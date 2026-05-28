@@ -1,0 +1,122 @@
+<?xml version="1.0"?>
+<sdf version="1.8">
+  <world name="mini_terminal_final">
+    <physics type="ode">
+      <max_step_size>0.02</max_step_size>
+      <real_time_update_rate>50</real_time_update_rate>
+      <real_time_factor>1</real_time_factor>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>30</iters>
+          <sor>1.3</sor>
+        </solver>
+      </ode>
+    </physics>
+
+    <scene>
+      <shadows>false</shadows>
+      <grid>false</grid>
+      <ambient>0.6 0.6 0.6 1</ambient>
+      <background>0.3 0.3 0.3 1</background>
+    </scene>
+
+    <plugin filename="gz-sim-physics-system" name="gz::sim::systems::Physics"/>
+    <plugin filename="gz-sim-user-commands-system" name="gz::sim::systems::UserCommands"/>
+    <plugin filename="gz-sim-scene-broadcaster-system" name="gz::sim::systems::SceneBroadcaster"/>
+    <plugin filename="gz-sim-sensors-system" name="gz::sim::systems::Sensors">
+      <render_engine>ogre2</render_engine>
+    </plugin>
+
+    <light type="directional" name="sun">
+      <cast_shadows>false</cast_shadows>
+      <pose>0 0 10 0 0 0</pose>
+      <diffuse>0.8 0.8 0.8 1</diffuse>
+      <specular>0.2 0.2 0.2 1</specular>
+      <attenuation>
+        <range>1000</range>
+        <constant>0.9</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <direction>-0.5 0.1 -0.9</direction>
+    </light>
+
+    <include><uri>model://ground_plane</uri></include>
+
+    <model name="terminal_structure">
+      <static>true</static>
+      <link name="walls">
+        <visual name="wall_n"><pose>4 0 0.5 0 0 0</pose><geometry><box><size>0.2 8.2 1</size></box></geometry></visual>
+        <collision name="wall_n_c"><pose>4 0 0.5 0 0 0</pose><geometry><box><size>0.2 8.2 1</size></box></geometry></collision>
+        <visual name="wall_s"><pose>-4 0 0.5 0 0 0</pose><geometry><box><size>0.2 8.2 1</size></box></geometry></visual>
+        <collision name="wall_s_c"><pose>-4 0 0.5 0 0 0</pose><geometry><box><size>0.2 8.2 1</size></box></geometry></collision>
+        <visual name="lat_L_top"><pose>2.25 4 0.5 0 0 0</pose><geometry><box><size>3.5 0.2 1</size></box></geometry></visual>
+        <visual name="lat_L_bot"><pose>-2.25 4 0.5 0 0 0</pose><geometry><box><size>3.5 0.2 1</size></box></geometry></visual>
+        <visual name="lat_R_top"><pose>2.25 -4 0.5 0 0 0</pose><geometry><box><size>3.5 0.2 1</size></box></geometry></visual>
+        <visual name="lat_R_bot"><pose>-2.25 -4 0.5 0 0 0</pose><geometry><box><size>3.5 0.2 1</size></box></geometry></visual>
+        <visual name="counter"><pose>2.5 0 0.4 0 0 0</pose><geometry><box><size>0.8 3 0.8</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material>
+        </visual>
+        <collision name="counter_c"><pose>2.5 0 0.4 0 0 0</pose><geometry><box><size>0.8 3 0.8</size></box></geometry></collision>
+      </link>
+    </model>
+
+    <model name="room_left">
+      <static>true</static>
+      <pose>0 5.5 0 0 0 0</pose>
+      <link name="walls">
+        <visual name="w_outer"><pose>0 1.5 0.5 0 0 0</pose><geometry><box><size>4.2 0.2 1</size></box></geometry></visual>
+        <visual name="w_side1"><pose>2 0 0.5 0 0 0</pose><geometry><box><size>0.2 3 1</size></box></geometry></visual>
+        <visual name="w_side2"><pose>-2 0 0.5 0 0 0</pose><geometry><box><size>0.2 3 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <model name="room_right">
+      <static>true</static>
+      <pose>0 -5.5 0 0 0 0</pose>
+      <link name="walls">
+        <visual name="w_outer"><pose>0 -1.5 0.5 0 0 0</pose><geometry><box><size>4.2 0.2 1</size></box></geometry></visual>
+        <visual name="w_side1"><pose>2 0 0.5 0 0 0</pose><geometry><box><size>0.2 3 1</size></box></geometry></visual>
+        <visual name="w_side2"><pose>-2 0 0.5 0 0 0</pose><geometry><box><size>0.2 3 1</size></box></geometry></visual>
+      </link>
+    </model>
+
+    <include><name>wait_1</name><uri>model://WhiteChipChair</uri><pose>-0.5 1.5 0 0 0 0</pose></include>
+    <include><name>wait_2</name><uri>model://WhiteChipChair</uri><pose>-0.5 -1.5 0 0 0 0</pose></include>
+    <include><name>wait_3</name><uri>model://WhiteChipChair</uri><pose>-2.5 1.5 0 0 0 0</pose></include>
+    <include><name>wait_4</name><uri>model://WhiteChipChair</uri><pose>-2.5 -1.5 0 0 0 0</pose></include>
+    <include><name>side_L</name><uri>model://WhiteChipChair</uri><pose>0 6.2 0 0 0 -1.57</pose></include>
+    <include><name>side_R</name><uri>model://WhiteChipChair</uri><pose>0 -6.2 0 0 0 1.57</pose></include>
+
+    <model name="chair_blockers">
+      <static>true</static>
+      <link name="link">
+        <visual name="v_1"><pose>-0.5 1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material></visual>
+        <collision name="c_1"><pose>-0.5 1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry></collision>
+
+        <visual name="v_2"><pose>-0.5 -1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material></visual>
+        <collision name="c_2"><pose>-0.5 -1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry></collision>
+
+        <visual name="v_3"><pose>-2.5 1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material></visual>
+        <collision name="c_3"><pose>-2.5 1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry></collision>
+
+        <visual name="v_4"><pose>-2.5 -1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material></visual>
+        <collision name="c_4"><pose>-2.5 -1.5 0.25 0 0 0</pose><geometry><box><size>0.5 1.5 0.5</size></box></geometry></collision>
+
+        <visual name="v_5"><pose>0 6.2 0.25 0 0 0</pose><geometry><box><size>1.5 0.5 0.5</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material></visual>
+        <collision name="c_5"><pose>0 6.2 0.25 0 0 0</pose><geometry><box><size>1.5 0.5 0.5</size></box></geometry></collision>
+
+        <visual name="v_6"><pose>0 -6.2 0.25 0 0 0</pose><geometry><box><size>1.5 0.5 0.5</size></box></geometry>
+          <material><ambient>0 0 0 1</ambient><diffuse>0 0 0 1</diffuse></material></visual>
+        <collision name="c_6"><pose>0 -6.2 0.25 0 0 0</pose><geometry><box><size>1.5 0.5 0.5</size></box></geometry></collision>
+      </link>
+    </model>
+
+  </world>
+</sdf>

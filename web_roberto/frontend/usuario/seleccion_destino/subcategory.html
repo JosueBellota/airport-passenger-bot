@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBERTO - Destinos (Subcategoría)</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="overlay" id="navigation-overlay">
+        <div class="header-icon" style="margin-bottom: 1rem;">
+            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+            </svg>
+        </div>
+        <h2 id="navigation-text">Iniciando navegación...</h2>
+    </div>
+
+    <main class="app-container">
+        <!-- Header -->
+        <header class="header">
+            <!-- Botón opcional para volver, pero usaré el icono de la imagen -->
+            <div class="header-icon" id="back-btn" style="cursor: pointer;" title="Volver a Categorías">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+            </div>
+            <div class="header-texts">
+                <h1 id="title-text">Selecciona tu destino específico</h1>
+                <p id="subtitle-text">Elige a dónde quieres ir dentro de esta zona</p>
+            </div>
+        </header>
+
+        <!-- Dynamic Grid -->
+        <div class="cards-grid" id="destinations-grid">
+            <!-- Rellenado por JS -->
+        </div>
+
+        <div class="bottom-area">
+            
+            <!-- Summary Bar -->
+            <div class="summary-bar hidden" id="summary-bar">
+                <div class="summary-left">
+                    <div class="summary-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                            <circle cx="12" cy="10" r="3"></circle>
+                        </svg>
+                    </div>
+                    <div class="summary-texts">
+                        <div class="label" id="summary-label">DESTINO SELECCIONADO</div>
+                        <div class="value" id="summary-dest-name">---</div>
+                    </div>
+                </div>
+                <div class="summary-right">
+                    <div class="summary-stat">
+                        <div class="label" id="summary-dist-label">Distancia</div>
+                        <div class="value" id="summary-dest-dist">---</div>
+                    </div>
+                    <div class="summary-stat">
+                        <div class="label" id="summary-time-label">Tiempo estimado</div>
+                        <div class="value" id="summary-dest-time">---</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Continue Button -->
+            <button id="continue-btn" disabled>
+                <span>Continuar</span>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                    <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+            </button>
+        </div>
+    </main>
+
+    <script src="main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            initSubcategoryView();
+        });
+    </script>
+</body>
+</html>

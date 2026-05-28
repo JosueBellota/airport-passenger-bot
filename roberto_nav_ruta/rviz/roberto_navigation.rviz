@@ -1,0 +1,273 @@
+Panels:
+  - Class: rviz_common/Displays
+    Help Height: 78
+    Name: Displays
+    Property Tree Widget:
+      Expanded:
+        - /Global Options1
+        - /TF1
+        - /Map1
+        - /RobotModel1
+        - /LaserScan1
+        - /Path1
+        - /Goal Pose1
+        - /Pose Array1
+        - /PoseWithCovariance1
+        - /PoseWithCovariance1/Selected
+      Splitter Ratio: 0.5
+    Tree Height: 572
+  - Class: rviz_common/Selection
+    Name: Selection
+  - Class: rviz_common/Tool Properties
+    Expanded:
+      - /2D Goal Pose1
+      - /Publish Point1
+    Name: Tool Properties
+    Splitter Ratio: 0.5886790156364441
+  - Class: rviz_common/Views
+    Expanded:
+      - /Current View1
+    Name: Views
+    Splitter Ratio: 0.5
+Visualization Manager:
+  Class: ""
+  Displays:
+    - Alpha: 0.5
+      Cell Size: 1
+      Class: rviz_default_plugins/Grid
+      Color: 160; 160; 164
+      Enabled: true
+      Name: Grid
+      Normal Cell Count: 0
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Plane: XY
+      Plane Cell Count: 10
+      Reference Frame: map
+      Value: true
+    - Class: rviz_default_plugins/TF
+      Enabled: true
+      Frame Timeout: 15
+      Frames:
+        All Enabled: true
+      Marker Scale: 1
+      Name: TF
+      Show Arrows: true
+      Show Axes: true
+      Show Names: true
+      Tree:
+        {}
+      Update Interval: 0
+      Value: true
+    - Alpha: 0.7
+      Class: rviz_default_plugins/Map
+      Color Scheme: map
+      Draw Behind: false
+      Enabled: true
+      Name: Map
+      Topic: /map
+      Unreliable: false
+      Value: true
+    - Class: rviz_default_plugins/RobotModel
+      Description File: ""
+      Description Source: Topic
+      Description Topic: /robot_description
+      Enabled: true
+      Links:
+        All Links Enabled: true
+        Expand Joint Details: false
+        Expand Link Details: false
+        Expand Tree: false
+        Link Tree Style: Links in Alphabetic Order
+        base_footprint:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        base_scan:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        caster_back_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        imu_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wheel_left_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+        wheel_right_link:
+          Alpha: 1
+          Show Axes: false
+          Show Trail: false
+      Name: RobotModel
+      Robot Description: robot_description
+      TF Prefix: ""
+      Update Interval: 0
+      Value: true
+      Visual Enabled: true
+    - Class: rviz_default_plugins/LaserScan
+      Enabled: true
+      Name: LaserScan
+      Topic: /scan
+      Unreliable: false
+      Value: true
+      Queue Size: 10
+      Size: 0.05
+      Color: 255; 25; 0
+      Color Transformer: Intensity
+      Decay Time: 0
+      Invert Rainbow: false
+      Max Color: 255; 255; 255
+      Max Intensity: 4096
+      Min Color: 0; 0; 0
+      Min Intensity: 0
+      Use Fixed Frame: true
+      Use rainbow: true
+    - Class: rviz_default_plugins/Path
+      Enabled: true
+      Name: Global Path
+      Topic: /plan
+      Unreliable: false
+      Value: true
+      Color: 25; 255; 0
+      Head Diameter: 0.1
+      Head Length: 0.2
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Shaft Diameter: 0.02
+      Width: 0.05
+    - Class: rviz_default_plugins/Path
+      Enabled: true
+      Name: Local Path
+      Topic: /local_plan
+      Unreliable: false
+      Value: true
+      Color: 0; 0; 255
+      Head Diameter: 0.05
+      Head Length: 0.1
+      Offset:
+        X: 0
+        Y: 0
+        Z: 0
+      Shaft Diameter: 0.01
+      Width: 0.03
+    - Class: rviz_default_plugins/PoseArray
+      Enabled: true
+      Name: Particle Cloud
+      Topic: /particlecloud
+      Unreliable: false
+      Value: true
+      Arrow Color: 255; 25; 0
+      Arrow Length: 0.3
+      Axes Length: 0.3
+      Axes Radius: 0.03
+      Color: 255; 25; 0
+      Marker Scale: 1
+      Shape: Arrow (Flat)
+      Value: true
+    - Alpha: 1
+      Class: rviz_default_plugins/Polygon
+      Enabled: true
+      Name: Costmap (Local)
+      Topic: /local_costmap/costmap
+      Unreliable: false
+      Value: true
+      Color: 200; 200; 200
+      Alpha: 0.5
+      Show Only Inscribed: false
+    - Alpha: 0.3
+      Class: rviz_default_plugins/Polygon
+      Enabled: true
+      Name: Costmap (Global)
+      Topic: /global_costmap/costmap
+      Unreliable: false
+      Value: true
+      Color: 100; 100; 100
+      Alpha: 0.3
+      Show Only Inscribed: false
+    - Class: rviz_default_plugins/PoseWithCovariance
+      Enabled: true
+      Name: Estimated Pose
+      Topic: /amcl_pose
+      Unreliable: false
+      Value: true
+      Color: 255; 0; 0
+      Covariance:
+        Orientation:
+          Alpha: 0.5
+          Scale: 1
+          Scale Unsigned: true
+        Position:
+          Alpha: 0.5
+          Scale: 1
+          Scale Unsigned: true
+      Covariance Arrow Size: 0.5
+      Covariance Visible: true
+      Pose Shape: Arrow
+      Pose Color: 0; 255; 0
+      Pose Alpha: 1
+      Shape Axes Length: 0.5
+      Shape Axes Radius: 0.03
+      Topic: /amcl_pose
+      Unreliable: false
+      Value: true
+    - Class: rviz_default_plugins/GoalTool
+      Name: 2D Goal Pose
+    - Class: rviz_default_plugins/InitialPoseTool
+      Name: 2D Pose Estimate
+    - Class: rviz_default_plugins/PublishPoint
+      Name: Publish Point
+  Enabled: true
+  Global Options:
+    Background Color: 48; 48; 48
+    Fixed Frame: map
+    Frame Rate: 30
+  Name: root
+  Tools:
+    - Class: rviz_default_plugins/Interact
+      Hide Inactive Objects: true
+    - Class: rviz_default_plugins/MoveCamera
+    - Class: rviz_default_plugins/Select
+    - Class: rviz_default_plugins/FocusCamera
+    - Class: rviz_default_plugins/Measure
+      Line color: 128; 128; 0
+    - Class: rviz_default_plugins/SetInitialPose
+      Topic: /initialpose
+    - Class: rviz_default_plugins/SetGoal
+      Topic: /goal_pose
+    - Class: rviz_default_plugins/PublishPoint
+      Single click: true
+      Topic: /clicked_point
+  Value: true
+  Views:
+    Current:
+      Class: rviz_default_plugins/Orbit
+      Distance: 10
+      Enable Stereo Rendering:
+        Stereo Eye Separation: 0.05999999865889549
+        Stereo Focal Distance: 1
+        Swap Stereo Eyes: false
+        Use Stereo Rendering: false
+      Field of View: 0.7853981633974483
+      Focal Point:
+        X: 0
+        Y: 0
+        Z: 0
+      Focal Shape Fixed Size: true
+      Focal Shape Size: 0.05000000074505806
+      Invert Z Axis: false
+      Name: Current View
+      Near Clip Distance: 0.009999999776482582
+      Pitch: 0.6100000143051147
+      Target Frame: <Fixed Frame>
+      Value: Orbit (rviz)
+      Yaw: 3.130000114440918
+    Saved: ~

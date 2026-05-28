@@ -1,0 +1,205 @@
+:root {
+    --bg-light: #ffffff;
+    --bg-color: #f6ebd9;
+    --navy: #354266;
+    --navy-hover: #293351;
+    --text-grey: #8a8377;
+    --tech-hover: #e8ddc9;
+    --orange: #f0a150;
+    --shadow-soft: 0 4px 15px rgba(0, 0, 0, 0.05);
+    --shadow-medium: 0 10px 25px rgba(53, 66, 102, 0.15);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    /* Degradado radial desde el centro hacia afuera */
+    background: radial-gradient(circle at center, var(--bg-light) 0%, var(--bg-color) 75%);
+    background-color: var(--bg-color); /* fallback */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--navy);
+    position: relative;
+    user-select: none;
+    overflow: hidden;
+}
+
+/* Botón técnico oculto superior izquierdo */
+#tech-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 1.5rem;
+    background: transparent;
+    border: none;
+    color: transparent;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom-right-radius: 1rem;
+    z-index: 10;
+}
+
+#tech-btn:hover {
+    background: var(--tech-hover);
+    color: var(--text-grey);
+}
+
+#tech-btn svg {
+    width: 24px;
+    height: 24px;
+}
+
+/* Contenedor principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+    padding: 2rem;
+}
+
+/* Logo Superior */
+.logo {
+    background-color: var(--navy);
+    width: 90px;
+    height: 90px;
+    border-radius: 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    box-shadow: var(--shadow-medium);
+}
+
+/* Textos Principales */
+h1#title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--navy);
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+h2#subtitle {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--text-grey);
+    margin-bottom: 2rem;
+}
+
+/* Banner de Bienvenida */
+.welcome-pill {
+    background: white;
+    padding: 0.75rem 2rem;
+    border-radius: 2rem;
+    color: var(--navy);
+    font-size: 0.95rem;
+    font-weight: 500;
+    box-shadow: var(--shadow-soft);
+    margin-bottom: 3.5rem;
+    border: 1px solid rgba(53, 66, 102, 0.05);
+}
+
+/* Sección de Idiomas */
+.language-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 3.5rem;
+}
+
+.language-label {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--navy);
+    font-size: 0.9rem;
+    font-weight: 500;
+    margin-bottom: 1.5rem;
+}
+
+.language-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.lang-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: white;
+    border: none;
+    padding: 1.25rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-soft);
+    transition: all 0.3s ease;
+    width: 140px;
+    height: 80px;
+}
+
+.lang-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08); /* slight raise effect */
+}
+
+.lang-btn .flag {
+    font-size: 1.2rem;
+    line-height: 1;
+}
+
+.lang-btn .lang-name {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--navy);
+    transition: color 0.3s ease;
+}
+
+/* Estado Activo de Idioma */
+.lang-btn.active {
+    background: var(--navy);
+    box-shadow: var(--shadow-medium);
+}
+
+.lang-btn.active .lang-name {
+    color: white;
+}
+
+/* Botón Principal (Inferior) */
+#start-btn {
+    font-family: 'Poppins', sans-serif;
+    background: var(--navy);
+    color: white;
+    border: none;
+    padding: 1.2rem 2rem;
+    font-size: 1.15rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    box-shadow: var(--shadow-medium);
+    transition: all 0.3s ease;
+    width: 260px;
+    max-width: 100%;
+}
+
+#start-btn:hover {
+    background: var(--navy-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 12px 30px rgba(53, 66, 102, 0.25);
+}

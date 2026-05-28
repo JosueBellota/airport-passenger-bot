@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roberto Control - Dashboard</title>
+    <link rel="stylesheet" href="estilo.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <script src="https://cdn.jsdelivr.net/npm/eventemitter2@6.4.9/lib/eventemitter2.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/roslib@1/build/roslib.min.js"></script>
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+
+
+    <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ros2d@0.10.0/build/ros2d.min.js"></script>
+
+
+</head>
+
+<body>
+
+
+
+    <!-- Contenedor principal -->
+    <div class="dashboard-container">
+        <!-- Barra lateral de robots -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Robots</h2>
+                <span>5 conectados</span>
+            </div>
+            <ul class="robot-list">
+                <li class="robot-item active">
+                    <div class="robot-info">
+                        <strong>Roberto 1</strong>
+                        <span><i class="ph ph-battery-medium"></i> 67%</span>
+                    </div>
+                    <span class="status online">Activo</span>
+                </li>
+                <li class="robot-item">
+                    <div class="robot-info">
+                        <strong>Roberto 2</strong>
+                        <span><i class="ph ph-battery-full"></i> 92%</span>
+                    </div>
+                    <span class="status online">Activo</span>
+                </li>
+                <li class="nav-item">
+                    <a href="declaracion_incidencias/index.html" class="nav-link" style="background-color: #dc3545; color: white; margin-top: 20px; border-radius: 8px;">
+                        <i class="ph ph-warning"></i>
+                        <span>Declarar Incidencia</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+
+
+
+        <!-- Contenido principal -->
+        <main class="main-content">
+            <header class="top-nav">
+                <div class="logo">Roberto Control</div>
+                <div class="user-actions">
+                <div style="position: relative; cursor: pointer;" onclick="toggleIncidenciasPanel()">
+                <i class="ph ph-warning-circle"></i>
+                <span id="badge-incidencias" class="notification-badge" style="display: none;">0</span>
+                </div>
+
+                    <i class="ph ph-bell"></i>
+                    <i class="ph ph-gear"></i>
+                    <i class="ph ph-user-circle"></i>
+                    <!-- Logout Button -->
+                    <button class="btn btn-danger btn-sm d-flex align-items-center gap-2" data-bs-toggle="modal"
+                        data-bs-target="#logoutModal">
+                        <i class="ph ph-sign-out"></i>
+                        Logout
+                    </button>
+                </div>
+            </header>
+
+            
+
+            <!-- Grid principal -->
+            <section class="grid-layout">
+                <div class="card video-feed">
+                    <div class="card-header">
+                        <span><i class="ph ph-video-camera"></i> Vista de Cámara - Roberto 1</span>
+                        <span class="live-badge">EN VIVO</span>
+                    </div>
+                    <div class="camera-placeholder" style="background: #000; overflow: hidden; display: flex; align-items: center; justify-content: center; height: 200px; border-radius: 10px;">
+                        <img src="http://localhost:5000/video_feed" 
+                            alt="Streaming Burger" 
+                            style="width: 100%; height: auto; display: block;">
+                    </div>
+                </div>
+            
+            <div class="card history-preview-card">
+    <div class="card-header">
+        <h3>Historial reciente</h3>
+        <button class="view-all-link" onclick="openHistoryModal()">Ver todo</button>
+    </div>
+    <div id="history-preview-list">
+        <p style="color:gray; font-size: 0.8rem; padding: 10px;">Cargando historial...</p>
+    </div>
+</div>
+
+
+                <!-- Sección de mapa -->
+                <div class="card map-section">
+                    <div class="card-header">
+                        <h3>Mapa - Terminal A</h3>
+                        <span class="legend"><span class="dot blue"></span> Posición actual</span>
+                    </div>
+                    <div class="nav-bar"
+                        style="display: flex; align-items: center; gap: 12px; margin-bottom: 12px; background: var(--bg-main); padding: 12px 16px; border-radius: 10px; border: 1px solid var(--border-color);">
+                        <div
+                            style="font-weight: 600; font-size: 0.95rem; color: var(--text-dark); display: flex; align-items: center; gap: 6px; margin-right: auto;">
+                            <i class="ph ph-compass" style="color: var(--accent-blue); font-size: 1.2rem;"></i>
+                            Navegación
+                        </div>
+                        <label for="zonaSelect"
+                            style="font-size: 0.85rem; color: var(--text-muted); font-weight: 500;">Destino:</label>
+                        <select id="zonaSelect"
+                            style="padding: 8px 12px; border: 1px solid var(--border-color); border-radius: 6px; font-family: inherit; font-size: 0.9rem; outline: none; background: white; cursor: pointer; min-width: 180px; transition: border-color 0.2s;"></select>
+                        <button onclick="sendGoal()"
+                            style="padding: 8px 16px; background: var(--accent-blue); color: white; border: none; border-radius: 6px; font-weight: 600; font-size: 0.9rem; cursor: pointer; transition: background-color 0.2s, transform 0.1s; display: flex; align-items: center; gap: 6px;"
+                            onmouseover="this.style.backgroundColor='#2563eb'"
+                            onmouseout="this.style.backgroundColor='var(--accent-blue)'"
+                            onmousedown="this.style.transform='scale(0.98)'"
+                            onmouseup="this.style.transform='scale(1)'">
+                            Enviar destino
+                        </button>
+                    </div>
+                    <div id="map-canvas" class="map-container">
+                    </div>
+                </div>
+
+
+
+                <!-- Panel de estado -->
+                <div class="card status-panel">
+                    <div class="card-header">
+                        <h3> Estado</h3>
+                    </div>
+                    <div class="status-content">
+                        <div class="stat-row">
+                            <span>Velocidad</span>
+                            <strong id="speed-value">0.00 m/s</strong>
+                        </div>
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="speed-fill" style="width: 0%"></div>
+                        </div>
+
+
+                        <ul class="systems-list">
+                            <li id="motor-info">Motores <span class="check-ok" id="motor-status">OK</span></li>
+                            <li id="sensor-info">Sensores <span class="check-ok" id="sensor-status">OK</span></li>
+                            <li id="battery-info">Bateria <span id="battery-percent">87%</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+
+
+        <!-- Panel de control -->
+        <aside class="control-panel">
+            <div class="connection-box"
+                style="margin-bottom: 2rem; background: var(--bg-light); padding: 1rem; border-radius: 8px; box-shadow: var(--shadow-soft);">
+                <h4 style="margin-bottom: 1rem; font-size: 1rem; color: var(--navy);">Conexión ROS2</h4>
+                <div style="margin-bottom: 1rem;">
+                    <label for="ws_url" style="font-size: 0.85rem; color: var(--text-grey);">Servidor (ws://):</label>
+                    <input type="text" id="ws_url" value="127.0.0.1:9090"
+                        style="width: 100%; padding: 0.5rem; border: 1px solid #ddd; border-radius: 4px; margin-top: 0.5rem; outline: none;">
+                </div>
+                <div style="display: flex; gap: 0.5rem;">
+                    <button id="btn_connect"
+                        style="flex: 1; padding: 0.5rem; background: #27ae60; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600;">Conectar</button>
+                    <button id="btn_disconnect" disabled
+                        style="flex: 1; padding: 0.5rem; background: #e74c3c; color: white; border: none; border-radius: 4px; cursor: pointer; font-weight: 600; opacity: 0.5;">Desconectar</button>
+                </div>
+                <p style="text-align: center; margin-top: 1rem; font-size: 0.9rem;">
+                    Estado: <strong id="status" style="color: #e74c3c;">Desconectado</strong>
+                </p>
+            </div>
+
+
+            <h3>Controlar Robot</h3>
+            <div class="joystick-container">
+                <button class="joy-btn up" id="btn_forward"><i class="ph ph-arrow-up"></i></button>
+                <div class="joy-row">
+                    <button class="joy-btn left" id="btn_left"><i class="ph ph-arrow-left"></i></button>
+                    <div class="center-dot"></div>
+                    <button class="joy-btn right" id="btn_right"><i class="ph ph-arrow-right"></i></button>
+                </div>
+                <button class="joy-btn down" id="btn_back"><i class="ph ph-arrow-down"></i></button>
+            </div>
+            <button class="stop-btn" id="btn_stop">
+                <i class="ph ph-stop-circle"></i> PARAR
+            </button>
+        </aside>
+    </div>
+
+
+    <!-- Tarjeta de información -->
+    <div id="infoCard" class="info-card">
+        <div class="info-card-content">
+            <div class="info-card-header">
+                <h3><i class="ph ph-information"></i> <span id="infoCardTitle">Informacion</span></h3>
+                <span class="info-card-close" onclick="closeInfoCard()">&times;</span>
+            </div>
+            <div class="info-card-body" id="infoCardBody">
+                Contenido
+            </div>
+        </div>
+    </div>
+<div id="historyModal" class="modal-full-overlay">
+    <div class="modal-full-content">
+        <div class="modal-full-header">
+            <h2>Historial completo de interacciones</h2>
+            <span class="modal-close-icon" onclick="closeHistoryModal()">&times;</span>
+        </div>
+        
+<div class="modal-full-body">
+    <div class="table-filters" style="display: flex; gap: 8px; margin-bottom: 24px; align-items: center; flex-wrap: wrap;">
+<div class="filter-group">
+    <i class="ph ph-calendar-blank"></i>
+    <input type="date" id="filter-date" class="date-filter-input">
+</div>
+        <div class="filter-group">
+            <i class="ph ph-robot"></i>
+            <select id="filter-robot"><option value="">Robot</option></select>
+        </div>
+        <div class="filter-group">
+            <i class="ph ph-map-pin"></i>
+            <select id="filter-zona"><option value="">Zona actual</option></select>
+        </div>
+        <div class="filter-group">
+            <i class="ph ph-navigation-arrow"></i>
+            <select id="filter-destino"><option value="">Destino</option></select>
+        </div>
+        <div class="filter-group">
+            <i class="ph ph-star"></i>
+       
+        <select id="filter-valoracion">
+    <option value="">Valoración</option>
+    <option value="5">5 Estrellas</option>
+    <option value="4">4 Estrellas</option>
+    <option value="3">3 Estrellas</option>
+    <option value="2">2 Estrellas</option>
+    <option value="1">1 Estrella</option>
+</select>
+ </div>
+<button class="btn-secondary-outline" onclick="clearAllFilters()">
+    <i class="ph ph-arrows-counter-clockwise"></i> Limpiar filtros
+</button>
+        
+<button class="export-csv-btn" onclick="exportToCSV()" style="margin-left: auto; background-color: #1a1f36;">
+    <i class="ph ph-download-simple"></i> Exportar CSV
+</button>
+    </div>
+
+    <div class="table-wrapper" style="border: none;">
+        <table class="modern-table">
+            <thead>
+                <tr>
+                    <th>Interacción ID</th>
+                    <th>Robot</th>
+                    <th>Zona actual</th>
+                    <th>Destino</th>
+                    <th>Fecha y hora <i class="ph ph-arrow-down" style="font-size: 0.7rem;"></i></th>
+                    <th>Duración</th>
+                    <th>Valoración</th>
+                    <th>Comentario</th>
+                </tr>
+            </thead>
+            <tbody id="full-history-table-body">
+                </tbody>
+        </table>
+    </div>
+
+<div class="table-footer">
+    <span id="table-stats">Cargando interacciones...</span>
+    <div class="pagination-mock" id="pagination-controls">
+        </div>
+</div>
+</div>
+    </div>
+</div>
+    <div class="modal fade" id="logoutModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <h5 class="modal-title">Cerrar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+
+                <div class="modal-body">
+                    ¿Seguro que quieres cerrar sesión?
+                </div>
+
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="confirmLogout" class="btn btn-danger">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+    <div id="panel-incidencias" class="side-panel">
+    <div class="side-panel-header">
+        <h2><i class="ph ph-warning-circle" style="color: var(--danger-red);"></i> Incidencias</h2>
+        <span class="panel-close" onclick="toggleIncidenciasPanel()">&times;</span>
+    </div>
+    <div class="side-panel-tabs">
+        <button class="tab-btn active" onclick="filtrarIncidencias('Abierto')">Abiertas</button>
+        <button class="tab-btn" onclick="filtrarIncidencias('Cerrado')">Resueltas</button>
+    </div>
+    <div class="side-panel-body" id="lista-incidencias">
+        <p style="text-align: center; color: var(--text-muted); margin-top: 20px;">Cargando...</p>
+    </div>
+</div>
+    
+    <script src="joystick.js"></script>
+    <!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+
+</html>

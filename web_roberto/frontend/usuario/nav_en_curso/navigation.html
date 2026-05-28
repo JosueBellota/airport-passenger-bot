@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ROBERTO - En Camino</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="navigation.css">
+</head>
+<body>
+
+    <main class="nav-container">
+        <header class="nav-header">
+            <div class="nav-badge">Navegación Activa</div>
+            <h1>Roberto está en camino</h1>
+            <p>Sigue al robot hasta tu destino</p>
+        </header>
+
+        <div class="nav-layout">
+            <aside class="telemetry-panel">
+                <div class="robot-card">
+                    <div class="robot-icon">🤖</div>
+                    <h3>ROBERTO</h3>
+                    <p>En servicio</p>
+                </div>
+
+                <div class="live-card">
+                    <div class="live-indicator">
+                        <span class="dot"></span>
+                        <span>DATOS EN VIVO</span>
+                    </div>
+                    <div class="speed-display">
+                        <span class="label">Velocidad</span>
+                        <strong id="val-speed">0.0 m/s</strong>
+                    </div>
+                </div>
+            </aside>
+
+            <section class="progress-panel">
+                <div class="track-card">
+                    <div class="track-info">
+                        <div class="point">
+                            <div class="point-box">📍</div>
+                            <span>Inicio</span>
+                        </div>
+                        <div class="point">
+                            <div class="point-box dark">🏁</div>
+                            <span id="txt-destination">Destino</span>
+                        </div>
+                    </div>
+
+                    <div class="track-visual">
+                        <div class="track-line-bg">
+                            <div class="track-line-fill" id="progress-fill"></div>
+                            <div class="robot-marker" id="robot-marker">🤖</div>
+                        </div>
+                    </div>
+
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <span class="stat-label">Distancia restante</span>
+                            <strong class="stat-value" id="val-dist">-- m</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">ETA</span>
+                            <strong class="stat-value" id="val-eta">--:--</strong>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-label">Progreso</span>
+                            <strong class="stat-value" id="val-prog">0%</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="safety-notice">
+                    ⚠️ Mantente cerca de Roberto durante el trayecto.
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <script src="navigation.js"></script>
+</body>
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Llegada al destino</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div class="header">
+    <div class="check-icon">✓</div>
+    <h1>¡Hemos llegado!</h1>
+    <p class="terminal"><span>⌂</span> Terminal A</p>
+    <div class="banner">Has llegado a tu destino. Por favor, recoge tus maletas de la plataforma.</div>
+  </div>
+
+  <div class="main-content">
+    <!-- Left Column -->
+    <div class="left-col">
+      <div class="card summary-card">
+        <h3>Resumen del viaje</h3>
+        <div class="stats-row">
+          <div class="stat-box"><small>DURACIÓN</small><br><span id="duracion">3:15</span></div>
+          <div class="stat-box"><small>DISTANCIA</small><br><span id="distancia">350m</span></div>
+        </div>
+        <div class="status-bar">
+          <span class="check-circle">✓</span> Completado
+        </div>
+      </div>
+
+      <div class="card steps-card">
+        <h3>→ Próximos pasos</h3>
+        <ul>
+          <li><span class="step-num">1</span> Retira tus maletas</li>
+          <li><span class="step-num">2</span> Verifica que no olvides nada</li>
+          <li><span class="step-num">3</span> Disfruta tu viaje</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Right Column -->
+    <div class="right-col card feedback-card">
+      <div class="suitcase-icon">🧳</div>
+      <h3>¿Cómo fue tu experiencia?</h3>
+      <p class="subtitle">Tu opinión nos ayuda a mejorar</p>
+
+      <div id="stars">
+        <span data-value="1">★</span>
+        <span data-value="2">★</span>
+        <span data-value="3">★</span>
+        <span data-value="4">★</span>
+        <span data-value="5">★</span>
+      </div>
+
+      <!-- ✅ NEW COMMENT BOX -->
+      <div class="comment-box">
+        <textarea id="comentario" placeholder="Añade un comentario..."></textarea>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="footer">
+    <p class="thanks">Gracias por usar Roberto</p>
+    <p class="see-soon">Esperamos verte pronto de nuevo</p>
+    <button id="finalizar">Finalizar servicio</button>
+  </div>
+</div>
+
+<script src="main.js"></script>
+</body>
+</html>

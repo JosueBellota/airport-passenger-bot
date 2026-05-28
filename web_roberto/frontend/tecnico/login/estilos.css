@@ -1,0 +1,263 @@
+    :root {
+      --fondo: #e8d6c5;
+      --tarjeta: #ffffff;
+      --principal: #3b4470;
+      --principal2: #4a557c;
+      --atenuado: #8b92a8;
+      --fondoInput: #f4f6fb;
+      --sombra: 0 8px 24px rgba(46, 50, 84, 0.12);
+      --radio: 16px;
+      --acento: #AA8A0F;
+      --peligro: #c44c4c;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+      margin: 0;
+      background: linear-gradient(180deg, var(--fondo) 0%, #e9dacc 100%);
+    }
+
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px;
+    }
+
+    .escenario {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .tarjeta {
+      width: 400px;
+      max-width: 94vw;
+      border-radius: var(--radio);
+      overflow: hidden;
+      box-shadow: var(--sombra);
+      background: var(--tarjeta);
+    }
+
+    .encabezadoTarjeta {
+      padding: 28px 24px;
+      background: linear-gradient(135deg, var(--principal) 0%, var(--principal2) 100%);
+      color: #fff;
+      position: relative;
+      text-align: center;
+    }
+
+    .decoracion1,
+    .decoracion2 {
+      position: absolute;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.16);
+      box-shadow: 0 0 22px rgba(255, 255, 255, 0.38);
+      pointer-events: none;
+    }
+
+    .decoracion1 {
+      width: 96px;
+      height: 96px;
+      right: -26px;
+      top: -26px;
+    }
+
+    .decoracion2 {
+      width: 56px;
+      height: 56px;
+      left: -18px;
+      bottom: -18px;
+    }
+
+    .logo {
+      width: 56px;
+      height: 56px;
+      border-radius: 14px;
+      background: rgba(255, 255, 255, 0.08);
+      display: grid;
+      place-items: center;
+      margin: 0 auto 12px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .titulo {
+      font-size: 18px;
+      font-weight: 600;
+      line-height: 1.2;
+    }
+
+    .subtitulo {
+      margin-top: 6px;
+      font-size: 13px;
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .cuerpoTarjeta {
+      padding: 22px 20px 26px;
+    }
+
+    .tarjetaFormulario {
+      width: 100%;
+    }
+
+    .tituloSeccion {
+      text-align: center;
+      font-weight: 600;
+      color: var(--principal2);
+      margin: 4px 0 18px;
+      font-size: 16px;
+    }
+
+    .filaFormulario {
+      margin-bottom: 14px;
+    }
+
+    .etiqueta {
+      display: block;
+      font-size: 12px;
+      color: var(--atenuado);
+      margin: 0 0 8px 6px;
+    }
+
+    .contenedorInput {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--fondoInput);
+      border-radius: 10px;
+      padding: 12px 14px;
+      border: 1px solid rgba(66, 72, 110, 0.06);
+      transition: all .15s ease;
+    }
+
+    .contenedorInput:focus-within {
+      border-color: rgba(74, 85, 124, 0.22);
+      box-shadow: 0 0 0 3px rgba(59, 68, 112, 0.08);
+    }
+
+    .iconoBurbuja {
+      flex: 0 0 18px;
+      display: grid;
+      place-items: center;
+      color: var(--atenuado);
+    }
+
+    .contenedorInput input {
+      border: 0;
+      outline: 0;
+      background: transparent;
+      font-size: 14px;
+      color: #333;
+      width: 100%;
+    }
+
+    .contenedorInput input::placeholder {
+      color: #adb4c6;
+    }
+
+    .accionesInput {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .botonIcono {
+      border: 0;
+      background: transparent;
+      color: #6f789b;
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+    }
+
+    .botonIcono:hover {
+      background: rgba(111, 120, 155, 0.08);
+    }
+
+    .filaEntre {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin: 4px 2px 0;
+    }
+
+    .recordar {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: #5f6785;
+    }
+
+    .recordar input {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--principal2);
+    }
+
+    .olvidaste {
+      color: var(--acento);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 13px;
+    }
+
+    .olvidaste:hover {
+      text-decoration: underline;
+    }
+
+    .boton {
+      display: block;
+      width: 100%;
+      margin-top: 14px;
+      background: linear-gradient(180deg, #3B4671 0%, #4A5686 100%);
+      color: #fff;
+      border: 0;
+      padding: 12px 16px;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 15px;
+      cursor: pointer;
+      box-shadow: 0 6px 14px rgba(50, 56, 104, 0.18);
+    }
+
+    .boton:disabled {
+      opacity: .72;
+      cursor: not-allowed;
+    }
+
+    .nota {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #8590ae;
+      text-align: center;
+    }
+
+    .error-msg {
+      margin: 8px 6px 0;
+      font-size: 12px;
+      color: var(--peligro);
+      display: none;
+    }
+
+    .error-msg.show {
+      display: block;
+    }
+
+    .contenedorInput.error {
+      border-color: var(--peligro);
+      box-shadow: 0 0 0 3px rgba(196, 76, 76, 0.08);
+    }

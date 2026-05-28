@@ -1,0 +1,50 @@
+================================================================================
+GUIA DE TESTEO: LOCALIZACION ROBOT ROBERTO (TAREAS 6, 7 y 8)
+Autor: Mery
+================================================================================
+
+PASO 1: COMPILACION Y ENTORNO
+--------------------------------------------------------------------------------
+# Navegar al workspace y compilar el paquete de localizacion
+cd ~/turtlebot3_ws/
+colcon build --packages-select roberto_nav_punto
+source install/setup.bash
+
+PASO 2: LANZAMIENTO DE LA SIMULACION (Terminal 1)
+--------------------------------------------------------------------------------
+# Lanzar el mundo 
+ros2 launch roberto_mundo roberto.launch.py
+
+PASO 3: LANZAMIENTO DE LOCALIZACION (Terminal 2)
+--------------------------------------------------------------------------------
+# Lanzar el sistema de localizacion (AMCL + Map Server + Lifecycle)
+# Nota: use_rviz:=false para testeo limpio en terminal
+source ~/turtlebot3_ws/install/setup.bash
+ros2 launch roberto_nav_punto localization.launch.py use_rviz:=false
+
+PASO 4: VERIFICACION DE ESTADOS (Terminal 3)
+--------------------------------------------------------------------------------
+# Verificar que el Lifecycle Manager ha activado los nodos correctamente
+ros2 lifecycle get /map_server
+ros2 lifecycle get /amcl
+# RESULTADO ESPERADO: Ambos deben responder "active [3]"
+
+PASO 5: TEST DE MOVIMIENTO Y COORDENADAS (Terminal 4)
+--------------------------------------------------------------------------------
+# Monitorear la posicion filtrando solo x e y para evitar "ruido"
+source ~/turtlebot3_ws/install/setup.bash
+ros2 topic echo /amcl_pose --field pose.pose.position
+
+# --- EN OTRA TERMINAL (Terminal 5) ---
+# Mover al robot para ver como cambian las coordenadas en tiempo real
+ros2 run turtlebot3_teleop teleop_keyboard
+
+PASO 6: VERIFICACION DE TRANSFORMADAS (TF)
+--------------------------------------------------------------------------------
+# Comprobar que existe la cadena completa: map -> odom -> base_footprint
+ros2 run tf2_tools view_frames
+# Abrir el archivo generado 'frames.pdf' para validacion visual.
+
+================================================================================
+FIN DEL TEST
+================================================================================

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Declaración de Incidencias - Reconocimiento Facial</title>
+    <link rel="stylesheet" href="../estilo.css">
+    <style>
+        .container {
+            padding: 20px;
+            text-align: center;
+            color: white;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .btn-facial {
+            padding: 12px 24px;
+            margin: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 8px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            transition: background 0.3s;
+        }
+        .btn-facial:hover {
+            background-color: #0056b3;
+        }
+        .btn-facial:disabled {
+            background-color: #6c757d;
+            cursor: not-allowed;
+        }
+        #camera-container {
+            position: relative;
+            width: 640px;
+            height: 480px;
+            background: #222;
+            margin: 20px 0;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 3px solid #444;
+        }
+        #webcam, #overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        #output {
+            width: 80%;
+            margin-top: 10px;
+            padding: 10px;
+            background: rgba(0,0,0,0.5);
+            border-radius: 5px;
+            text-align: left;
+            white-space: pre-wrap;
+            font-family: monospace;
+            font-size: 0.9rem;
+        }
+        .controls {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Declaración de Incidencias</h1>
+        <h2>Verificación Facial Web</h2>
+        
+        <div class="controls">
+            <button id="btnProcess" class="btn-facial" onclick="runBackendScript('process')">Procesar Imágenes</button>
+            <button id="btnTrain" class="btn-facial" onclick="runBackendScript('train')">Entrenar Modelo</button>
+            <button id="btnOpen" class="btn-facial" style="background-color: #28a745;" onclick="startWebcam()">Abrir Cámara Web</button>
+            <button id="btnStop" class="btn-facial" style="background-color: #dc3545;" onclick="stopWebcam()" disabled>Detener Cámara</button>
+        </div>
+
+        <div id="camera-container">
+            <video id="webcam" width="640" height="480" autoplay playsinline></video>
+            <canvas id="overlay" width="640" height="480"></canvas>
+        </div>
+
+        <div id="output">Estado: Listo para iniciar.</div>
+
+        <br>
+        <button class="btn-facial" style="background-color: #6c757d;" onclick="window.location.href='../dashboard.html'">Volver al Dashboard</button>
+    </div>
+
+    <script>
+        const video = document.getElementById('webcam');
+        const canvas = document.getElementById('overlay');
+        const ctx = canvas.getContext('2d');
+        const outputDiv = document.getElementById('output');
+        let stream = null;
+        let isProcessing = false;
+
+        async function startWebcam() {
+            try {
+                outputDiv.innerText = "Solicitando permisos de cámara...";
+                stream = await navigator.mediaDevices.getUserMedia({ video: true });
+                video.srcObject = stream;
+                
+                document.getElementById('btnOpen').disabled = true;
+                document.getElementById('btnStop').disabled = false;
+                
+                outputDiv.innerText = "Cámara activa. Iniciando detección...";
+                startDetectionLoop();
+            } catch (err) {
+                outputDiv.innerText = "Error al acceder a la cámara: " + err.message;
+            }
+        }
+
+        function stopWebcam() {
+            if (stream) {
+                stream.getTracks().forEach(track => track.stop());
+                video.srcObject = null;
+            }
+            isProcessing = false;
+            document.getElementById('btnOpen').disabled = false;
+            document.getElementById('btnStop').disabled = true;
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            outputDiv.innerText = "Cámara detenida.";
+        }
+
+        async function startDetectionLoop() {
+            isProcessing = true;
+            while (isProcessing) {
+                if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                    // Capturar frame
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = video.videoWidth;
+                    tempCanvas.height = video.videoHeight;
+                    tempCanvas.getContext('2d').drawImage(video, 0, 0);
+                    const base64Image = tempCanvas.toDataURL('image/jpeg', 0.7);
+
+                    try {
+                        const response = await fetch('/api/facial/verify', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ image: base64Image })
+                        });
+                        const data = await response.json();
+                        
+                        if (data.success) {
+                            drawResults(data.results);
+                        }
+                    } catch (err) {
+                        console.error("Error en detección:", err);
+                    }
+                }
+                // Esperar un poco antes del siguiente frame para no saturar el servidor
+                await new Promise(r => setTimeout(r, 200));
+            }
+        }
+
+        function drawResults(results) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            
+            if (!results || results.error) return;
+
+            results.forEach(res => {
+                const [x1, y1, x2, y2] = res.box;
+                
+                // Dibujar rectángulo
+                ctx.strokeStyle = res.name === "Desconocido" ? "#ff0000" : "#00ff00";
+                ctx.lineWidth = 3;
+                ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
+
+                // Dibujar etiqueta
+                ctx.fillStyle = res.name === "Desconocido" ? "#ff0000" : "#00ff00";
+                ctx.font = "18px Arial";
+                const label = `${res.name} (${(res.confidence * 100).toFixed(1)}%)`;
+                ctx.fillText(label, x1, y1 > 20 ? y1 - 10 : y1 + 20);
+            });
+        }
+
+        async function runBackendScript(action) {
+            outputDiv.innerText = `Ejecutando ${action} en el servidor...`;
+            try {
+                const response = await fetch(`/api/facial/${action}`, { method: 'POST' });
+                const data = await response.json();
+                outputDiv.innerText = data.success ? `Resultado:\n${data.output}` : `Error:\n${data.error}`;
+            } catch (err) {
+                outputDiv.innerText = "Error de red: " + err.message;
+            }
+        }
+    </script>
+</body>
+</html>

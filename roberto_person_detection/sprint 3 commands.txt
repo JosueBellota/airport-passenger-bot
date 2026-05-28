@@ -1,0 +1,15 @@
+sprint 3 commands
+T1
+export TURTLEBOT3_MODEL=burger_cam
+ros2 launch roberto_mundo roberto.launch.py
+
+T2
+ros2 run ros_gz_sim create -world mini_terminal_final -file https://fuel.gazebosim.org/1.0/openrobotics/models/Standing%20person -name my_human -x 2.0 -y 0.0 -z 0.0
+
+T3
+ros2 run roberto_person_detection person_detector
+
+
+T4
+ros2 topic echo /person_detected
+
