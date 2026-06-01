@@ -1,0 +1,38 @@
+[2.536s] Invoking command in '/root/ROS2/Roberto/roberto_gesture_detection': PYTHONPATH=/root/ROS2/Roberto/build/roberto_gesture_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_gesture_detection build --build-base /root/ROS2/Roberto/build/roberto_gesture_detection/build install --record /root/ROS2/Roberto/build/roberto_gesture_detection/install.log --single-version-externally-managed install_data
+[2.834s] /usr/local/lib/python3.12/dist-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[2.834s]   warnings.warn(msg)
+[3.120s] running egg_info
+[3.159s] creating ../build/roberto_gesture_detection/roberto_gesture_detection.egg-info
+[3.160s] writing ../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/PKG-INFO
+[3.160s] writing dependency_links to ../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/dependency_links.txt
+[3.161s] writing entry points to ../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/entry_points.txt
+[3.161s] writing requirements to ../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/requires.txt
+[3.162s] writing top-level names to ../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/top_level.txt
+[3.162s] writing manifest file '../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/SOURCES.txt'
+[3.261s] reading manifest file '../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/SOURCES.txt'
+[3.263s] writing manifest file '../build/roberto_gesture_detection/roberto_gesture_detection.egg-info/SOURCES.txt'
+[3.263s] running build
+[3.263s] running build_py
+[3.264s] creating /root/ROS2/Roberto/build/roberto_gesture_detection/build/lib/roberto_gesture_detection
+[3.265s] copying roberto_gesture_detection/gesture_detector.py -> /root/ROS2/Roberto/build/roberto_gesture_detection/build/lib/roberto_gesture_detection
+[3.266s] copying roberto_gesture_detection/__init__.py -> /root/ROS2/Roberto/build/roberto_gesture_detection/build/lib/roberto_gesture_detection
+[3.267s] running install
+[3.276s] running install_lib
+[3.330s] creating /root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages/roberto_gesture_detection
+[3.331s] copying /root/ROS2/Roberto/build/roberto_gesture_detection/build/lib/roberto_gesture_detection/gesture_detector.py -> /root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages/roberto_gesture_detection
+[3.331s] copying /root/ROS2/Roberto/build/roberto_gesture_detection/build/lib/roberto_gesture_detection/__init__.py -> /root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages/roberto_gesture_detection
+[3.332s] byte-compiling /root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages/roberto_gesture_detection/gesture_detector.py to gesture_detector.cpython-312.pyc
+[3.337s] byte-compiling /root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages/roberto_gesture_detection/__init__.py to __init__.cpython-312.pyc
+[3.338s] running install_data
+[3.338s] creating /root/ROS2/Roberto/install/roberto_gesture_detection/share/ament_index/resource_index/packages
+[3.340s] copying resource/roberto_gesture_detection -> /root/ROS2/Roberto/install/roberto_gesture_detection/share/ament_index/resource_index/packages
+[3.341s] copying package.xml -> /root/ROS2/Roberto/install/roberto_gesture_detection/share/roberto_gesture_detection
+[3.342s] creating /root/ROS2/Roberto/install/roberto_gesture_detection/share/roberto_gesture_detection/launch
+[3.342s] copying launch/gesture_call_robot.launch.py -> /root/ROS2/Roberto/install/roberto_gesture_detection/share/roberto_gesture_detection/launch
+[3.343s] creating /root/ROS2/Roberto/install/roberto_gesture_detection/share/roberto_gesture_detection/config
+[3.344s] running install_egg_info
+[3.389s] Copying ../build/roberto_gesture_detection/roberto_gesture_detection.egg-info to /root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages/roberto_gesture_detection-0.0.1-py3.12.egg-info
+[3.393s] running install_scripts
+[3.483s] Installing gesture_detector script to /root/ROS2/Roberto/install/roberto_gesture_detection/lib/roberto_gesture_detection
+[3.484s] writing list of installed files to '/root/ROS2/Roberto/build/roberto_gesture_detection/install.log'
+[3.542s] Invoked command in '/root/ROS2/Roberto/roberto_gesture_detection' returned '0': PYTHONPATH=/root/ROS2/Roberto/build/roberto_gesture_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_gesture_detection build --build-base /root/ROS2/Roberto/build/roberto_gesture_detection/build install --record /root/ROS2/Roberto/build/roberto_gesture_detection/install.log --single-version-externally-managed install_data

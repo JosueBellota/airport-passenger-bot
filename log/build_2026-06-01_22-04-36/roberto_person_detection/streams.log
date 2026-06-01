@@ -1,0 +1,27 @@
+[2.552s] Invoking command in '/root/ROS2/Roberto/roberto_person_detection': PYTHONPATH=/root/ROS2/Roberto/build/roberto_person_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_person_detection/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_person_detection build --build-base /root/ROS2/Roberto/build/roberto_person_detection/build install --record /root/ROS2/Roberto/build/roberto_person_detection/install.log --single-version-externally-managed install_data
+[2.984s] running egg_info
+[3.018s] writing ../build/roberto_person_detection/roberto_person_detection.egg-info/PKG-INFO
+[3.020s] writing dependency_links to ../build/roberto_person_detection/roberto_person_detection.egg-info/dependency_links.txt
+[3.020s] writing entry points to ../build/roberto_person_detection/roberto_person_detection.egg-info/entry_points.txt
+[3.021s] writing requirements to ../build/roberto_person_detection/roberto_person_detection.egg-info/requires.txt
+[3.021s] writing top-level names to ../build/roberto_person_detection/roberto_person_detection.egg-info/top_level.txt
+[3.104s] reading manifest file '../build/roberto_person_detection/roberto_person_detection.egg-info/SOURCES.txt'
+[3.107s] writing manifest file '../build/roberto_person_detection/roberto_person_detection.egg-info/SOURCES.txt'
+[3.107s] running build
+[3.107s] running build_py
+[3.108s] copying roberto_person_detection/image_publisher.py -> /root/ROS2/Roberto/build/roberto_person_detection/build/lib/roberto_person_detection
+[3.108s] copying roberto_person_detection/person_detector.py -> /root/ROS2/Roberto/build/roberto_person_detection/build/lib/roberto_person_detection
+[3.109s] copying roberto_person_detection/__init__.py -> /root/ROS2/Roberto/build/roberto_person_detection/build/lib/roberto_person_detection
+[3.109s] running install
+[3.115s] running install_lib
+[3.159s] running install_data
+[3.164s] copying resource/roberto_person_detection -> /root/ROS2/Roberto/install/roberto_person_detection/share/ament_index/resource_index/packages
+[3.164s] copying package.xml -> /root/ROS2/Roberto/install/roberto_person_detection/share/roberto_person_detection
+[3.164s] running install_egg_info
+[3.199s] removing '/root/ROS2/Roberto/install/roberto_person_detection/lib/python3.12/site-packages/roberto_person_detection-0.0.0-py3.12.egg-info' (and everything under it)
+[3.200s] Copying ../build/roberto_person_detection/roberto_person_detection.egg-info to /root/ROS2/Roberto/install/roberto_person_detection/lib/python3.12/site-packages/roberto_person_detection-0.0.0-py3.12.egg-info
+[3.202s] running install_scripts
+[3.287s] Installing image_publisher script to /root/ROS2/Roberto/install/roberto_person_detection/lib/roberto_person_detection
+[3.287s] Installing person_detector script to /root/ROS2/Roberto/install/roberto_person_detection/lib/roberto_person_detection
+[3.288s] writing list of installed files to '/root/ROS2/Roberto/build/roberto_person_detection/install.log'
+[3.316s] Invoked command in '/root/ROS2/Roberto/roberto_person_detection' returned '0': PYTHONPATH=/root/ROS2/Roberto/build/roberto_person_detection/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_person_detection/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_person_detection build --build-base /root/ROS2/Roberto/build/roberto_person_detection/build install --record /root/ROS2/Roberto/build/roberto_person_detection/install.log --single-version-externally-managed install_data

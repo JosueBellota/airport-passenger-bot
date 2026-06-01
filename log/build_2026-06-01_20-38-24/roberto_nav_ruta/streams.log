@@ -1,0 +1,47 @@
+[2.512s] Invoking command in '/root/ROS2/Roberto/roberto_nav_ruta': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_ruta/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_ruta build --build-base /root/ROS2/Roberto/build/roberto_nav_ruta/build install --record /root/ROS2/Roberto/build/roberto_nav_ruta/install.log --single-version-externally-managed install_data
+[2.800s] /usr/local/lib/python3.12/dist-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[2.801s]   warnings.warn(msg)
+[3.099s] running egg_info
+[3.154s] creating ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info
+[3.155s] writing ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/PKG-INFO
+[3.155s] writing dependency_links to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/dependency_links.txt
+[3.156s] writing entry points to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/entry_points.txt
+[3.157s] writing requirements to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/requires.txt
+[3.158s] writing top-level names to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/top_level.txt
+[3.158s] writing manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+[3.251s] reading manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+[3.253s] writing manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+[3.253s] running build
+[3.254s] running build_py
+[3.254s] creating /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+[3.255s] copying roberto_nav_ruta/navigate_to_pose.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+[3.256s] copying roberto_nav_ruta/__init__.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+[3.256s] copying roberto_nav_ruta/follow_waypoints.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+[3.257s] running install
+[3.264s] running install_lib
+[3.315s] creating /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+[3.315s] copying /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta/navigate_to_pose.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+[3.315s] copying /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta/__init__.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+[3.316s] copying /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta/follow_waypoints.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+[3.316s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta/navigate_to_pose.py to navigate_to_pose.cpython-312.pyc
+[3.319s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta/__init__.py to __init__.cpython-312.pyc
+[3.320s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta/follow_waypoints.py to follow_waypoints.cpython-312.pyc
+[3.323s] running install_data
+[3.323s] creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/ament_index/resource_index/packages
+[3.325s] copying resource/roberto_nav_ruta -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/ament_index/resource_index/packages
+[3.326s] copying package.xml -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta
+[3.326s] creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/launch
+[3.327s] copying launch/roberto_nav.launch.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/launch
+[3.328s] creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/map
+[3.329s] creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/param
+[3.330s] copying param/nav2_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/param
+[3.331s] creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/rviz
+[3.332s] copying rviz/roberto_navigation.rviz -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/rviz
+[3.332s] running install_egg_info
+[3.375s] Copying ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta-0.0.0-py3.12.egg-info
+[3.379s] running install_scripts
+[3.475s] Installing follow_waypoints script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+[3.476s] Installing navigate_to_pose script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+[3.476s] Installing test_navigation script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+[3.477s] writing list of installed files to '/root/ROS2/Roberto/build/roberto_nav_ruta/install.log'
+[3.520s] Invoked command in '/root/ROS2/Roberto/roberto_nav_ruta' returned '0': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_ruta/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_ruta build --build-base /root/ROS2/Roberto/build/roberto_nav_ruta/build install --record /root/ROS2/Roberto/build/roberto_nav_ruta/install.log --single-version-externally-managed install_data

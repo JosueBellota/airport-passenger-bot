@@ -1,0 +1,33 @@
+[2.814s] Invoking command in '/root/ROS2/Roberto/roberto_nav_ruta': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_ruta/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_ruta build --build-base /root/ROS2/Roberto/build/roberto_nav_ruta/build install --record /root/ROS2/Roberto/build/roberto_nav_ruta/install.log --single-version-externally-managed install_data
+[3.106s] /usr/local/lib/python3.12/dist-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[3.106s]   warnings.warn(msg)
+[3.404s] running egg_info
+[3.446s] writing ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/PKG-INFO
+[3.448s] writing dependency_links to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/dependency_links.txt
+[3.448s] writing entry points to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/entry_points.txt
+[3.448s] writing requirements to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/requires.txt
+[3.449s] writing top-level names to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/top_level.txt
+[3.548s] reading manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+[3.552s] writing manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+[3.552s] running build
+[3.552s] running build_py
+[3.554s] copying roberto_nav_ruta/navigate_to_pose.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+[3.555s] copying roberto_nav_ruta/__init__.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+[3.555s] copying roberto_nav_ruta/follow_waypoints.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+[3.556s] running install
+[3.562s] running install_lib
+[3.613s] running install_data
+[3.614s] copying resource/roberto_nav_ruta -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/ament_index/resource_index/packages
+[3.614s] copying package.xml -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta
+[3.615s] copying launch/roberto_nav.launch.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/launch
+[3.616s] copying param/nav2_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/param
+[3.617s] copying rviz/roberto_navigation.rviz -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/rviz
+[3.618s] running install_egg_info
+[3.654s] removing '/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta-0.0.0-py3.12.egg-info' (and everything under it)
+[3.654s] Copying ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta-0.0.0-py3.12.egg-info
+[3.657s] running install_scripts
+[3.734s] Installing follow_waypoints script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+[3.735s] Installing navigate_to_pose script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+[3.735s] Installing test_navigation script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+[3.735s] writing list of installed files to '/root/ROS2/Roberto/build/roberto_nav_ruta/install.log'
+[3.763s] Invoked command in '/root/ROS2/Roberto/roberto_nav_ruta' returned '0': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_ruta/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_ruta build --build-base /root/ROS2/Roberto/build/roberto_nav_ruta/build install --record /root/ROS2/Roberto/build/roberto_nav_ruta/install.log --single-version-externally-managed install_data

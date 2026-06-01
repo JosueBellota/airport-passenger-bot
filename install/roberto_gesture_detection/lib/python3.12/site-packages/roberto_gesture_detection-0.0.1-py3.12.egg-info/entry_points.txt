@@ -1,0 +1,2 @@
+[console_scripts]
+gesture_detector = roberto_gesture_detection.gesture_detector:main

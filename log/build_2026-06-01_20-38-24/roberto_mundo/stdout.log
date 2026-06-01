@@ -1,0 +1,660 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Found ros_gz_sim: 1.0.18 (/opt/ros/jazzy/share/ros_gz_sim/cmake)
+-- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+-- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+-- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+-- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+-- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+-- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+-- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+-- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+-- Using RMW implementation 'rmw_fastrtps_cpp' as default
+-- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+-- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+-- Found gz_math_vendor: 0.0.8 (/opt/ros/jazzy/share/gz_math_vendor/cmake)
+-- Looking for gz-math7 -- found version 7.5.2
+-- Searching for dependencies of gz-math7
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for dependencies of gz-utils2
+-- Found gz_sim_vendor: 0.0.9 (/opt/ros/jazzy/share/gz_sim_vendor/cmake)
+-- Looking for gz-sim8 -- found version 8.10.0
+-- Searching for dependencies of gz-sim8
+-- Looking for sdformat14 -- found version 14.8.0
+-- Searching for dependencies of sdformat14
+-- Checking for module 'tinyxml2'
+--   Found tinyxml2, version 10.0.0
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for dependencies of gz-utils2
+-- Searching for <gz-utils2> component [cli]
+-- Looking for gz-utils2-cli -- found version 2.2.1
+-- Searching for dependencies of gz-utils2-cli
+-- Looking for gz-plugin2 -- found version 2.0.4
+-- Searching for dependencies of gz-plugin2
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for <gz-plugin2> component [loader]
+-- Looking for gz-plugin2-loader -- found version 2.0.4
+-- Searching for dependencies of gz-plugin2-loader
+-- Searching for <gz-plugin2> component [register]
+-- Looking for gz-plugin2-register -- found version 2.0.4
+-- Searching for dependencies of gz-plugin2-register
+-- Looking for gz-transport13 -- found version 13.5.0
+-- Searching for dependencies of gz-transport13
+-- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") 
+-- Config-file not installed for ZeroMQ -- checking for pkg-config
+-- Checking for module 'libzmq >= 4'
+--   Found libzmq, version 4.3.5
+-- Found ZeroMQ: TRUE (Required is at least version "4") 
+-- Checking for module 'uuid'
+--   Found uuid, version 2.39.3
+-- Found UUID: TRUE  
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for gz-msgs10 -- found version 10.3.2
+-- Searching for dependencies of gz-msgs10
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for gz-math7 -- found version 7.5.2
+-- Searching for <gz-transport13> component [log]
+-- Looking for gz-transport13-log -- found version 13.5.0
+-- Searching for dependencies of gz-transport13-log
+-- Searching for <gz-transport13> component [parameters]
+-- Looking for gz-transport13-parameters -- found version 13.5.0
+-- Searching for dependencies of gz-transport13-parameters
+-- Looking for gz-msgs10 -- found version 10.3.2
+-- Looking for gz-common5 -- found version 5.7.1
+-- Searching for dependencies of gz-common5
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Found DL: TRUE  
+-- Searching for <gz-common5> component [av]
+-- Looking for gz-common5-av -- found version 5.7.1
+-- Searching for dependencies of gz-common5-av
+-- Checking for module 'libswscale'
+--   Found libswscale, version 7.5.100
+-- Found SWSCALE: TRUE  
+-- Checking for module 'libavdevice >= 56.4.100'
+--   Found libavdevice, version 60.3.100
+-- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+-- Checking for module 'libavformat'
+--   Found libavformat, version 60.16.100
+-- Found AVFORMAT: TRUE  
+-- Checking for module 'libavcodec'
+--   Found libavcodec, version 60.31.102
+-- Found AVCODEC: TRUE  
+-- Checking for module 'libavutil'
+--   Found libavutil, version 58.29.100
+-- Found AVUTIL: TRUE  
+-- Searching for <gz-common5> component [events]
+-- Looking for gz-common5-events -- found version 5.7.1
+-- Searching for dependencies of gz-common5-events
+-- Looking for gz-math7 -- found version 7.5.2
+-- Searching for <gz-common5> component [graphics]
+-- Looking for gz-common5-graphics -- found version 5.7.1
+-- Searching for dependencies of gz-common5-graphics
+-- Looking for gz-math7 -- found version 7.5.2
+-- Found GzAssimp: TRUE (found version "5.3.0") 
+-- Searching for <gz-common5> component [io]
+-- Looking for gz-common5-io -- found version 5.7.1
+-- Searching for dependencies of gz-common5-io
+-- Searching for <gz-common5> component [profiler]
+-- Looking for gz-common5-profiler -- found version 5.7.1
+-- Searching for dependencies of gz-common5-profiler
+-- Looking for gz-fuel_tools9 -- found version 9.1.1
+-- Searching for dependencies of gz-fuel_tools9
+-- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  
+-- Checking for module 'jsoncpp'
+--   Found jsoncpp, version 1.9.5
+-- Found JSONCPP: TRUE  
+-- Checking for module 'yaml-0.1'
+--   Found yaml-0.1, version 0.2.5
+-- Found YAML: TRUE  
+-- Checking for module 'libzip'
+--   Found libzip, version 1.7.3
+-- Found ZIP: TRUE  
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for gz-common5 -- found version 5.7.1
+-- Searching for dependencies of gz-common5
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Searching for <gz-common5> component [testing]
+-- Looking for gz-common5-testing -- found version 5.7.1
+-- Searching for dependencies of gz-common5-testing
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-msgs10 -- found version 10.3.2
+-- Looking for gz-gui8 -- found version 8.4.0
+-- Searching for dependencies of gz-gui8
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-common5 -- found version 5.7.1
+-- Looking for gz-plugin2 -- found version 2.0.4
+-- Looking for gz-transport13 -- found version 13.5.0
+-- Looking for gz-rendering8 -- found version 8.2.3
+-- Searching for dependencies of gz-rendering8
+-- Looking for gz-math7 -- found version 7.5.2
+-- Searching for dependencies of gz-math7
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for <gz-math7> component [eigen3]
+-- Looking for gz-math7-eigen3 -- found version 7.5.2
+-- Searching for dependencies of gz-math7-eigen3
+-- Looking for gz-common5 -- found version 5.7.1
+-- Searching for dependencies of gz-common5
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for dlfcn.h - found
+-- Looking for libdl - found
+-- Searching for <gz-common5> component [graphics]
+-- Searching for <gz-common5> component [events]
+-- Searching for <gz-common5> component [geospatial]
+-- Looking for gz-common5-geospatial -- found version 5.7.1
+-- Searching for dependencies of gz-common5-geospatial
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-common5 -- found version 5.7.1
+-- Looking for gz-plugin2 -- found version 2.0.4
+-- Searching for dependencies of gz-plugin2
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for <gz-plugin2> component [all]
+-- Looking for all libraries of gz-plugin2 -- found version 2.0.4
+-- Looking for gz-plugin2 -- found version 2.0.4
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+-- Looking for gz-msgs10 -- found version 10.3.2
+-- Looking for gz-physics7 -- found version 7.6.0
+-- Searching for dependencies of gz-physics7
+-- Looking for gz-common5 -- found version 5.7.1
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-plugin2 -- found version 2.0.4
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Searching for <gz-physics7> component [heightmap]
+-- Looking for gz-physics7-heightmap -- found version 7.6.0
+-- Searching for dependencies of gz-physics7-heightmap
+-- Looking for gz-common5 -- found version 5.7.1
+-- Searching for <gz-physics7> component [mesh]
+-- Looking for gz-physics7-mesh -- found version 7.6.0
+-- Searching for dependencies of gz-physics7-mesh
+-- Looking for gz-common5 -- found version 5.7.1
+-- Searching for <gz-physics7> component [sdf]
+-- Looking for gz-physics7-sdf -- found version 7.6.0
+-- Searching for dependencies of gz-physics7-sdf
+-- Looking for sdformat14 -- found version 14.8.0
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-common5 -- found version 5.7.1
+-- Looking for gz-transport13 -- found version 13.5.0
+-- Looking for gz-rendering8 -- found version 8.2.3
+-- Looking for gz-msgs10 -- found version 10.3.2
+-- Looking for sdformat14 -- found version 14.8.0
+-- Searching for <gz-sensors8> component [air_pressure]
+-- Looking for gz-sensors8-air_pressure -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-air_pressure
+-- Searching for <gz-sensors8> component [air_speed]
+-- Looking for gz-sensors8-air_speed -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-air_speed
+-- Searching for <gz-sensors8> component [altimeter]
+-- Looking for gz-sensors8-altimeter -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-altimeter
+-- Searching for <gz-sensors8> component [imu]
+-- Looking for gz-sensors8-imu -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-imu
+-- Searching for <gz-sensors8> component [force_torque]
+-- Looking for gz-sensors8-force_torque -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-force_torque
+-- Searching for <gz-sensors8> component [logical_camera]
+-- Looking for gz-sensors8-logical_camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-logical_camera
+-- Searching for <gz-sensors8> component [magnetometer]
+-- Looking for gz-sensors8-magnetometer -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-magnetometer
+-- Searching for <gz-sensors8> component [navsat]
+-- Looking for gz-sensors8-navsat -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-navsat
+-- Searching for <gz-sensors8> component [dvl]
+-- Looking for gz-sensors8-dvl -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-dvl
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-common5 -- found version 5.7.1
+-- Looking for gz-transport13 -- found version 13.5.0
+-- Looking for gz-rendering8 -- found version 8.2.3
+-- Looking for gz-msgs10 -- found version 10.3.2
+-- Looking for sdformat14 -- found version 14.8.0
+-- Searching for <gz-sensors8> component [rendering]
+-- Looking for gz-sensors8-rendering -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-rendering
+-- Searching for <gz-sensors8> component [rendering]
+-- Searching for <gz-sensors8> component [lidar]
+-- Looking for gz-sensors8-lidar -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-lidar
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for <gz-sensors8> component [gpu_lidar]
+-- Looking for gz-sensors8-gpu_lidar -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-gpu_lidar
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for <gz-sensors8> component [camera]
+-- Looking for gz-sensors8-camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-camera
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for <gz-sensors8> component [boundingbox_camera]
+-- Looking for gz-sensors8-boundingbox_camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-boundingbox_camera
+-- Searching for <gz-sensors8> component [segmentation_camera]
+-- Looking for gz-sensors8-segmentation_camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-segmentation_camera
+-- Searching for <gz-sensors8> component [depth_camera]
+-- Looking for gz-sensors8-depth_camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-depth_camera
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for <gz-sensors8> component [rgbd_camera]
+-- Looking for gz-sensors8-rgbd_camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-rgbd_camera
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for <gz-sensors8> component [thermal_camera]
+-- Looking for gz-sensors8-thermal_camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-thermal_camera
+-- Looking for gz-sensors8 -- found version 8.2.2
+-- Searching for <gz-sensors8> component [wide_angle_camera]
+-- Looking for gz-sensors8-wide_angle_camera -- found version 8.2.2
+-- Searching for dependencies of gz-sensors8-wide_angle_camera
+-- Looking for gz-rendering8 -- found version 8.2.3
+-- Looking for gz-math7 -- found version 7.5.2
+-- Looking for gz-utils2 -- found version 2.2.1
+-- Looking for gz-plugin2 -- found version 2.0.4
+-- Configuring done (18.9s)
+-- Generating done (0.1s)
+-- Build files have been written to: /root/ROS2/Roberto/build/roberto_mundo
+[ 25%] [32mBuilding CXX object CMakeFiles/obstacle1.dir/src/obstacle1.cpp.o[0m
+[ 25%] [32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o[0m
+[ 37%] [32mBuilding CXX object CMakeFiles/obstacles.dir/src/obstacles.cpp.o[0m
+[ 50%] [32mBuilding CXX object CMakeFiles/obstacle2.dir/src/obstacle2.cpp.o[0m
+[ 75%] [32m[1mLinking CXX shared library libobstacle2.so[0m
+[ 75%] [32m[1mLinking CXX shared library libobstacle1.so[0m
+[ 87%] [32m[1mLinking CXX shared library libobstacles.so[0m
+[ 87%] Built target obstacle2
+[ 87%] Built target obstacle1
+[ 87%] Built target obstacles
+[100%] [32m[1mLinking CXX executable turtlebot3_drive[0m
+[100%] Built target turtlebot3_drive
+-- Install configuration: ""
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/turtlebot3_drive
+-- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/turtlebot3_drive" to ""
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacles.so
+-- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacles.so" to ""
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle1.so
+-- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle1.so" to ""
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle2.so
+-- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle2.so" to ""
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/spawn_turtlebot3.launch.py
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/robot_state_publisher.launch.py
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/roberto.launch.py
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeye.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/brown_eye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeyev2.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/eyebrow001.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/female_casualsuit02_normal.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/female_casualsuit02_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/bob02_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/brown_eye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/shoes03_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/young_darkskinned_male_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/male_casualsuit03_normal.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeyev2.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/eyebrow001.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/teeth.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeye.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/tongue01_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/male_casualsuit03_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/female_elegantsuit01_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/female_elegantsuit01_normal.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/teeth.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseyev2.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/old_lightskinned_female_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/green_eye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/braid01_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/tongue01_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseye.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/eyebrow010.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/brown_eye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/young_lightskinned_female_diffuse3.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeye.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/male_worksuit01_normal.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeyev2.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/male_worksuit01_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/teeth.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/short01_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeye.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/tongue01_diffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/lds.stl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/astra.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/astra.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/r200.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/burger_base.stl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/model.config
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/meshes
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/meshes/cafe.dae
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_22.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_35.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_34.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_23.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_28.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_10.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_37.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_25.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_31.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_30.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_29.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_24.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_2.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_21.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_26.jpg
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/model.sdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone - Copy.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone - Copy.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone - Copy.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone - Copy.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone - Copy.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone - Copy.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone - Copy.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf_Zone.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone - Copy.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone - Copy.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf:Zone.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone - Copy.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds/distribution_center.world
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds/roberto.world
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include/
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp:Zone.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone - Copy.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp_Zone.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone - Copy.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone - Copy.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone - Copy.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp_Zone.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp:Zone.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp_Zone.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone - Copy.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp_Zone.Identifier_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp:Zone.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp:Zone.Identifier:Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp_Zone.Identifier
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/package_run_dependencies/roberto_mundo
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/parent_prefix_path/roberto_mundo
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/ament_prefix_path.sh
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/ament_prefix_path.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/path.sh
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/path.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.bash
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.sh
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.zsh
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/package.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/packages/roberto_mundo
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/ament_cmake_export_include_directories-extras.cmake
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/ament_cmake_export_dependencies-extras.cmake
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/roberto_mundoConfig.cmake
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/roberto_mundoConfig-version.cmake
+-- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/package.xml

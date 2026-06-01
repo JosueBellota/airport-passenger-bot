@@ -1,0 +1,33 @@
+-- The C compiler identification is GNU 13.3.0
+-- The CXX compiler identification is GNU 13.3.0
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Check for working C compiler: /usr/bin/cc - skipped
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Check for working CXX compiler: /usr/bin/c++ - skipped
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+-- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+-- Configuring done (2.8s)
+-- Generating done (0.0s)
+-- Build files have been written to: /root/ROS2/Roberto/build/roberto
+-- Install configuration: ""
+-- Installing: /root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/package_run_dependencies/roberto
+-- Installing: /root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/parent_prefix_path/roberto
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/ament_prefix_path.sh
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/ament_prefix_path.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/path.sh
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/path.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.bash
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.sh
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.zsh
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/package.dsv
+-- Installing: /root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/packages/roberto
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/cmake/robertoConfig.cmake
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/cmake/robertoConfig-version.cmake
+-- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/package.xml

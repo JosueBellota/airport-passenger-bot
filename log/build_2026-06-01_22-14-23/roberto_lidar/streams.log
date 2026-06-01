@@ -1,0 +1,29 @@
+[2.249s] Invoking command in '/root/ROS2/Roberto/roberto_lidar': PYTHONPATH=/root/ROS2/Roberto/build/roberto_lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_lidar build --build-base /root/ROS2/Roberto/build/roberto_lidar/build install --record /root/ROS2/Roberto/build/roberto_lidar/install.log --single-version-externally-managed install_data
+[2.752s] running egg_info
+[2.795s] writing ../build/roberto_lidar/roberto_lidar.egg-info/PKG-INFO
+[2.795s] writing dependency_links to ../build/roberto_lidar/roberto_lidar.egg-info/dependency_links.txt
+[2.796s] writing entry points to ../build/roberto_lidar/roberto_lidar.egg-info/entry_points.txt
+[2.796s] writing requirements to ../build/roberto_lidar/roberto_lidar.egg-info/requires.txt
+[2.796s] writing top-level names to ../build/roberto_lidar/roberto_lidar.egg-info/top_level.txt
+[2.867s] reading manifest file '../build/roberto_lidar/roberto_lidar.egg-info/SOURCES.txt'
+[2.868s] writing manifest file '../build/roberto_lidar/roberto_lidar.egg-info/SOURCES.txt'
+[2.868s] running build
+[2.869s] running build_py
+[2.869s] copying roberto_lidar/obstacle_avoidance_node.py -> /root/ROS2/Roberto/build/roberto_lidar/build/lib/roberto_lidar
+[2.869s] copying roberto_lidar/obstacle_detection_node.py -> /root/ROS2/Roberto/build/roberto_lidar/build/lib/roberto_lidar
+[2.869s] copying roberto_lidar/__init__.py -> /root/ROS2/Roberto/build/roberto_lidar/build/lib/roberto_lidar
+[2.870s] running install
+[2.879s] running install_lib
+[2.915s] running install_data
+[2.915s] copying resource/roberto_lidar -> /root/ROS2/Roberto/install/roberto_lidar/share/ament_index/resource_index/packages
+[2.916s] copying package.xml -> /root/ROS2/Roberto/install/roberto_lidar/share/roberto_lidar
+[2.916s] copying launch/lidar.launch.py -> /root/ROS2/Roberto/install/roberto_lidar/share/roberto_lidar/launch
+[2.917s] copying rviz/rviz_lidar_config.rviz -> /root/ROS2/Roberto/install/roberto_lidar/share/roberto_lidar/rviz
+[2.917s] running install_egg_info
+[2.956s] removing '/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages/roberto_lidar-0.0.0-py3.12.egg-info' (and everything under it)
+[2.956s] Copying ../build/roberto_lidar/roberto_lidar.egg-info to /root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages/roberto_lidar-0.0.0-py3.12.egg-info
+[2.958s] running install_scripts
+[3.054s] Installing obstacle_avoidance script to /root/ROS2/Roberto/install/roberto_lidar/lib/roberto_lidar
+[3.054s] Installing obstacle_detection_node script to /root/ROS2/Roberto/install/roberto_lidar/lib/roberto_lidar
+[3.055s] writing list of installed files to '/root/ROS2/Roberto/build/roberto_lidar/install.log'
+[3.089s] Invoked command in '/root/ROS2/Roberto/roberto_lidar' returned '0': PYTHONPATH=/root/ROS2/Roberto/build/roberto_lidar/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_lidar build --build-base /root/ROS2/Roberto/build/roberto_lidar/build install --record /root/ROS2/Roberto/build/roberto_lidar/install.log --single-version-externally-managed install_data

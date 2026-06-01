@@ -1,0 +1,13 @@
+Metadata-Version: 2.4
+Name: roberto_gesture_detection
+Version: 0.0.1
+Summary: Gesture detection for TurtleBot3 - Call robot with thumb
+Maintainer: mmalgbon
+Maintainer-email: mmalgbon@todo.todo
+License: Apache License 2.0
+Requires-Dist: setuptools
+Dynamic: license
+Dynamic: maintainer
+Dynamic: maintainer-email
+Dynamic: requires-dist
+Dynamic: summary

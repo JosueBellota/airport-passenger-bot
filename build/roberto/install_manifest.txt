@@ -1,0 +1,15 @@
+/root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/package_run_dependencies/roberto
+/root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/parent_prefix_path/roberto
+/root/ROS2/Roberto/install/roberto/share/roberto/environment/ament_prefix_path.sh
+/root/ROS2/Roberto/install/roberto/share/roberto/environment/ament_prefix_path.dsv
+/root/ROS2/Roberto/install/roberto/share/roberto/environment/path.sh
+/root/ROS2/Roberto/install/roberto/share/roberto/environment/path.dsv
+/root/ROS2/Roberto/install/roberto/share/roberto/local_setup.bash
+/root/ROS2/Roberto/install/roberto/share/roberto/local_setup.sh
+/root/ROS2/Roberto/install/roberto/share/roberto/local_setup.zsh
+/root/ROS2/Roberto/install/roberto/share/roberto/local_setup.dsv
+/root/ROS2/Roberto/install/roberto/share/roberto/package.dsv
+/root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/packages/roberto
+/root/ROS2/Roberto/install/roberto/share/roberto/cmake/robertoConfig.cmake
+/root/ROS2/Roberto/install/roberto/share/roberto/cmake/robertoConfig-version.cmake
+/root/ROS2/Roberto/install/roberto/share/roberto/package.xml

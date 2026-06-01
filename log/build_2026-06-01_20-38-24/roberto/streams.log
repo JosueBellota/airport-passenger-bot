@@ -1,0 +1,39 @@
+[0.335s] Invoking command in '/root/ROS2/Roberto/build/roberto': AMENT_PREFIX_PATH=/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy PYTHONPATH=/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /root/ROS2/Roberto/roberto -DCMAKE_INSTALL_PREFIX=/root/ROS2/Roberto/install/roberto
+[0.503s] -- The C compiler identification is GNU 13.3.0
+[1.184s] -- The CXX compiler identification is GNU 13.3.0
+[1.811s] -- Detecting C compiler ABI info
+[2.117s] -- Detecting C compiler ABI info - done
+[2.127s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.127s] -- Detecting C compile features
+[2.128s] -- Detecting C compile features - done
+[2.226s] -- Detecting CXX compiler ABI info
+[2.533s] -- Detecting CXX compiler ABI info - done
+[2.544s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.544s] -- Detecting CXX compile features
+[2.545s] -- Detecting CXX compile features - done
+[2.578s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.804s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[3.149s] -- Configuring done (2.8s)
+[3.169s] -- Generating done (0.0s)
+[3.176s] -- Build files have been written to: /root/ROS2/Roberto/build/roberto
+[3.183s] Invoked command in '/root/ROS2/Roberto/build/roberto' returned '0': AMENT_PREFIX_PATH=/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy PYTHONPATH=/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake /root/ROS2/Roberto/roberto -DCMAKE_INSTALL_PREFIX=/root/ROS2/Roberto/install/roberto
+[3.183s] Invoking command in '/root/ROS2/Roberto/build/roberto': AMENT_PREFIX_PATH=/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy PYTHONPATH=/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /root/ROS2/Roberto/build/roberto -- -j8 -l8
+[3.241s] Invoked command in '/root/ROS2/Roberto/build/roberto' returned '0': AMENT_PREFIX_PATH=/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy PYTHONPATH=/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --build /root/ROS2/Roberto/build/roberto -- -j8 -l8
+[3.243s] Invoking command in '/root/ROS2/Roberto/build/roberto': AMENT_PREFIX_PATH=/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy PYTHONPATH=/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /root/ROS2/Roberto/build/roberto
+[3.256s] -- Install configuration: ""
+[3.258s] -- Installing: /root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/package_run_dependencies/roberto
+[3.259s] -- Installing: /root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/parent_prefix_path/roberto
+[3.262s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/ament_prefix_path.sh
+[3.263s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/ament_prefix_path.dsv
+[3.263s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/path.sh
+[3.263s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/environment/path.dsv
+[3.265s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.bash
+[3.265s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.sh
+[3.266s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.zsh
+[3.266s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/local_setup.dsv
+[3.267s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/package.dsv
+[3.267s] -- Installing: /root/ROS2/Roberto/install/roberto/share/ament_index/resource_index/packages/roberto
+[3.269s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/cmake/robertoConfig.cmake
+[3.271s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/cmake/robertoConfig-version.cmake
+[3.271s] -- Installing: /root/ROS2/Roberto/install/roberto/share/roberto/package.xml
+[3.274s] Invoked command in '/root/ROS2/Roberto/build/roberto' returned '0': AMENT_PREFIX_PATH=/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy PYTHONPATH=/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages /usr/bin/cmake --install /root/ROS2/Roberto/build/roberto

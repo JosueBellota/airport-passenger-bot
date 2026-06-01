@@ -1,0 +1,45 @@
+/usr/local/lib/python3.12/dist-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+creating ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info
+writing ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/PKG-INFO
+writing dependency_links to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/dependency_links.txt
+writing entry points to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/entry_points.txt
+writing requirements to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/requires.txt
+writing top-level names to ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/top_level.txt
+writing manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+reading manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+writing manifest file '../build/roberto_nav_ruta/roberto_nav_ruta.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+copying roberto_nav_ruta/navigate_to_pose.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+copying roberto_nav_ruta/__init__.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+copying roberto_nav_ruta/follow_waypoints.py -> /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta
+running install
+running install_lib
+creating /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+copying /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta/navigate_to_pose.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+copying /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta/__init__.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+copying /root/ROS2/Roberto/build/roberto_nav_ruta/build/lib/roberto_nav_ruta/follow_waypoints.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta
+byte-compiling /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta/navigate_to_pose.py to navigate_to_pose.cpython-312.pyc
+byte-compiling /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta/__init__.py to __init__.cpython-312.pyc
+byte-compiling /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta/follow_waypoints.py to follow_waypoints.cpython-312.pyc
+running install_data
+creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/ament_index/resource_index/packages
+copying resource/roberto_nav_ruta -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/ament_index/resource_index/packages
+copying package.xml -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta
+creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/launch
+copying launch/roberto_nav.launch.py -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/launch
+creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/map
+creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/param
+copying param/nav2_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/param
+creating /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/rviz
+copying rviz/roberto_navigation.rviz -> /root/ROS2/Roberto/install/roberto_nav_ruta/share/roberto_nav_ruta/rviz
+running install_egg_info
+Copying ../build/roberto_nav_ruta/roberto_nav_ruta.egg-info to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages/roberto_nav_ruta-0.0.0-py3.12.egg-info
+running install_scripts
+Installing follow_waypoints script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+Installing navigate_to_pose script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+Installing test_navigation script to /root/ROS2/Roberto/install/roberto_nav_ruta/lib/roberto_nav_ruta
+writing list of installed files to '/root/ROS2/Roberto/build/roberto_nav_ruta/install.log'

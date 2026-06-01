@@ -1,0 +1,9 @@
+Metadata-Version: 2.4
+Name: roberto_lidar
+Version: 0.0.0
+Summary: LiDAR obstacle detection package
+Maintainer: cyorpul
+Requires-Dist: setuptools
+Dynamic: maintainer
+Dynamic: requires-dist
+Dynamic: summary

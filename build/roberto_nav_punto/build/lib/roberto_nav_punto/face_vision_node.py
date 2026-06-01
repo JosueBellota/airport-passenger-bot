@@ -37,7 +37,7 @@ class FaceVisionNode(Node):
     """
     Nodo de ROS 2 que integra:
     1. Suscripción a cámara (trasera).
-    2. Detección de caras con OpenCV DNN.
+    2. Detección de caras con OpenCV DNN de forma asíncrona.
     3. Seguimiento (Tracking) reactivo vía /cmd_vel.
     4. Streaming de video procesado vía Flask.
     """
@@ -58,14 +58,10 @@ class FaceVisionNode(Node):
         self.current_frame = None
         self.processed_frame = None
         
-        # Cargar Modelos de Inteligencia Artificial
-        try:
-            self.face_net = cv2.dnn.readNetFromCaffe(PROTO_PATH, CAFFE_PATH)
-            self.classifier = tf.keras.models.load_model(MODEL_PATH)
-            self.get_logger().info(f'✅ Modelos cargados desde: {MODELS_DIR}')
-        except Exception as e:
-            self.get_logger().error(f'❌ Error crítico cargando modelos de IA: {str(e)}')
-            self.face_net = None
+        # Inicializamos variables de control de carga de IA vacías
+        self.face_net = None
+        self.classifier = None
+        self.models_loaded = False
 
         # Parámetros del Algoritmo de Seguimiento (Control Proporcional)
         self.target_center_x = 160.0    # Centro de la imagen (320/2)
@@ -73,17 +69,37 @@ class FaceVisionNode(Node):
         self.kp_dist = 0.003            # Sensibilidad de avance/retroceso
         self.target_face_width = 80.0   # Tamaño de cara ideal (distancia deseada)
         
-        self.get_logger().info('Face Vision & Tracking Node Listo.')
+        self.get_logger().info('Constructor del Nodo listo. Inicializando carga de modelos en segundo plano...')
+        
+        # Lanzamos un hilo secundario exclusivo para cargar la IA sin congelar la red de Flask
+        threading.Thread(target=self.load_ai_models, daemon=True).start()
+
+    def load_ai_models(self):
+        """Carga los modelos pesados de IA en un hilo secundario."""
+        try:
+            # Forzamos a TensorFlow a usar CPU de forma optimizada en WSL
+            os.environ['CUDA_VISIBLE_DEVICES'] = '-1'
+            
+            self.get_logger().info('⏳ Cargando redes neuronales de seguimiento facial...')
+            self.face_net = cv2.dnn.readNetFromCaffe(PROTO_PATH, CAFFE_PATH)
+            self.classifier = tf.keras.models.load_model(MODEL_PATH)
+            self.models_loaded = True
+            
+            self.get_logger().info(f'✅ Modelos cargados exitosamente desde: {MODELS_DIR}')
+            self.get_logger().info('Face Vision & Tracking Node COMPLETAMENTE LISTO.')
+        except Exception as e:
+            self.get_logger().error(f'❌ Error crítico cargando modelos de IA: {str(e)}')
 
     def listener_callback(self, data):
         """
         Callback que procesa cada frame recibido de la cámara.
-        Realiza la detección y calcula el comando de seguimiento.
+        Realiza la detección y calcula el comando de seguimiento si la IA está lista.
         """
         frame = self.bridge.imgmsg_to_cv2(data, "bgr8")
         self.current_frame = frame
         
-        if self.face_net is None:
+        # Si la IA aún no termina de cargar en su hilo, transmitimos el feed limpio
+        if not self.models_loaded or self.face_net is None:
             self.processed_frame = frame
             return
 
@@ -141,7 +157,6 @@ class FaceVisionNode(Node):
         self.processed_frame = frame
 
 # --- SERVIDOR FLASK PARA STREAMING ---
-
 global_node = None
 
 def generate_frames():
@@ -172,7 +187,7 @@ def main():
     # 1. Lanzar ROS 2 en un hilo de fondo
     threading.Thread(target=ros2_thread, daemon=True).start()
     
-    # 2. Lanzar Flask en el hilo principal
+    # 2. Lanzar Flask en el hilo principal de red de forma inmediata
     print("🚀 Face Vision & Tracking Server activo en http://0.0.0.0:5000/video_feed")
     app.run(host='0.0.0.0', port=5000, threaded=True)
 

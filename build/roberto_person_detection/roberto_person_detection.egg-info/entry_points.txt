@@ -1,0 +1,3 @@
+[console_scripts]
+image_publisher = roberto_person_detection.image_publisher:main
+person_detector = roberto_person_detection.person_detector:main

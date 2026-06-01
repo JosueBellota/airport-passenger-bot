@@ -1,0 +1,4 @@
+[console_scripts]
+follow_waypoints = roberto_nav_ruta.follow_waypoints:main
+navigate_to_pose = roberto_nav_ruta.navigate_to_pose:main
+test_navigation = roberto_nav_ruta.test_navigation:main

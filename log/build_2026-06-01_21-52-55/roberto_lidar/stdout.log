@@ -1,0 +1,27 @@
+running egg_info
+writing ../build/roberto_lidar/roberto_lidar.egg-info/PKG-INFO
+writing dependency_links to ../build/roberto_lidar/roberto_lidar.egg-info/dependency_links.txt
+writing entry points to ../build/roberto_lidar/roberto_lidar.egg-info/entry_points.txt
+writing requirements to ../build/roberto_lidar/roberto_lidar.egg-info/requires.txt
+writing top-level names to ../build/roberto_lidar/roberto_lidar.egg-info/top_level.txt
+reading manifest file '../build/roberto_lidar/roberto_lidar.egg-info/SOURCES.txt'
+writing manifest file '../build/roberto_lidar/roberto_lidar.egg-info/SOURCES.txt'
+running build
+running build_py
+copying roberto_lidar/obstacle_avoidance_node.py -> /root/ROS2/Roberto/build/roberto_lidar/build/lib/roberto_lidar
+copying roberto_lidar/obstacle_detection_node.py -> /root/ROS2/Roberto/build/roberto_lidar/build/lib/roberto_lidar
+copying roberto_lidar/__init__.py -> /root/ROS2/Roberto/build/roberto_lidar/build/lib/roberto_lidar
+running install
+running install_lib
+running install_data
+copying resource/roberto_lidar -> /root/ROS2/Roberto/install/roberto_lidar/share/ament_index/resource_index/packages
+copying package.xml -> /root/ROS2/Roberto/install/roberto_lidar/share/roberto_lidar
+copying launch/lidar.launch.py -> /root/ROS2/Roberto/install/roberto_lidar/share/roberto_lidar/launch
+copying rviz/rviz_lidar_config.rviz -> /root/ROS2/Roberto/install/roberto_lidar/share/roberto_lidar/rviz
+running install_egg_info
+removing '/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages/roberto_lidar-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/roberto_lidar/roberto_lidar.egg-info to /root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages/roberto_lidar-0.0.0-py3.12.egg-info
+running install_scripts
+Installing obstacle_avoidance script to /root/ROS2/Roberto/install/roberto_lidar/lib/roberto_lidar
+Installing obstacle_detection_node script to /root/ROS2/Roberto/install/roberto_lidar/lib/roberto_lidar
+writing list of installed files to '/root/ROS2/Roberto/build/roberto_lidar/install.log'

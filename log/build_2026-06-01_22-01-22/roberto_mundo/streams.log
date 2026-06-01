@@ -1,0 +1,374 @@
+[0.497s] Invoking command in '/root/ROS2/Roberto/build/roberto_mundo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_person_detection:/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_gesture_detection:/opt/ros/jazzy /usr/bin/cmake --build /root/ROS2/Roberto/build/roberto_mundo -- -j8 -l8
+[1.949s] [ 25%] Built target obstacles
+[1.951s] [ 50%] Built target obstacle1
+[1.952s] [ 75%] Built target obstacle2
+[1.953s] [100%] Built target turtlebot3_drive
+[1.954s] Invoked command in '/root/ROS2/Roberto/build/roberto_mundo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_person_detection:/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_gesture_detection:/opt/ros/jazzy /usr/bin/cmake --build /root/ROS2/Roberto/build/roberto_mundo -- -j8 -l8
+[1.969s] Invoking command in '/root/ROS2/Roberto/build/roberto_mundo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_person_detection:/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_gesture_detection:/opt/ros/jazzy /usr/bin/cmake --install /root/ROS2/Roberto/build/roberto_mundo
+[2.501s] -- Install configuration: ""
+[2.551s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/turtlebot3_drive
+[2.554s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacles.so
+[2.557s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle1.so
+[2.559s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle2.so
+[2.560s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch
+[2.562s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/spawn_turtlebot3.launch.py
+[2.563s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/robot_state_publisher.launch.py
+[2.565s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/roberto.launch.py
+[2.567s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models
+[2.568s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall
+[2.570s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf_Zone.Identifier
+[2.571s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config_Zone.Identifier
+[2.574s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf
+[2.575s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf
+[2.577s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf_Zone.Identifier
+[2.580s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf:Zone.Identifier
+[2.582s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config
+[2.583s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf:Zone.Identifier
+[2.584s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf:Zone.Identifier
+[2.585s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf_Zone.Identifier
+[2.586s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config:Zone.Identifier
+[2.587s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials
+[2.589s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures
+[2.594s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png
+[2.600s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png:Zone.Identifier
+[2.601s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png_Zone.Identifier
+[2.602s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts
+[2.602s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material_Zone.Identifier
+[2.602s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material:Zone.Identifier
+[2.608s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material
+[2.609s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf
+[2.610s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house
+[2.611s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house/model.config
+[2.618s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house/model.sdf
+[2.621s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane
+[2.623s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf_Zone.Identifier
+[2.625s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config_Zone.Identifier
+[2.626s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf
+[2.627s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf:Zone.Identifier
+[2.628s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf
+[2.628s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf_Zone.Identifier
+[2.635s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf_Zone.Identifier
+[2.636s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf:Zone.Identifier
+[2.637s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config
+[2.638s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf:Zone.Identifier
+[2.639s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf:Zone.Identifier
+[2.639s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf_Zone.Identifier
+[2.640s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config:Zone.Identifier
+[2.640s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf
+[2.641s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf
+[2.643s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam
+[2.643s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf_Zone - Copy.Identifier
+[2.644s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf
+[2.644s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf:Zone - Copy.Identifier
+[2.644s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config
+[2.644s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config:Zone - Copy.Identifier
+[2.644s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config_Zone - Copy.Identifier
+[2.645s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.sdf
+[2.645s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls
+[2.645s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config_Zone.Identifier
+[2.646s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config
+[2.646s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf:Zone.Identifier
+[2.646s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf_Zone.Identifier
+[2.646s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config:Zone.Identifier
+[2.646s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials
+[2.647s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures
+[2.647s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png
+[2.647s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png:Zone.Identifier
+[2.647s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png_Zone.Identifier
+[2.647s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts
+[2.648s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material_Zone.Identifier
+[2.648s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material:Zone.Identifier
+[2.649s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material
+[2.650s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf
+[2.650s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun
+[2.651s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf_Zone.Identifier
+[2.651s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config_Zone.Identifier
+[2.651s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf
+[2.651s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf:Zone.Identifier
+[2.652s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf
+[2.652s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf_Zone.Identifier
+[2.653s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf_Zone.Identifier
+[2.654s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf:Zone.Identifier
+[2.654s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config
+[2.655s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf:Zone.Identifier
+[2.655s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf:Zone.Identifier
+[2.655s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf_Zone.Identifier
+[2.655s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config:Zone.Identifier
+[2.655s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf
+[2.655s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf
+[2.655s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/model.config
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeye.dae
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeye.png
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/brown_eye.png
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeyev2.dae
+[2.656s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/eyebrow001.png
+[2.657s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/female_casualsuit02_normal.png
+[2.657s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/female_casualsuit02_diffuse.png
+[2.657s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/bob02_diffuse.png
+[2.657s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/model.sdf
+[2.657s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye
+[2.657s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/model.config
+[2.658s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes
+[2.658s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/brown_eye.png
+[2.659s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/shoes03_diffuse.png
+[2.659s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/young_darkskinned_male_diffuse.png
+[2.660s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/male_casualsuit03_normal.png
+[2.660s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeye.png
+[2.661s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeyev2.dae
+[2.661s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/eyebrow001.png
+[2.661s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/teeth.png
+[2.661s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeye.dae
+[2.661s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/tongue01_diffuse.png
+[2.661s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/male_casualsuit03_diffuse.png
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/model.sdf
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/model.config
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/female_elegantsuit01_diffuse.png
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/female_elegantsuit01_normal.png
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/teeth.png
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseyev2.dae
+[2.662s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/old_lightskinned_female_diffuse.png
+[2.663s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/green_eye.png
+[2.663s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseye.png
+[2.663s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/braid01_diffuse.png
+[2.663s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/tongue01_diffuse.png
+[2.663s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseye.dae
+[2.663s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/model.sdf
+[2.664s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye
+[2.664s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/model.config
+[2.665s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes
+[2.667s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/eyebrow010.png
+[2.667s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/brown_eye.png
+[2.669s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/young_lightskinned_female_diffuse3.png
+[2.669s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeye.png
+[2.670s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/male_worksuit01_normal.png
+[2.670s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeyev2.dae
+[2.671s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/male_worksuit01_diffuse.png
+[2.671s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/teeth.png
+[2.672s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/short01_diffuse.png
+[2.672s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeye.dae
+[2.673s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/tongue01_diffuse.png
+[2.673s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/model.sdf
+[2.673s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger
+[2.673s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf_Zone - Copy.Identifier
+[2.674s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf
+[2.674s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf:Zone - Copy.Identifier
+[2.674s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config
+[2.674s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config:Zone - Copy.Identifier
+[2.674s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config_Zone - Copy.Identifier
+[2.675s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.sdf
+[2.675s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common
+[2.675s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config
+[2.675s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config:Zone - Copy.Identifier
+[2.675s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config_Zone - Copy.Identifier
+[2.675s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes
+[2.675s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae
+[2.676s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae_Zone - Copy.Identifier
+[2.676s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae
+[2.676s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae:Zone - Copy.Identifier
+[2.676s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae:Zone - Copy.Identifier
+[2.676s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels
+[2.676s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl
+[2.676s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl
+[2.677s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl:Zone - Copy.Identifier
+[2.677s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl_Zone - Copy.Identifier
+[2.677s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl_Zone - Copy.Identifier
+[2.678s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl:Zone - Copy.Identifier
+[2.679s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae_Zone - Copy.Identifier
+[2.680s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae
+[2.681s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae:Zone - Copy.Identifier
+[2.681s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae_Zone - Copy.Identifier
+[2.681s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae
+[2.682s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors
+[2.682s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg
+[2.683s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/lds.stl
+[2.683s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/astra.jpg
+[2.684s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg:Zone - Copy.Identifier
+[2.684s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/astra.dae
+[2.685s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.dae
+[2.685s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg_Zone - Copy.Identifier
+[2.686s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae
+[2.686s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae:Zone - Copy.Identifier
+[2.686s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae_Zone - Copy.Identifier
+[2.687s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/r200.dae
+[2.687s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae_Zone - Copy.Identifier
+[2.687s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases
+[2.687s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl_Zone - Copy.Identifier
+[2.688s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl
+[2.688s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl:Zone - Copy.Identifier
+[2.689s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/burger_base.stl
+[2.691s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl_Zone - Copy.Identifier
+[2.691s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl
+[2.691s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl:Zone - Copy.Identifier
+[2.691s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae:Zone - Copy.Identifier
+[2.692s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair
+[2.694s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config_Zone.Identifier
+[2.694s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails
+[2.694s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png_Zone.Identifier
+[2.694s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png:Zone.Identifier
+[2.694s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png:Zone.Identifier
+[2.694s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png_Zone.Identifier
+[2.695s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png:Zone.Identifier
+[2.695s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png
+[2.695s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png
+[2.695s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png
+[2.696s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png_Zone.Identifier
+[2.696s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png
+[2.697s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png:Zone.Identifier
+[2.697s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png_Zone.Identifier
+[2.697s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png
+[2.697s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png_Zone.Identifier
+[2.698s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png:Zone.Identifier
+[2.698s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config
+[2.698s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf:Zone.Identifier
+[2.699s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes
+[2.699s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj:Zone.Identifier
+[2.699s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj:Zone.Identifier
+[2.699s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png:Zone.Identifier
+[2.699s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl
+[2.700s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl_Zone.Identifier
+[2.700s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png
+[2.700s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj_Zone.Identifier
+[2.700s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl_Zone.Identifier
+[2.700s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png_Zone.Identifier
+[2.700s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl:Zone.Identifier
+[2.700s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl:Zone.Identifier
+[2.701s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj
+[2.701s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj
+[2.702s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj_Zone.Identifier
+[2.702s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl
+[2.702s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf_Zone.Identifier
+[2.703s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config:Zone.Identifier
+[2.703s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf
+[2.704s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe
+[2.704s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/model.config
+[2.705s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/meshes
+[2.706s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/meshes/cafe.dae
+[2.706s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials
+[2.707s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures
+[2.707s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_22.jpg
+[2.708s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_35.jpg
+[2.708s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_34.jpg
+[2.708s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_23.jpg
+[2.709s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_28.jpg
+[2.709s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_10.jpg
+[2.709s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_37.jpg
+[2.709s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_25.jpg
+[2.710s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_31.jpg
+[2.710s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_30.jpg
+[2.710s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_29.jpg
+[2.710s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_24.jpg
+[2.711s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_2.jpg
+[2.711s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_21.jpg
+[2.711s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_26.jpg
+[2.711s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/model.sdf
+[2.712s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params
+[2.712s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone - Copy.Identifier_Zone.Identifier
+[2.712s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone - Copy.Identifier:Zone.Identifier
+[2.712s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml
+[2.713s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone - Copy.Identifier_Zone.Identifier
+[2.713s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone.Identifier
+[2.713s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone - Copy.Identifier
+[2.713s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml
+[2.714s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone.Identifier
+[2.714s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone - Copy.Identifier:Zone.Identifier
+[2.714s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone.Identifier
+[2.714s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone - Copy.Identifier
+[2.715s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone - Copy.Identifier
+[2.715s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone - Copy.Identifier
+[2.715s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone.Identifier
+[2.715s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz
+[2.716s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone - Copy.Identifier_Zone.Identifier
+[2.716s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone - Copy.Identifier
+[2.716s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone - Copy.Identifier
+[2.716s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf
+[2.716s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone.Identifier
+[2.717s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone.Identifier
+[2.717s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone - Copy.Identifier:Zone.Identifier
+[2.719s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf
+[2.719s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone - Copy.Identifier_Zone.Identifier
+[2.720s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf_Zone.Identifier_Zone.Identifier
+[2.720s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone - Copy.Identifier:Zone.Identifier
+[2.721s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone - Copy.Identifier
+[2.722s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf_Zone.Identifier
+[2.722s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf:Zone.Identifier
+[2.722s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone - Copy.Identifier
+[2.722s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone.Identifier
+[2.723s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone - Copy.Identifier
+[2.723s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf
+[2.724s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone - Copy.Identifier_Zone.Identifier
+[2.725s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf
+[2.726s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone.Identifier
+[2.726s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf
+[2.726s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone - Copy.Identifier
+[2.726s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf:Zone.Identifier:Zone.Identifier
+[2.727s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone.Identifier
+[2.727s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone.Identifier
+[2.727s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone - Copy.Identifier:Zone.Identifier
+[2.728s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds
+[2.728s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds/distribution_center.world
+[2.728s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds/roberto.world
+[2.729s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps
+[2.729s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm_Zone.Identifier
+[2.729s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm
+[2.730s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml_Zone.Identifier
+[2.730s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml:Zone.Identifier
+[2.730s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml
+[2.731s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm:Zone.Identifier
+[2.731s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include/
+[2.731s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone - Copy.Identifier
+[2.731s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp:Zone.Identifier:Zone.Identifier
+[2.732s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp:Zone.Identifier
+[2.732s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp:Zone.Identifier
+[2.732s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp:Zone.Identifier
+[2.732s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone - Copy.Identifier_Zone.Identifier
+[2.732s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp_Zone.Identifier
+[2.733s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone - Copy.Identifier
+[2.734s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone.Identifier
+[2.734s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp:Zone.Identifier
+[2.735s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp_Zone.Identifier_Zone.Identifier
+[2.735s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone - Copy.Identifier:Zone.Identifier
+[2.735s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp
+[2.735s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone - Copy.Identifier_Zone.Identifier
+[2.736s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp
+[2.736s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp
+[2.736s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp
+[2.736s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone - Copy.Identifier:Zone.Identifier
+[2.736s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp_Zone.Identifier_Zone.Identifier
+[2.737s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp
+[2.737s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone - Copy.Identifier
+[2.738s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp:Zone.Identifier:Zone.Identifier
+[2.738s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp_Zone.Identifier_Zone.Identifier
+[2.738s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp
+[2.738s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone.Identifier
+[2.738s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone - Copy.Identifier
+[2.739s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp_Zone.Identifier_Zone.Identifier
+[2.739s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone.Identifier
+[2.739s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp:Zone.Identifier:Zone.Identifier
+[2.740s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp:Zone.Identifier:Zone.Identifier
+[2.740s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp_Zone.Identifier
+[2.740s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone.Identifier
+[2.740s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp_Zone.Identifier
+[2.740s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp_Zone.Identifier
+[2.740s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/package_run_dependencies/roberto_mundo
+[2.743s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/parent_prefix_path/roberto_mundo
+[2.744s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/ament_prefix_path.sh
+[2.745s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/ament_prefix_path.dsv
+[2.746s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/path.sh
+[2.747s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/path.dsv
+[2.747s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.bash
+[2.748s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.sh
+[2.749s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.zsh
+[2.749s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.dsv
+[2.749s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/package.dsv
+[2.749s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/packages/roberto_mundo
+[2.749s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.750s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.750s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/roberto_mundoConfig.cmake
+[2.750s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/roberto_mundoConfig-version.cmake
+[2.750s] -- Up-to-date: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/package.xml
+[2.750s] Invoked command in '/root/ROS2/Roberto/build/roberto_mundo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_person_detection:/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_gesture_detection:/opt/ros/jazzy /usr/bin/cmake --install /root/ROS2/Roberto/build/roberto_mundo

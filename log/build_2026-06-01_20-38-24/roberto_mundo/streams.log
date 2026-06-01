@@ -1,0 +1,666 @@
+[0.334s] Invoking command in '/root/ROS2/Roberto/build/roberto_mundo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy /usr/bin/cmake /root/ROS2/Roberto/roberto_mundo -DCMAKE_INSTALL_PREFIX=/root/ROS2/Roberto/install/roberto_mundo
+[1.260s] -- The C compiler identification is GNU 13.3.0
+[1.353s] -- The CXX compiler identification is GNU 13.3.0
+[1.813s] -- Detecting C compiler ABI info
+[2.072s] -- Detecting C compiler ABI info - done
+[2.089s] -- Check for working C compiler: /usr/bin/cc - skipped
+[2.091s] -- Detecting C compile features
+[2.093s] -- Detecting C compile features - done
+[2.152s] -- Detecting CXX compiler ABI info
+[2.432s] -- Detecting CXX compiler ABI info - done
+[2.445s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[2.445s] -- Detecting CXX compile features
+[2.446s] -- Detecting CXX compile features - done
+[2.463s] -- Found ament_cmake: 2.5.5 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[2.736s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[2.959s] -- Found ros_gz_sim: 1.0.18 (/opt/ros/jazzy/share/ros_gz_sim/cmake)
+[3.165s] -- Found rosidl_generator_c: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[3.203s] -- Found rosidl_generator_cpp: 4.6.7 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[3.247s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[3.294s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[3.484s] -- Found rmw_implementation_cmake: 7.3.3 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[3.495s] -- Found rmw_fastrtps_cpp: 8.4.3 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[3.635s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[3.805s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[3.913s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[4.393s] -- Found nav_msgs: 5.3.6 (/opt/ros/jazzy/share/nav_msgs/cmake)
+[4.430s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[4.463s] -- Found gz_math_vendor: 0.0.8 (/opt/ros/jazzy/share/gz_math_vendor/cmake)
+[4.478s] -- Looking for gz-math7 -- found version 7.5.2
+[4.488s] -- Searching for dependencies of gz-math7
+[4.492s] -- Looking for gz-utils2 -- found version 2.2.1
+[4.492s] -- Searching for dependencies of gz-utils2
+[4.498s] -- Found gz_sim_vendor: 0.0.9 (/opt/ros/jazzy/share/gz_sim_vendor/cmake)
+[4.616s] -- Looking for gz-sim8 -- found version 8.10.0
+[4.617s] -- Searching for dependencies of gz-sim8
+[4.621s] -- Looking for sdformat14 -- found version 14.8.0
+[4.622s] -- Searching for dependencies of sdformat14
+[4.628s] -- Checking for module 'tinyxml2'
+[4.647s] --   Found tinyxml2, version 10.0.0
+[4.689s] -- Looking for gz-math7 -- found version 7.5.2
+[4.689s] -- Looking for gz-utils2 -- found version 2.2.1
+[4.690s] -- Searching for dependencies of gz-utils2
+[4.690s] -- Searching for <gz-utils2> component [cli]
+[4.695s] -- Looking for gz-utils2-cli -- found version 2.2.1
+[4.695s] -- Searching for dependencies of gz-utils2-cli
+[4.700s] -- Looking for gz-plugin2 -- found version 2.0.4
+[4.700s] -- Searching for dependencies of gz-plugin2
+[4.701s] -- Looking for gz-utils2 -- found version 2.2.1
+[4.701s] -- Searching for <gz-plugin2> component [loader]
+[4.706s] -- Looking for gz-plugin2-loader -- found version 2.0.4
+[4.706s] -- Searching for dependencies of gz-plugin2-loader
+[4.707s] -- Searching for <gz-plugin2> component [register]
+[4.712s] -- Looking for gz-plugin2-register -- found version 2.0.4
+[4.712s] -- Searching for dependencies of gz-plugin2-register
+[4.717s] -- Looking for gz-transport13 -- found version 13.5.0
+[4.717s] -- Searching for dependencies of gz-transport13
+[6.667s] -- Found Protobuf: /usr/lib/x86_64-linux-gnu/libprotobuf.so (found version "3.21.12") 
+[7.947s] -- Config-file not installed for ZeroMQ -- checking for pkg-config
+[7.953s] -- Checking for module 'libzmq >= 4'
+[7.974s] --   Found libzmq, version 4.3.5
+[8.031s] -- Found ZeroMQ: TRUE (Required is at least version "4") 
+[8.081s] -- Checking for module 'uuid'
+[8.101s] --   Found uuid, version 2.39.3
+[8.144s] -- Found UUID: TRUE  
+[8.145s] -- Looking for gz-utils2 -- found version 2.2.1
+[8.150s] -- Looking for gz-msgs10 -- found version 10.3.2
+[8.150s] -- Searching for dependencies of gz-msgs10
+[9.433s] -- Looking for gz-utils2 -- found version 2.2.1
+[9.434s] -- Looking for gz-math7 -- found version 7.5.2
+[9.443s] -- Searching for <gz-transport13> component [log]
+[9.446s] -- Looking for gz-transport13-log -- found version 13.5.0
+[9.446s] -- Searching for dependencies of gz-transport13-log
+[9.447s] -- Searching for <gz-transport13> component [parameters]
+[9.452s] -- Looking for gz-transport13-parameters -- found version 13.5.0
+[9.452s] -- Searching for dependencies of gz-transport13-parameters
+[9.453s] -- Looking for gz-msgs10 -- found version 10.3.2
+[9.458s] -- Looking for gz-common5 -- found version 5.7.1
+[9.458s] -- Searching for dependencies of gz-common5
+[9.459s] -- Looking for gz-utils2 -- found version 2.2.1
+[9.501s] -- Looking for dlfcn.h - found
+[9.545s] -- Looking for libdl - found
+[9.547s] -- Found DL: TRUE  
+[9.555s] -- Searching for <gz-common5> component [av]
+[9.561s] -- Looking for gz-common5-av -- found version 5.7.1
+[9.561s] -- Searching for dependencies of gz-common5-av
+[9.568s] -- Checking for module 'libswscale'
+[9.607s] --   Found libswscale, version 7.5.100
+[9.663s] -- Found SWSCALE: TRUE  
+[9.670s] -- Checking for module 'libavdevice >= 56.4.100'
+[9.691s] --   Found libavdevice, version 60.3.100
+[9.751s] -- Found AVDEVICE: TRUE (Required is at least version "56.4.100") 
+[9.758s] -- Checking for module 'libavformat'
+[9.778s] --   Found libavformat, version 60.16.100
+[9.829s] -- Found AVFORMAT: TRUE  
+[9.835s] -- Checking for module 'libavcodec'
+[9.856s] --   Found libavcodec, version 60.31.102
+[9.904s] -- Found AVCODEC: TRUE  
+[9.910s] -- Checking for module 'libavutil'
+[9.931s] --   Found libavutil, version 58.29.100
+[9.975s] -- Found AVUTIL: TRUE  
+[9.976s] -- Searching for <gz-common5> component [events]
+[9.980s] -- Looking for gz-common5-events -- found version 5.7.1
+[9.981s] -- Searching for dependencies of gz-common5-events
+[9.981s] -- Looking for gz-math7 -- found version 7.5.2
+[9.982s] -- Searching for <gz-common5> component [graphics]
+[9.987s] -- Looking for gz-common5-graphics -- found version 5.7.1
+[9.987s] -- Searching for dependencies of gz-common5-graphics
+[9.987s] -- Looking for gz-math7 -- found version 7.5.2
+[9.996s] -- Found GzAssimp: TRUE (found version "5.3.0") 
+[9.997s] -- Searching for <gz-common5> component [io]
+[10.002s] -- Looking for gz-common5-io -- found version 5.7.1
+[10.002s] -- Searching for dependencies of gz-common5-io
+[10.003s] -- Searching for <gz-common5> component [profiler]
+[10.008s] -- Looking for gz-common5-profiler -- found version 5.7.1
+[10.008s] -- Searching for dependencies of gz-common5-profiler
+[10.015s] -- Looking for gz-fuel_tools9 -- found version 9.1.1
+[10.015s] -- Searching for dependencies of gz-fuel_tools9
+[11.524s] -- Found CURL: /usr/lib/x86_64-linux-gnu/libcurl.so (found version "8.5.0")  
+[11.540s] -- Checking for module 'jsoncpp'
+[11.561s] --   Found jsoncpp, version 1.9.5
+[11.609s] -- Found JSONCPP: TRUE  
+[12.858s] -- Checking for module 'yaml-0.1'
+[12.879s] --   Found yaml-0.1, version 0.2.5
+[12.925s] -- Found YAML: TRUE  
+[12.931s] -- Checking for module 'libzip'
+[12.956s] --   Found libzip, version 1.7.3
+[13.004s] -- Found ZIP: TRUE  
+[13.005s] -- Looking for gz-utils2 -- found version 2.2.1
+[13.005s] -- Looking for gz-common5 -- found version 5.7.1
+[13.005s] -- Searching for dependencies of gz-common5
+[13.006s] -- Looking for gz-utils2 -- found version 2.2.1
+[13.006s] -- Looking for dlfcn.h - found
+[13.006s] -- Looking for libdl - found
+[13.016s] -- Searching for <gz-common5> component [testing]
+[13.021s] -- Looking for gz-common5-testing -- found version 5.7.1
+[13.022s] -- Searching for dependencies of gz-common5-testing
+[13.023s] -- Looking for gz-math7 -- found version 7.5.2
+[13.023s] -- Looking for gz-msgs10 -- found version 10.3.2
+[13.028s] -- Looking for gz-gui8 -- found version 8.4.0
+[13.028s] -- Searching for dependencies of gz-gui8
+[14.315s] -- Looking for gz-utils2 -- found version 2.2.1
+[14.315s] -- Looking for gz-math7 -- found version 7.5.2
+[14.316s] -- Looking for gz-common5 -- found version 5.7.1
+[14.316s] -- Looking for gz-plugin2 -- found version 2.0.4
+[14.317s] -- Looking for gz-transport13 -- found version 13.5.0
+[14.323s] -- Looking for gz-rendering8 -- found version 8.2.3
+[14.323s] -- Searching for dependencies of gz-rendering8
+[14.323s] -- Looking for gz-math7 -- found version 7.5.2
+[14.323s] -- Searching for dependencies of gz-math7
+[14.324s] -- Looking for gz-utils2 -- found version 2.2.1
+[14.324s] -- Searching for <gz-math7> component [eigen3]
+[14.329s] -- Looking for gz-math7-eigen3 -- found version 7.5.2
+[14.329s] -- Searching for dependencies of gz-math7-eigen3
+[14.343s] -- Looking for gz-common5 -- found version 5.7.1
+[14.343s] -- Searching for dependencies of gz-common5
+[14.344s] -- Looking for gz-utils2 -- found version 2.2.1
+[14.344s] -- Looking for dlfcn.h - found
+[14.344s] -- Looking for libdl - found
+[14.353s] -- Searching for <gz-common5> component [graphics]
+[14.353s] -- Searching for <gz-common5> component [events]
+[14.353s] -- Searching for <gz-common5> component [geospatial]
+[14.358s] -- Looking for gz-common5-geospatial -- found version 5.7.1
+[14.358s] -- Searching for dependencies of gz-common5-geospatial
+[14.359s] -- Looking for gz-math7 -- found version 7.5.2
+[14.359s] -- Looking for gz-common5 -- found version 5.7.1
+[14.361s] -- Looking for gz-plugin2 -- found version 2.0.4
+[14.361s] -- Searching for dependencies of gz-plugin2
+[14.362s] -- Looking for gz-utils2 -- found version 2.2.1
+[14.362s] -- Searching for <gz-plugin2> component [all]
+[14.367s] -- Looking for all libraries of gz-plugin2 -- found version 2.0.4
+[14.367s] -- Looking for gz-plugin2 -- found version 2.0.4
+[14.368s] -- Looking for gz-utils2 -- found version 2.2.1
+[15.063s] -- Found OpenGL: /usr/lib/x86_64-linux-gnu/libOpenGL.so  found components: OpenGL 
+[15.065s] -- Looking for gz-msgs10 -- found version 10.3.2
+[15.199s] -- Looking for gz-physics7 -- found version 7.6.0
+[15.199s] -- Searching for dependencies of gz-physics7
+[15.199s] -- Looking for gz-common5 -- found version 5.7.1
+[15.200s] -- Looking for gz-math7 -- found version 7.5.2
+[15.200s] -- Looking for gz-plugin2 -- found version 2.0.4
+[15.201s] -- Looking for gz-utils2 -- found version 2.2.1
+[15.202s] -- Searching for <gz-physics7> component [heightmap]
+[15.206s] -- Looking for gz-physics7-heightmap -- found version 7.6.0
+[15.207s] -- Searching for dependencies of gz-physics7-heightmap
+[15.207s] -- Looking for gz-common5 -- found version 5.7.1
+[15.208s] -- Searching for <gz-physics7> component [mesh]
+[15.211s] -- Looking for gz-physics7-mesh -- found version 7.6.0
+[15.211s] -- Searching for dependencies of gz-physics7-mesh
+[15.212s] -- Looking for gz-common5 -- found version 5.7.1
+[15.212s] -- Searching for <gz-physics7> component [sdf]
+[15.217s] -- Looking for gz-physics7-sdf -- found version 7.6.0
+[15.218s] -- Searching for dependencies of gz-physics7-sdf
+[15.218s] -- Looking for sdformat14 -- found version 14.8.0
+[15.223s] -- Looking for gz-sensors8 -- found version 8.2.2
+[15.223s] -- Searching for dependencies of gz-sensors8
+[16.503s] -- Looking for gz-math7 -- found version 7.5.2
+[16.503s] -- Looking for gz-common5 -- found version 5.7.1
+[16.503s] -- Looking for gz-transport13 -- found version 13.5.0
+[16.504s] -- Looking for gz-rendering8 -- found version 8.2.3
+[16.504s] -- Looking for gz-msgs10 -- found version 10.3.2
+[16.505s] -- Looking for sdformat14 -- found version 14.8.0
+[16.506s] -- Searching for <gz-sensors8> component [air_pressure]
+[16.509s] -- Looking for gz-sensors8-air_pressure -- found version 8.2.2
+[16.509s] -- Searching for dependencies of gz-sensors8-air_pressure
+[16.510s] -- Searching for <gz-sensors8> component [air_speed]
+[16.514s] -- Looking for gz-sensors8-air_speed -- found version 8.2.2
+[16.514s] -- Searching for dependencies of gz-sensors8-air_speed
+[16.514s] -- Searching for <gz-sensors8> component [altimeter]
+[16.518s] -- Looking for gz-sensors8-altimeter -- found version 8.2.2
+[16.519s] -- Searching for dependencies of gz-sensors8-altimeter
+[16.519s] -- Searching for <gz-sensors8> component [imu]
+[16.525s] -- Looking for gz-sensors8-imu -- found version 8.2.2
+[16.525s] -- Searching for dependencies of gz-sensors8-imu
+[16.526s] -- Searching for <gz-sensors8> component [force_torque]
+[16.529s] -- Looking for gz-sensors8-force_torque -- found version 8.2.2
+[16.530s] -- Searching for dependencies of gz-sensors8-force_torque
+[16.530s] -- Searching for <gz-sensors8> component [logical_camera]
+[16.534s] -- Looking for gz-sensors8-logical_camera -- found version 8.2.2
+[16.535s] -- Searching for dependencies of gz-sensors8-logical_camera
+[16.535s] -- Searching for <gz-sensors8> component [magnetometer]
+[16.539s] -- Looking for gz-sensors8-magnetometer -- found version 8.2.2
+[16.539s] -- Searching for dependencies of gz-sensors8-magnetometer
+[16.540s] -- Searching for <gz-sensors8> component [navsat]
+[16.544s] -- Looking for gz-sensors8-navsat -- found version 8.2.2
+[16.544s] -- Searching for dependencies of gz-sensors8-navsat
+[16.545s] -- Searching for <gz-sensors8> component [dvl]
+[16.549s] -- Looking for gz-sensors8-dvl -- found version 8.2.2
+[16.549s] -- Searching for dependencies of gz-sensors8-dvl
+[16.550s] -- Looking for gz-sensors8 -- found version 8.2.2
+[16.550s] -- Searching for dependencies of gz-sensors8
+[17.850s] -- Looking for gz-math7 -- found version 7.5.2
+[17.850s] -- Looking for gz-common5 -- found version 5.7.1
+[17.851s] -- Looking for gz-transport13 -- found version 13.5.0
+[17.851s] -- Looking for gz-rendering8 -- found version 8.2.3
+[17.852s] -- Looking for gz-msgs10 -- found version 10.3.2
+[17.852s] -- Looking for sdformat14 -- found version 14.8.0
+[17.853s] -- Searching for <gz-sensors8> component [rendering]
+[17.857s] -- Looking for gz-sensors8-rendering -- found version 8.2.2
+[17.857s] -- Searching for dependencies of gz-sensors8-rendering
+[17.858s] -- Searching for <gz-sensors8> component [rendering]
+[17.859s] -- Searching for <gz-sensors8> component [lidar]
+[17.861s] -- Looking for gz-sensors8-lidar -- found version 8.2.2
+[17.862s] -- Searching for dependencies of gz-sensors8-lidar
+[17.862s] -- Looking for gz-sensors8 -- found version 8.2.2
+[17.863s] -- Searching for <gz-sensors8> component [gpu_lidar]
+[17.866s] -- Looking for gz-sensors8-gpu_lidar -- found version 8.2.2
+[17.866s] -- Searching for dependencies of gz-sensors8-gpu_lidar
+[17.866s] -- Looking for gz-sensors8 -- found version 8.2.2
+[17.867s] -- Searching for <gz-sensors8> component [camera]
+[17.871s] -- Looking for gz-sensors8-camera -- found version 8.2.2
+[17.872s] -- Searching for dependencies of gz-sensors8-camera
+[17.872s] -- Looking for gz-sensors8 -- found version 8.2.2
+[17.873s] -- Searching for <gz-sensors8> component [boundingbox_camera]
+[17.877s] -- Looking for gz-sensors8-boundingbox_camera -- found version 8.2.2
+[17.877s] -- Searching for dependencies of gz-sensors8-boundingbox_camera
+[17.878s] -- Searching for <gz-sensors8> component [segmentation_camera]
+[17.880s] -- Looking for gz-sensors8-segmentation_camera -- found version 8.2.2
+[17.881s] -- Searching for dependencies of gz-sensors8-segmentation_camera
+[17.881s] -- Searching for <gz-sensors8> component [depth_camera]
+[17.887s] -- Looking for gz-sensors8-depth_camera -- found version 8.2.2
+[17.887s] -- Searching for dependencies of gz-sensors8-depth_camera
+[17.887s] -- Looking for gz-sensors8 -- found version 8.2.2
+[17.888s] -- Searching for <gz-sensors8> component [rgbd_camera]
+[17.892s] -- Looking for gz-sensors8-rgbd_camera -- found version 8.2.2
+[17.892s] -- Searching for dependencies of gz-sensors8-rgbd_camera
+[17.893s] -- Looking for gz-sensors8 -- found version 8.2.2
+[17.893s] -- Searching for <gz-sensors8> component [thermal_camera]
+[17.896s] -- Looking for gz-sensors8-thermal_camera -- found version 8.2.2
+[17.896s] -- Searching for dependencies of gz-sensors8-thermal_camera
+[17.897s] -- Looking for gz-sensors8 -- found version 8.2.2
+[17.898s] -- Searching for <gz-sensors8> component [wide_angle_camera]
+[17.902s] -- Looking for gz-sensors8-wide_angle_camera -- found version 8.2.2
+[17.902s] -- Searching for dependencies of gz-sensors8-wide_angle_camera
+[17.903s] -- Looking for gz-rendering8 -- found version 8.2.3
+[17.904s] -- Looking for gz-math7 -- found version 7.5.2
+[17.904s] -- Looking for gz-utils2 -- found version 2.2.1
+[19.162s] -- Looking for gz-plugin2 -- found version 2.0.4
+[19.281s] -- Configuring done (18.9s)
+[19.349s] -- Generating done (0.1s)
+[19.363s] -- Build files have been written to: /root/ROS2/Roberto/build/roberto_mundo
+[19.383s] Invoked command in '/root/ROS2/Roberto/build/roberto_mundo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy /usr/bin/cmake /root/ROS2/Roberto/roberto_mundo -DCMAKE_INSTALL_PREFIX=/root/ROS2/Roberto/install/roberto_mundo
+[19.385s] Invoking command in '/root/ROS2/Roberto/build/roberto_mundo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy /usr/bin/cmake --build /root/ROS2/Roberto/build/roberto_mundo -- -j8 -l8
+[19.470s] [ 25%] [32mBuilding CXX object CMakeFiles/obstacle1.dir/src/obstacle1.cpp.o[0m
+[19.470s] [ 25%] [32mBuilding CXX object CMakeFiles/turtlebot3_drive.dir/src/turtlebot3_drive.cpp.o[0m
+[19.473s] [ 37%] [32mBuilding CXX object CMakeFiles/obstacles.dir/src/obstacles.cpp.o[0m
+[19.473s] [ 50%] [32mBuilding CXX object CMakeFiles/obstacle2.dir/src/obstacle2.cpp.o[0m
+[23.913s] [ 75%] [32m[1mLinking CXX shared library libobstacle2.so[0m
+[23.914s] [ 75%] [32m[1mLinking CXX shared library libobstacle1.so[0m
+[24.253s] [ 87%] [32m[1mLinking CXX shared library libobstacles.so[0m
+[24.295s] [ 87%] Built target obstacle2
+[24.305s] [ 87%] Built target obstacle1
+[24.554s] [ 87%] Built target obstacles
+[33.331s] [100%] [32m[1mLinking CXX executable turtlebot3_drive[0m
+[33.921s] [100%] Built target turtlebot3_drive
+[33.945s] Invoked command in '/root/ROS2/Roberto/build/roberto_mundo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy /usr/bin/cmake --build /root/ROS2/Roberto/build/roberto_mundo -- -j8 -l8
+[33.966s] Invoking command in '/root/ROS2/Roberto/build/roberto_mundo': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy /usr/bin/cmake --install /root/ROS2/Roberto/build/roberto_mundo
+[33.978s] -- Install configuration: ""
+[33.979s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/turtlebot3_drive
+[33.992s] -- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/turtlebot3_drive" to ""
+[33.992s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacles.so
+[33.993s] -- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacles.so" to ""
+[33.993s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle1.so
+[33.994s] -- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle1.so" to ""
+[33.995s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle2.so
+[33.996s] -- Set non-toolchain portion of runtime path of "/root/ROS2/Roberto/install/roberto_mundo/lib/roberto_mundo/libobstacle2.so" to ""
+[33.996s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch
+[33.997s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/spawn_turtlebot3.launch.py
+[33.997s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/robot_state_publisher.launch.py
+[33.997s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//launch/roberto.launch.py
+[33.998s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models
+[33.999s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall
+[34.000s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf_Zone.Identifier
+[34.000s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config_Zone.Identifier
+[34.001s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf
+[34.002s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf
+[34.002s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf_Zone.Identifier
+[34.003s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_3.sdf:Zone.Identifier
+[34.003s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config
+[34.003s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf:Zone.Identifier
+[34.004s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model-1_4.sdf:Zone.Identifier
+[34.004s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf_Zone.Identifier
+[34.004s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.config:Zone.Identifier
+[34.005s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials
+[34.005s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures
+[34.006s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png
+[34.022s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png:Zone.Identifier
+[34.023s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/textures/grey_wall.png_Zone.Identifier
+[34.023s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts
+[34.024s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material_Zone.Identifier
+[34.024s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material:Zone.Identifier
+[34.024s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/materials/scripts/grey_wall.material
+[34.025s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/grey_wall/model.sdf
+[34.026s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house
+[34.026s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house/model.config
+[34.027s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/small_house/model.sdf
+[34.029s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane
+[34.029s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf_Zone.Identifier
+[34.030s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config_Zone.Identifier
+[34.030s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf
+[34.048s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf:Zone.Identifier
+[34.048s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf
+[34.048s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf_Zone.Identifier
+[34.049s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf_Zone.Identifier
+[34.049s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_3.sdf:Zone.Identifier
+[34.049s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config
+[34.051s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf:Zone.Identifier
+[34.051s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_4.sdf:Zone.Identifier
+[34.052s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf_Zone.Identifier
+[34.053s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.config:Zone.Identifier
+[34.053s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model.sdf
+[34.055s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/ground_plane/model-1_2.sdf
+[34.056s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam
+[34.056s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf_Zone - Copy.Identifier
+[34.056s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf
+[34.057s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model-1_4.sdf:Zone - Copy.Identifier
+[34.058s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config
+[34.059s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config:Zone - Copy.Identifier
+[34.060s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.config_Zone - Copy.Identifier
+[34.060s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger_cam/model.sdf
+[34.061s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls
+[34.062s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config_Zone.Identifier
+[34.062s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config
+[34.063s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf:Zone.Identifier
+[34.063s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf_Zone.Identifier
+[34.063s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.config:Zone.Identifier
+[34.064s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials
+[34.064s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures
+[34.065s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png
+[34.081s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png:Zone.Identifier
+[34.081s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/textures/grey_wall.png_Zone.Identifier
+[34.081s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts
+[34.082s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material_Zone.Identifier
+[34.082s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material:Zone.Identifier
+[34.082s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/materials/scripts/grey_wall.material
+[34.083s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/warehouse_walls/model.sdf
+[34.085s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun
+[34.086s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf_Zone.Identifier
+[34.087s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config_Zone.Identifier
+[34.088s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf
+[34.088s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf:Zone.Identifier
+[34.089s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf
+[34.089s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf_Zone.Identifier
+[34.089s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf_Zone.Identifier
+[34.090s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_3.sdf:Zone.Identifier
+[34.090s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config
+[34.090s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf:Zone.Identifier
+[34.091s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_4.sdf:Zone.Identifier
+[34.092s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf_Zone.Identifier
+[34.093s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.config:Zone.Identifier
+[34.093s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model.sdf
+[34.093s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/sun/model-1_2.sdf
+[34.093s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas
+[34.094s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye
+[34.094s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/model.config
+[34.095s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes
+[34.095s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeye.dae
+[34.135s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeye.png
+[34.138s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/brown_eye.png
+[34.142s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/naokoeyev2.dae
+[34.179s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/eyebrow001.png
+[34.181s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/female_casualsuit02_normal.png
+[34.189s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/female_casualsuit02_diffuse.png
+[34.209s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/meshes/bob02_diffuse.png
+[34.224s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/naokoeye/model.sdf
+[34.226s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye
+[34.226s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/model.config
+[34.227s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes
+[34.228s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/brown_eye.png
+[34.233s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/shoes03_diffuse.png
+[34.237s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/young_darkskinned_male_diffuse.png
+[34.251s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/male_casualsuit03_normal.png
+[34.297s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeye.png
+[34.301s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeyev2.dae
+[34.322s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/eyebrow001.png
+[34.324s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/teeth.png
+[34.335s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/bobeye.dae
+[34.347s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/tongue01_diffuse.png
+[34.352s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/meshes/male_casualsuit03_diffuse.png
+[34.376s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/bobeye/model.sdf
+[34.377s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye
+[34.377s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/model.config
+[34.378s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes
+[34.379s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/female_elegantsuit01_diffuse.png
+[34.391s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/female_elegantsuit01_normal.png
+[34.401s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/teeth.png
+[34.411s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseyev2.dae
+[34.443s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/old_lightskinned_female_diffuse.png
+[34.468s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/green_eye.png
+[34.473s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseye.png
+[34.477s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/braid01_diffuse.png
+[34.493s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/tongue01_diffuse.png
+[34.498s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/meshes/gertrudiseye.dae
+[34.510s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/gertrudiseye/model.sdf
+[34.511s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye
+[34.512s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/model.config
+[34.512s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes
+[34.513s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/eyebrow010.png
+[34.514s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/brown_eye.png
+[34.519s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/young_lightskinned_female_diffuse3.png
+[34.540s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeye.png
+[34.543s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/male_worksuit01_normal.png
+[34.584s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeyev2.dae
+[34.632s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/male_worksuit01_diffuse.png
+[34.675s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/teeth.png
+[34.701s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/short01_diffuse.png
+[34.732s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/kumaeye.dae
+[34.770s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/meshes/tongue01_diffuse.png
+[34.785s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/modelos_pesonas/kumaeye/model.sdf
+[34.785s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger
+[34.786s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf_Zone - Copy.Identifier
+[34.786s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf
+[34.787s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model-1_4.sdf:Zone - Copy.Identifier
+[34.787s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config
+[34.788s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config:Zone - Copy.Identifier
+[34.788s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.config_Zone - Copy.Identifier
+[34.789s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_burger/model.sdf
+[34.791s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common
+[34.792s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config
+[34.793s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config:Zone - Copy.Identifier
+[34.793s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/model.config_Zone - Copy.Identifier
+[34.794s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes
+[34.795s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae
+[34.796s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae_Zone - Copy.Identifier
+[34.797s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae
+[34.798s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae:Zone - Copy.Identifier
+[34.799s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae:Zone - Copy.Identifier
+[34.801s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels
+[34.802s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl
+[34.807s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl
+[34.813s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl:Zone - Copy.Identifier
+[34.835s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/right_tire.stl_Zone - Copy.Identifier
+[34.853s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl_Zone - Copy.Identifier
+[34.854s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/wheels/left_tire.stl:Zone - Copy.Identifier
+[34.854s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae_Zone - Copy.Identifier
+[34.854s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae
+[34.855s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae:Zone - Copy.Identifier
+[34.856s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/lds.dae_Zone - Copy.Identifier
+[34.856s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/tire.dae
+[34.857s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors
+[34.857s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg
+[34.858s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/lds.stl
+[34.862s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/astra.jpg
+[34.863s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg:Zone - Copy.Identifier
+[34.864s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/astra.dae
+[34.904s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.dae
+[34.906s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/sensors/r200.jpg_Zone - Copy.Identifier
+[34.906s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae
+[34.907s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae:Zone - Copy.Identifier
+[34.907s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_base.dae_Zone - Copy.Identifier
+[34.907s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/r200.dae
+[34.910s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/burger_base.dae_Zone - Copy.Identifier
+[34.910s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases
+[34.911s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl_Zone - Copy.Identifier
+[34.911s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl
+[34.944s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_pi_base.stl:Zone - Copy.Identifier
+[34.944s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/burger_base.stl
+[34.968s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl_Zone - Copy.Identifier
+[34.968s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl
+[35.033s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/bases/waffle_base.stl:Zone - Copy.Identifier
+[35.034s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/turtlebot3_common/meshes/waffle_pi_base.dae:Zone - Copy.Identifier
+[35.034s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair
+[35.035s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config_Zone.Identifier
+[35.036s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails
+[35.036s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png_Zone.Identifier
+[35.037s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png:Zone.Identifier
+[35.037s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png:Zone.Identifier
+[35.037s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png_Zone.Identifier
+[35.037s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png:Zone.Identifier
+[35.038s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png
+[35.039s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png
+[35.041s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png
+[35.041s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/3.png_Zone.Identifier
+[35.042s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/5.png
+[35.043s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/2.png:Zone.Identifier
+[35.043s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/4.png_Zone.Identifier
+[35.044s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png
+[35.045s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png_Zone.Identifier
+[35.045s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/thumbnails/1.png:Zone.Identifier
+[35.045s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config
+[35.046s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf:Zone.Identifier
+[35.046s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes
+[35.047s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj:Zone.Identifier
+[35.047s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj:Zone.Identifier
+[35.048s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png:Zone.Identifier
+[35.048s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl
+[35.049s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl_Zone.Identifier
+[35.049s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png
+[35.053s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj_Zone.Identifier
+[35.053s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl_Zone.Identifier
+[35.054s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChairDiffuse.png_Zone.Identifier
+[35.054s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.mtl:Zone.Identifier
+[35.055s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl:Zone.Identifier
+[35.055s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj
+[35.057s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair_Col.obj
+[35.057s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.obj_Zone.Identifier
+[35.058s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/meshes/WhiteChipChair.mtl
+[35.058s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf_Zone.Identifier
+[35.058s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.config:Zone.Identifier
+[35.058s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/WhiteChipChair/model.sdf
+[35.059s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe
+[35.060s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/model.config
+[35.061s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/meshes
+[35.062s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/meshes/cafe.dae
+[35.072s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials
+[35.073s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures
+[35.073s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_22.jpg
+[35.075s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_35.jpg
+[35.076s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_34.jpg
+[35.076s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_23.jpg
+[35.077s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_28.jpg
+[35.077s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_10.jpg
+[35.078s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_37.jpg
+[35.079s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_25.jpg
+[35.079s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_31.jpg
+[35.080s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_30.jpg
+[35.081s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_29.jpg
+[35.082s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_24.jpg
+[35.083s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_2.jpg
+[35.084s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_21.jpg
+[35.084s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/materials/textures/__auto_26.jpg
+[35.086s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//models/cafe/model.sdf
+[35.086s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params
+[35.087s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone - Copy.Identifier_Zone.Identifier
+[35.087s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone - Copy.Identifier:Zone.Identifier
+[35.088s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml
+[35.089s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone - Copy.Identifier_Zone.Identifier
+[35.089s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone.Identifier
+[35.090s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone - Copy.Identifier
+[35.090s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml
+[35.091s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone.Identifier
+[35.092s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone - Copy.Identifier:Zone.Identifier
+[35.092s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone.Identifier
+[35.092s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml:Zone - Copy.Identifier
+[35.093s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_cam_bridge.yaml_Zone - Copy.Identifier
+[35.093s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml:Zone - Copy.Identifier
+[35.093s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//params/turtlebot3_burger_bridge.yaml_Zone.Identifier
+[35.094s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz
+[35.095s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone - Copy.Identifier_Zone.Identifier
+[35.096s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone - Copy.Identifier
+[35.097s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone - Copy.Identifier
+[35.097s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf
+[35.098s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf_Zone.Identifier
+[35.098s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone.Identifier
+[35.099s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//rviz/turtlebot3_burger.urdf:Zone - Copy.Identifier:Zone.Identifier
+[35.099s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf
+[35.100s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone - Copy.Identifier_Zone.Identifier
+[35.100s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf_Zone.Identifier_Zone.Identifier
+[35.100s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone - Copy.Identifier:Zone.Identifier
+[35.101s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone - Copy.Identifier
+[35.103s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf_Zone.Identifier
+[35.103s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf:Zone.Identifier
+[35.104s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone - Copy.Identifier
+[35.105s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone.Identifier
+[35.105s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone - Copy.Identifier
+[35.106s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf
+[35.107s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf_Zone - Copy.Identifier_Zone.Identifier
+[35.107s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf
+[35.108s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf_Zone.Identifier
+[35.108s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf
+[35.109s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone - Copy.Identifier
+[35.109s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/common_properties.urdf:Zone.Identifier:Zone.Identifier
+[35.110s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger_cam.urdf:Zone.Identifier
+[35.110s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone.Identifier
+[35.110s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//urdf/turtlebot3_burger.urdf:Zone - Copy.Identifier:Zone.Identifier
+[35.111s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds
+[35.112s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds/distribution_center.world
+[35.112s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//worlds/roberto.world
+[35.112s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps
+[35.113s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm_Zone.Identifier
+[35.114s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm
+[35.115s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml_Zone.Identifier
+[35.115s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml:Zone.Identifier
+[35.116s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.yaml
+[35.116s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo//maps/mapadelmundo.pgm:Zone.Identifier
+[35.117s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include/
+[35.118s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone - Copy.Identifier
+[35.120s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp:Zone.Identifier:Zone.Identifier
+[35.120s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp:Zone.Identifier
+[35.121s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp:Zone.Identifier
+[35.122s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp:Zone.Identifier
+[35.122s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone - Copy.Identifier_Zone.Identifier
+[35.122s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp_Zone.Identifier
+[35.123s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone - Copy.Identifier
+[35.123s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone.Identifier
+[35.124s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp:Zone.Identifier
+[35.124s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp_Zone.Identifier_Zone.Identifier
+[35.125s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone - Copy.Identifier:Zone.Identifier
+[35.125s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp
+[35.126s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone - Copy.Identifier_Zone.Identifier
+[35.126s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp
+[35.126s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp
+[35.127s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp
+[35.127s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone - Copy.Identifier:Zone.Identifier
+[35.128s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp_Zone.Identifier_Zone.Identifier
+[35.128s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp
+[35.128s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone - Copy.Identifier
+[35.129s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp:Zone.Identifier:Zone.Identifier
+[35.129s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_bar_plugin.hpp_Zone.Identifier_Zone.Identifier
+[35.130s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp
+[35.130s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp:Zone.Identifier
+[35.131s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp_Zone - Copy.Identifier
+[35.133s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp_Zone.Identifier_Zone.Identifier
+[35.133s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//traffic_light_plugin.hpp:Zone.Identifier
+[35.134s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp:Zone.Identifier:Zone.Identifier
+[35.134s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp:Zone.Identifier:Zone.Identifier
+[35.135s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacles.hpp_Zone.Identifier
+[35.136s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//turtlebot3_drive.hpp_Zone.Identifier
+[35.136s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle1.hpp_Zone.Identifier
+[35.136s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/include//obstacle2.hpp_Zone.Identifier
+[35.138s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/package_run_dependencies/roberto_mundo
+[35.139s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/parent_prefix_path/roberto_mundo
+[35.140s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/ament_prefix_path.sh
+[35.141s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/ament_prefix_path.dsv
+[35.142s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/path.sh
+[35.142s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/environment/path.dsv
+[35.142s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.bash
+[35.143s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.sh
+[35.143s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.zsh
+[35.143s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/local_setup.dsv
+[35.144s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/package.dsv
+[35.145s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/ament_index/resource_index/packages/roberto_mundo
+[35.147s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/ament_cmake_export_include_directories-extras.cmake
+[35.147s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/ament_cmake_export_dependencies-extras.cmake
+[35.148s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/roberto_mundoConfig.cmake
+[35.148s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/cmake/roberto_mundoConfig-version.cmake
+[35.149s] -- Installing: /root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/package.xml
+[35.152s] Invoked command in '/root/ROS2/Roberto/build/roberto_mundo' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/root/ROS2/Roberto/install/roberto_nav_punto:/opt/ros/jazzy /usr/bin/cmake --install /root/ROS2/Roberto/build/roberto_mundo
