@@ -11,32 +11,39 @@
 const mysql = require('mysql2/promise');
 const bcrypt = require('bcrypt');
 
-// Configuración de MySQL local apuntando a la base de datos "Roberto"
+// Configuración de MySQL local apuntando a la base de datos "roberto_db"
 const pool = mysql.createPool({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'Roberto',
+    database: 'roberto_db',
     port: 3306,
     waitForConnections: true,
     connectionLimit: 10,
     queueLimit: 0
 });
+
 /**
- * Verifica la conexión inicial con la base de datos Roberto.
- * Imprime un mensaje en consola si la conexión es exitosa o el error correspondiente.
- * @author Chris
+ * Verifica la conexión inicial con la base de datos.
  */
 async function testConnection() {
     try {
         const connection = await pool.getConnection();
-        console.log('Conexión a DB Roberto (MySQL) exitosa.');
+        console.log('✅ Conexión a DB roberto_db (MySQL) exitosa.');
         connection.release();
     } catch (err) {
-        console.error('Error de conexión DB Roberto:', err.message);
+        console.error('❌ Error crítico: No se pudo conectar a MySQL (roberto_db).', err.message);
+        process.exit(1); // En producción, si no hay DB, el servidor no debe seguir
     }
 }
 testConnection();
+
+/**
+ * Helper para ejecutar queries.
+ */
+async function query(sql, params) {
+    return pool.query(sql, params);
+}
 
 /**
  * Obtiene todas las zonas registradas en la base de datos.
@@ -44,7 +51,7 @@ testConnection();
  * @returns {Promise<Array>} Lista de objetos de zona.
  */
 async function getZonas() {
-    const [rows] = await pool.query('SELECT * FROM Zona');
+    const [rows] = await query('SELECT * FROM Zona');
     return rows;
 }
 
@@ -56,7 +63,7 @@ async function getZonas() {
  * @returns {Promise<object|undefined>} Objeto de la zona encontrada o undefined.
  */
 async function getZonaById(id) {
-    const [rows] = await pool.query('SELECT * FROM Zona WHERE ZonaID = ?', [id]);
+    const [rows] = await query('SELECT * FROM Zona WHERE ZonaID = ?', [id]);
     return rows[0];
 }
 
@@ -67,7 +74,7 @@ async function getZonaById(id) {
  */
 async function getAllZonas() {
     // Agregamos PosX y PosY a la consulta para que el mapa pueda dibujar el punto rojo
-    const [rows] = await pool.query('SELECT ZonaID, Nombre, PosX, PosY FROM Zona');
+    const [rows] = await query('SELECT ZonaID, Nombre, PosX, PosY FROM Zona');
     return rows;
 }
 
@@ -77,7 +84,7 @@ async function getAllZonas() {
  * @returns {Promise<Array>} Lista de objetos de robot.
  */
 async function getRobots() {
-    const [rows] = await pool.query('SELECT * FROM Robot');
+    const [rows] = await query('SELECT * FROM Robot');
     return rows;
 }
 
@@ -87,14 +94,14 @@ async function getRobots() {
  * @returns {Promise<Array>} Últimos 10 eventos ordenados por fecha.
  */
 async function getEventos(robotId) {
-    let query = 'SELECT * FROM Evento';
+    let sql = 'SELECT * FROM Evento';
     const params = [];
     if (robotId) {
-        query += ' WHERE RobotID = ?';
+        sql += ' WHERE RobotID = ?';
         params.push(robotId);
     }
-    query += ' ORDER BY FechaHora DESC LIMIT 10';
-    const [rows] = await pool.query(query, params);
+    sql += ' ORDER BY FechaHora DESC LIMIT 10';
+    const [rows] = await query(sql, params);
     return rows;
 }
 
@@ -108,15 +115,15 @@ async function logConnectionEvent(robotId, status) {
     const tipoEvento = status === 'connected' ? 'Inicio Sistema' : 'Error de Comunicación';
     const desc = status === 'connected' ? 'Robot conectado a interfaz' : 'Robot desconectado de interfaz';
 
-    await pool.query(
-        'INSERT INTO Evento (RobotID, TipoEvento, Descripcion, Gravedad) VALUES (?, ?, ?, ?)',
+    await query(
+        "INSERT INTO Evento (RobotID, TipoEvento, Mensaje, Severidad, Estado, FechaHora) VALUES (?, ?, ?, ?, 'Abierto', NOW())",
         [robotId, tipoEvento, desc, status === 'connected' ? 'Notificación' : 'Advertencia']
     );
 
     if (status === 'connected') {
-        await pool.query('UPDATE Robot SET UltimaComunicacion = NOW(), EstadoID = 1 WHERE RobotID = ?', [robotId]);
+        await query('UPDATE Robot SET UltimaComunicacion = NOW() WHERE RobotID = ?', [robotId]);
     } else {
-        await pool.query('UPDATE Robot SET UltimaComunicacion = NOW(), EstadoID = 3 WHERE RobotID = ?', [robotId]);
+        await query('UPDATE Robot SET UltimaComunicacion = NOW() WHERE RobotID = ?', [robotId]);
     }
 }
 
@@ -129,7 +136,7 @@ async function logConnectionEvent(robotId, status) {
  */
 async function insertPosition(robotId, x, y) {
     try {
-        const [result] = await pool.query(
+        const [result] = await query(
             'INSERT INTO PosicionRobot (RobotID, PosX, PosY, FechaHora) VALUES (?, ?, ?, NOW())',
             [robotId, x, y]
         );
@@ -150,8 +157,8 @@ async function insertPosition(robotId, x, y) {
  */
 async function validarCredenciales(email, password) {
     try {
-        const query = 'SELECT TecnicoID, Nombre, Email, Contrasena FROM Tecnico WHERE Email = ?';
-        const [rows] = await pool.query(query, [email]);
+        const sql = 'SELECT TecnicoID, Nombre, Email, Contrasena FROM Tecnico WHERE Email = ?';
+        const [rows] = await query(sql, [email]);
 
         if (!rows || rows.length === 0) {
             return { success: false, message: 'Usuario no encontrado' };
@@ -172,7 +179,7 @@ async function validarCredenciales(email, password) {
                 const hashed = await bcrypt.hash(password, saltRounds);
 
                 const updateQuery = 'UPDATE Tecnico SET Contrasena = ? WHERE TecnicoID = ?';
-                await pool.query(updateQuery, [hashed, tecnico.TecnicoID]);
+                await query(updateQuery, [hashed, tecnico.TecnicoID]);
 
                 console.log(`Contraseña del usuario ${tecnico.Email} migrada a hash.`);
             }
@@ -212,13 +219,13 @@ async function insertInteraccion(data) {
         comentario
     } = data;
 
-    const query = `
+    const sql = `
         INSERT INTO Interaccion
         (RobotID, ZonaActualID, ZonaDestinoID, FechaHora, Duracion, Valoracion, Comentario)
         VALUES (?, ?, ?, NOW(), ?, ?, ?)
     `;
 
-    const [result] = await pool.query(query, [
+    const [result] = await query(sql, [
         robotId,
         zonaActualId,
         zonaDestinoId,
@@ -236,7 +243,7 @@ async function insertInteraccion(data) {
  * @returns {Promise<Array>} Lista de interacciones con nombres de zonas y robots
  */
 async function getInteracciones() {
-    const query = `
+    const sql = `
         SELECT 
             i.InteraccionID, 
             r.Nombre AS Robot, 
@@ -252,7 +259,7 @@ async function getInteracciones() {
         JOIN Zona z2 ON i.ZonaDestinoID = z2.ZonaID
         ORDER BY i.FechaHora DESC;
     `;
-    const [rows] = await pool.query(query);
+    const [rows] = await query(sql);
     return rows;
 }
 /**
@@ -261,7 +268,7 @@ async function getInteracciones() {
  * @returns {Promise<Array>}
  */
 async function getRobotNames() {
-    const [rows] = await pool.query('SELECT DISTINCT Nombre FROM Robot');
+    const [rows] = await query('SELECT DISTINCT Nombre FROM Robot');
     return rows;
 }
 
@@ -271,7 +278,7 @@ async function getRobotNames() {
  * @returns {Promise<Array>}
  */
 async function getZonaNames() {
-    const [rows] = await pool.query('SELECT DISTINCT Nombre FROM Zona');
+    const [rows] = await query('SELECT DISTINCT Nombre FROM Zona');
     return rows;
 }
 
@@ -279,25 +286,25 @@ async function getZonaNames() {
  * Actualiza una interacción existente con la valoración final y el comentario.
  */
 async function updateInteraccion(interaccionId, valoracion, comentario) {
-    const query = `
+    const sql = `
         UPDATE Interaccion 
         SET Valoracion = ?, Comentario = ? 
         WHERE InteraccionID = ?
     `;
-    await pool.query(query, [valoracion, comentario, interaccionId]);
+    await query(sql, [valoracion, comentario, interaccionId]);
 }
 
 /**
  * Obtiene todos los eventos con el nombre del robot y su estado.
  */
 async function getEventosConEstado() {
-    const query = `
+    const sql = `
         SELECT e.*, r.Nombre AS RobotNombre 
         FROM Evento e
         JOIN Robot r ON e.RobotID = r.RobotID
         ORDER BY e.FechaHora DESC
     `;
-    const [rows] = await pool.query(query);
+    const [rows] = await query(sql);
     return rows;
 }
 
@@ -309,7 +316,7 @@ async function resolverEvento(eventoId, tecnicoId, accion) {
     // Texto que se añadirá al mensaje existente en la base de datos
     const notaResolucion = `\n\n[Resuelto por Técnico ${tecnicoId}]: ${accion}`;
 
-    const query = `
+    const sql = `
         UPDATE Evento 
         SET Estado = 'Cerrado', 
             CerradaEn = NOW(),
@@ -317,7 +324,23 @@ async function resolverEvento(eventoId, tecnicoId, accion) {
         WHERE EventoID = ?
     `;
     
-    await pool.query(query, [notaResolucion, eventoId]);
+    await query(sql, [notaResolucion, eventoId]);
+}
+
+/**
+ * Inserta un nuevo evento (incidencia) en la base de datos.
+ * @param {object} data Datos del evento (robotId, tipo, severidad, mensaje)
+ * @returns {Promise<number>} ID del evento insertado.
+ */
+async function insertEvento(data) {
+    const { robotId, tipo, severidad, mensaje } = data;
+    const sql = `
+        INSERT INTO Evento (RobotID, FechaHora, TipoEvento, Severidad, Mensaje, Estado)
+        VALUES (?, NOW(), ?, ?, ?, 'Abierto')
+    `;
+    
+    const [result] = await query(sql, [robotId, tipo, severidad, mensaje]);
+    return result.insertId;
 }
 
 module.exports = {
@@ -336,5 +359,6 @@ module.exports = {
     getZonaNames,
     updateInteraccion,
     getEventosConEstado,
-    resolverEvento      
+    resolverEvento,
+    insertEvento      
 };

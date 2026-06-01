@@ -1,138 +1,359 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Declaración de Incidencias - Reconocimiento Facial</title>
+    <title>Roberto Control - Declarar Incidencia</title>
     <link rel="stylesheet" href="../estilo.css">
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-        .container {
-            padding: 20px;
-            text-align: center;
-            color: white;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .btn-facial {
-            padding: 12px 24px;
-            margin: 5px;
-            font-size: 1rem;
-            cursor: pointer;
-            border-radius: 8px;
-            border: none;
-            background-color: #007bff;
-            color: white;
-            transition: background 0.3s;
-        }
-        .btn-facial:hover {
-            background-color: #0056b3;
-        }
-        .btn-facial:disabled {
-            background-color: #6c757d;
-            cursor: not-allowed;
-        }
         #camera-container {
             position: relative;
-            width: 640px;
-            height: 480px;
+            width: 100%;
+            max-width: 640px;
+            aspect-ratio: 4/3;
             background: #222;
             margin: 20px 0;
             border-radius: 10px;
             overflow: hidden;
             border: 3px solid #444;
         }
-        #webcam, #overlay {
+
+        #webcam,
+        #overlay {
             position: absolute;
             top: 0;
             left: 0;
+            width: 100%;
+            height: 100%;
         }
-        #output {
-            width: 80%;
-            margin-top: 10px;
-            padding: 10px;
-            background: rgba(0,0,0,0.5);
-            border-radius: 5px;
-            text-align: left;
-            white-space: pre-wrap;
-            font-family: monospace;
-            font-size: 0.9rem;
+
+        .btn-facial {
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 8px;
+            transition: all 0.2s;
         }
-        .controls {
-            margin-bottom: 10px;
+
+        .incidencia-form-card {
+            background: white;
+            padding: 24px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--shadow-soft);
         }
+        .extra-small { font-size: 0.75rem; }
+        .progress-bar-animated { transition: width 0.5s ease-in-out; }
     </style>
 </head>
+
 <body>
-    <div class="container">
-        <h1>Declaración de Incidencias</h1>
-        <h2>Verificación Facial Web</h2>
-        
-        <div class="controls">
-            <button id="btnProcess" class="btn-facial" onclick="runBackendScript('process')">Procesar Imágenes</button>
-            <button id="btnTrain" class="btn-facial" onclick="runBackendScript('train')">Entrenar Modelo</button>
-            <button id="btnOpen" class="btn-facial" style="background-color: #28a745;" onclick="startWebcam()">Abrir Cámara Web</button>
-            <button id="btnStop" class="btn-facial" style="background-color: #dc3545;" onclick="stopWebcam()" disabled>Detener Cámara</button>
-        </div>
+    <div class="dashboard-container" style="grid-template-columns: 260px 1fr;">
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>Robots</h2>
+                <span>Sistema Activo</span>
+            </div>
+            <ul class="robot-list">
+                <li class="robot-item active">
+                    <div class="robot-info">
+                        <strong>Roberto 1</strong>
+                        <span>En línea</span>
+                    </div>
+                </li>
+                <li class="nav-item mt-3">
+                    <button class="btn btn-primary w-100 d-flex align-items-center justify-content-center gap-2" onclick="openRegisterAuth()">
+                        <i class="ph ph-user-plus"></i>
+                        Registrar Face ID
+                    </button>
+                </li>
+                <li class="nav-item" style="margin-top: auto;">
+                    <a href="../dashboard.html" class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2">
+                        <i class="ph ph-arrow-left"></i>
+                        Volver al Panel
+                    </a>
+                </li>
+            </ul>
+        </aside>
 
-        <div id="camera-container">
-            <video id="webcam" width="640" height="480" autoplay playsinline></video>
-            <canvas id="overlay" width="640" height="480"></canvas>
-        </div>
+        <main class="main-content">
+            <header class="top-nav">
+                <div class="logo">Declaración de Incidencias</div>
+                <div class="user-actions">
+                    <i class="ph ph-bell"></i>
+                    <i class="ph ph-gear"></i>
+                    <i class="ph ph-user-circle"></i>
+                    <span id="user-name" class="me-2">Técnico</span>
+                    <button class="btn btn-danger btn-sm d-flex align-items-center gap-2" data-bs-toggle="modal"
+                        data-bs-target="#logoutModal">
+                        <i class="ph ph-sign-out"></i>
+                        Logout
+                    </button>
+                </div>
+            </header>
 
-        <div id="output">Estado: Listo para iniciar.</div>
+            <div class="container-fluid py-4">
+                <div class="row g-4">
+                    <div class="col-lg-7">
+                        <div class="card h-100">
+                            <div class="card-header d-flex justify-content-between align-items-center">
+                                <span><i class="ph ph-camera"></i> Verificación Facial</span>
+                                <div class="d-flex gap-2">
+                                    <button id="btnOpen" class="btn btn-success btn-sm" onclick="startWebcam()">Abrir Cámara</button>
+                                    <button id="btnStop" class="btn btn-danger btn-sm" onclick="stopWebcam()" disabled>Detener</button>
+                                </div>
+                            </div>
+                            <div class="card-body d-flex flex-column align-items-center justify-content-center">
+                                <div id="camera-container">
+                                    <video id="webcam" autoplay playsinline></video>
+                                    <canvas id="overlay"></canvas>
+                                </div>
+                                <div id="output" class="alert alert-info w-100 mt-3" style="font-family: monospace; font-size: 0.85rem;">
+                                    Estado: Listo para iniciar verificación.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
-        <br>
-        <button class="btn-facial" style="background-color: #6c757d;" onclick="window.location.href='../dashboard.html'">Volver al Dashboard</button>
+                    <div class="col-lg-5">
+                        <div id="form-incidencia" class="incidencia-form-card" style="display: none;">
+                            <h3 class="h5 mb-4"><i class="ph ph-warning-circle text-danger"></i> Nueva Incidencia</h3>
+                            <div class="mb-3">
+                                <label class="form-label">Robot Afectado</label>
+                                <select id="robotId" class="form-select">
+                                    <option value="1">Roberto 1</option>
+                                    <option value="2">Roberto 2</option>
+                                    <option value="3">Roberto 3</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Tipo de Evento</label>
+                                <select id="tipoEvento" class="form-select">
+                                    <option value="Error de Software">Error de Software</option>
+                                    <option value="Fallo de Sensor">Fallo de Sensor</option>
+                                    <option value="Batería Crítica">Batería Crítica</option>
+                                    <option value="Obstrucción">Obstrucción</option>
+                                    <option value="Otro">Otro</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Severidad</label>
+                                <select id="severidad" class="form-select">
+                                    <option value="Info">Informativo</option>
+                                    <option value="Advertencia">Advertencia</option>
+                                    <option value="Error">Error Crítico</option>
+                                </select>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">Descripción del Problema</label>
+                                <textarea id="mensajeIncidencia" class="form-control" rows="4" placeholder="Describe detalladamente el problema detectado..."></textarea>
+                            </div>
+                            <button class="btn btn-primary w-100 py-2 mt-2" onclick="enviarIncidencia()" id="btnSubmit">
+                                <i class="ph ph-paper-plane-tilt"></i> Enviar Declaración
+                            </button>
+                        </div>
+                        
+                        <div id="form-placeholder" class="card border-dashed d-flex align-items-center justify-content-center p-5 text-center text-muted" style="border: 2px dashed #ddd; height: 100%;">
+                            <div>
+                                <i class="ph ph-user-focus" style="font-size: 3rem; opacity: 0.3;"></i>
+                                <p class="mt-3">Por favor, realiza la verificación facial para habilitar el formulario de incidencias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
     </div>
 
+    <!-- Modals -->
+    <div class="modal fade" id="logoutModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Cerrar sesión</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">¿Seguro que quieres cerrar sesión?</div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button id="confirmLogout" class="btn btn-danger">Cerrar sesión</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="authRegisterModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="ph ph-lock-key"></i> Confirmar Identidad</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <p class="text-muted small">Por seguridad, re-ingresa tus credenciales y elige el nombre del nuevo perfil.</p>
+                    <div class="mb-3">
+                        <label class="form-label">Correo Electrónico</label>
+                        <input type="email" id="authEmail" class="form-control" placeholder="admin@aeropuerto.com">
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label">Contraseña</label>
+                        <input type="password" id="authPass" class="form-control">
+                    </div>
+                    <hr>
+                    <div class="mb-3">
+                        <label class="form-label fw-bold text-primary">Nombre del Perfil Face ID</label>
+                        <input type="text" id="faceIdName" class="form-control" placeholder="Ej: Tom Cruise, Billie Eilish, Juan...">
+                        <div class="form-text">Este es el nombre que aparecerá cuando el sistema reconozca a la persona.</div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+                    <button class="btn btn-primary" onclick="confirmAuthAndStart()">Validar y Empezar Registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="registerProgressModal" tabindex="-1" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title"><i class="ph ph-user-focus"></i> Registro de Nuevo Face ID</h5>
+                </div>
+                <div class="modal-body">
+                    <div id="register-instruction" class="alert alert-primary fw-bold mb-4 text-center">Iniciando...</div>
+                    <div class="row g-4 mb-4">
+                        <div class="col-md-5">
+                            <div style="width: 100%; border-radius: 8px; overflow: hidden; border: 2px solid var(--accent-blue); background: #000;">
+                                <video id="webcam-preview" autoplay playsinline muted style="width: 100%; transform: scaleX(-1);"></video>
+                            </div>
+                        </div>
+                        <div class="col-md-7 d-flex flex-column justify-content-center">
+                            <div class="mb-3" id="phase-capture-container">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="small fw-bold">Fase 1: Captura de Rostro</span>
+                                    <span id="capture-percent" class="small">0%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;"><div id="capture-bar" class="progress-bar bg-primary" style="width: 0%"></div></div>
+                                <p id="capture-status" class="text-muted extra-small mt-1">Esperando...</p>
+                            </div>
+                            <div class="mb-3" id="phase-process-container" style="opacity: 0.4;">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="small fw-bold">Fase 2: Procesamiento (Dataset)</span>
+                                    <span id="process-percent" class="small">0%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;"><div id="process-bar" class="progress-bar bg-warning" style="width: 0%"></div></div>
+                                <p id="process-status" class="text-muted extra-small mt-1">Pendiente...</p>
+                            </div>
+                            <div class="mb-3" id="phase-train-container" style="opacity: 0.4;">
+                                <div class="d-flex justify-content-between mb-1">
+                                    <span class="small fw-bold">Fase 3: Entrenamiento de IA</span>
+                                    <span id="train-percent" class="small">0%</span>
+                                </div>
+                                <div class="progress" style="height: 10px;"><div id="train-bar" class="progress-bar bg-success" style="width: 0%"></div></div>
+                                <p id="train-status" class="text-muted extra-small mt-1">Pendiente...</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="registration-finished-actions" style="display: none;" class="mt-4 text-center">
+                        <div class="alert alert-success">¡Todo listo! El sistema ya te reconoce.</div>
+                        <div class="d-flex gap-2 justify-content-center">
+                            <button class="btn btn-primary" data-bs-dismiss="modal">Entendido</button>
+                            <button class="btn btn-outline-primary" onclick="resetRegistration()">Registrar Otro</button>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <button id="btn-cancel-reg" class="btn btn-link text-danger mt-2" onclick="cancelRegistration()">Cancelar Registro</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SCRIPTS UNIFICADOS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script>
+        // GLOBALES
         const video = document.getElementById('webcam');
+        const preview = document.getElementById('webcam-preview');
         const canvas = document.getElementById('overlay');
         const ctx = canvas.getContext('2d');
         const outputDiv = document.getElementById('output');
         let stream = null;
         let isProcessing = false;
+        
+        let registrationUser = null;
+        let registrationCount = 0;
+        let isRegistering = false;
+        const TOTAL_CAPTURES = 50;
 
+        // SEGURIDAD: Verificación de Sesión
+        document.addEventListener('DOMContentLoaded', async () => {
+            const res = await fetch('/api/dashboard', { credentials: 'include' });
+            if (!res.ok) { window.location.href = '../login/login.html'; return; }
+            const data = await res.json();
+            if (data.usuario && data.usuario.nombre) {
+                document.getElementById('user-name').innerText = data.usuario.nombre;
+            }
+        });
+
+        // Logout
+        document.getElementById("confirmLogout").addEventListener("click", async () => {
+            try { await fetch('/api/logout', { method: 'POST', credentials: 'include' }); } catch (err) {}
+            window.location.href = '/usuario/index.html';
+        });
+
+        // CÁMARA
         async function startWebcam() {
+            console.log("[Camera] Solicitando acceso...");
             try {
+                outputDiv.className = "alert alert-info w-100 mt-3";
                 outputDiv.innerText = "Solicitando permisos de cámara...";
-                stream = await navigator.mediaDevices.getUserMedia({ video: true });
-                video.srcObject = stream;
                 
+                const newStream = await navigator.mediaDevices.getUserMedia({ video: { width: 640, height: 480 } });
+                stream = newStream;
+                video.srcObject = stream;
+                if (preview) preview.srcObject = stream;
+
+                video.onloadedmetadata = () => {
+                    video.play();
+                    if (preview) preview.play();
+                    console.log("[Camera] Reproducción iniciada");
+                };
+
                 document.getElementById('btnOpen').disabled = true;
                 document.getElementById('btnStop').disabled = false;
-                
                 outputDiv.innerText = "Cámara activa. Iniciando detección...";
                 startDetectionLoop();
+                return true;
             } catch (err) {
-                outputDiv.innerText = "Error al acceder a la cámara: " + err.message;
+                console.error("[Camera] Error:", err);
+                outputDiv.className = "alert alert-danger w-100 mt-3";
+                outputDiv.innerText = "Error de cámara: " + err.message;
+                return false;
             }
         }
 
         function stopWebcam() {
-            if (stream) {
-                stream.getTracks().forEach(track => track.stop());
-                video.srcObject = null;
-            }
+            if (stream) { stream.getTracks().forEach(t => t.stop()); stream = null; }
             isProcessing = false;
             document.getElementById('btnOpen').disabled = false;
             document.getElementById('btnStop').disabled = true;
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            outputDiv.innerText = "Cámara detenida.";
+            document.getElementById('form-incidencia').style.display = 'none';
+            document.getElementById('form-placeholder').style.display = 'flex';
         }
 
         async function startDetectionLoop() {
             isProcessing = true;
-            while (isProcessing) {
+            while (isProcessing && !isRegistering) {
                 if (video.readyState === video.HAVE_ENOUGH_DATA) {
-                    // Capturar frame
                     const tempCanvas = document.createElement('canvas');
-                    tempCanvas.width = video.videoWidth;
-                    tempCanvas.height = video.videoHeight;
+                    tempCanvas.width = video.videoWidth; tempCanvas.height = video.videoHeight;
                     tempCanvas.getContext('2d').drawImage(video, 0, 0);
                     const base64Image = tempCanvas.toDataURL('image/jpeg', 0.7);
-
                     try {
                         const response = await fetch('/api/facial/verify', {
                             method: 'POST',
@@ -140,49 +361,215 @@
                             body: JSON.stringify({ image: base64Image })
                         });
                         const data = await response.json();
-                        
-                        if (data.success) {
-                            drawResults(data.results);
-                        }
-                    } catch (err) {
-                        console.error("Error en detección:", err);
-                    }
+                        if (isProcessing && !isRegistering && data.success) drawResults(data.results);
+                    } catch (err) { console.warn("Detección fallida", err); }
                 }
-                // Esperar un poco antes del siguiente frame para no saturar el servidor
-                await new Promise(r => setTimeout(r, 200));
+                await new Promise(r => setTimeout(r, 250));
             }
         }
 
         function drawResults(results) {
+            if (canvas.width !== video.videoWidth) { canvas.width = video.videoWidth; canvas.height = video.videoHeight; }
             ctx.clearRect(0, 0, canvas.width, canvas.height);
-            
-            if (!results || results.error) return;
+            if (!results || results.length === 0) return;
+
+            // LÓGICA DE AUTENTICACIÓN ESTRICTA (>90% y no Desconocido)
+            const operator = results.find(res => res.name !== "Desconocido" && res.confidence >= 0.90);
+
+            if (operator) {
+                const form = document.getElementById('form-incidencia');
+                const placeholder = document.getElementById('form-placeholder');
+                if (form.style.display === 'none') {
+                    form.style.display = 'block';
+                    placeholder.style.display = 'none';
+                    outputDiv.className = "alert alert-success w-100 mt-3 fw-bold";
+                    outputDiv.innerText = `✅ Autenticación facial exitosa: ${operator.name}`;
+                    console.log(`[Auth] Operador verificado: ${operator.name} (${(operator.confidence * 100).toFixed(1)}%)`);
+                }
+            }
 
             results.forEach(res => {
                 const [x1, y1, x2, y2] = res.box;
+                // Marco rojo para desconocidos o baja confianza, verde para operadores VIP (>90%)
+                const isAuth = res.name !== "Desconocido" && res.confidence >= 0.90;
+                ctx.strokeStyle = isAuth ? "#10b981" : "#ef4444";
+                ctx.lineWidth = isAuth ? 6 : 4; 
                 
-                // Dibujar rectángulo
-                ctx.strokeStyle = res.name === "Desconocido" ? "#ff0000" : "#00ff00";
-                ctx.lineWidth = 3;
                 ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
-
-                // Dibujar etiqueta
-                ctx.fillStyle = res.name === "Desconocido" ? "#ff0000" : "#00ff00";
-                ctx.font = "18px Arial";
-                const label = `${res.name} (${(res.confidence * 100).toFixed(1)}%)`;
-                ctx.fillText(label, x1, y1 > 20 ? y1 - 10 : y1 + 20);
+                ctx.fillStyle = ctx.strokeStyle; 
+                ctx.font = "bold 20px Inter, sans-serif";
+                ctx.fillText(`${res.name} (${(res.confidence * 100).toFixed(1)}%)`, x1, y1 > 25 ? y1 - 10 : y1 + 25);
             });
         }
 
-        async function runBackendScript(action) {
-            outputDiv.innerText = `Ejecutando ${action} en el servidor...`;
-            try {
-                const response = await fetch(`/api/facial/${action}`, { method: 'POST' });
-                const data = await response.json();
-                outputDiv.innerText = data.success ? `Resultado:\n${data.output}` : `Error:\n${data.error}`;
-            } catch (err) {
-                outputDiv.innerText = "Error de red: " + err.message;
+        // REGISTRO
+        function openRegisterAuth() {
+            const modal = new bootstrap.Modal(document.getElementById('authRegisterModal'));
+            modal.show();
+        }
+
+        async function confirmAuthAndStart() {
+            const email = document.getElementById('authEmail').value;
+            const password = document.getElementById('authPass').value;
+            const customName = document.getElementById('faceIdName').value.trim();
+
+            if (!email || !password || !customName) {
+                return alert("Por favor, rellena todos los campos incluyendo el nombre del perfil.");
             }
+
+            console.log("[Auth] Validando para registro...");
+            const res = await fetch('/api/facial/auth-register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ email, password })
+            });
+
+            if (res.ok) {
+                registrationUser = customName; // Usar el nombre elegido por el usuario
+                console.log("[Auth] Éxito. Iniciando registro para perfil:", registrationUser);
+                const authModal = bootstrap.Modal.getInstance(document.getElementById('authRegisterModal'));
+                authModal.hide();
+                startRegistrationFlow();
+            } else { alert("Credenciales incorrectas"); }
+        }
+
+        async function startRegistrationFlow() {
+            console.log("[Registration] Iniciando flujo...");
+            const modal = new bootstrap.Modal(document.getElementById('registerProgressModal'));
+            modal.show();
+            
+            isRegistering = true;
+            registrationCount = 0;
+            resetPhasesUI();
+
+            if (!stream) {
+                console.log("[Registration] Cámara apagada. Intentando abrir...");
+                document.getElementById('register-instruction').innerText = "Solicitando permisos de cámara...";
+                const success = await startWebcam();
+                if (!success) {
+                    alert("No se pudo abrir la cámara automáticamente.");
+                    modal.hide();
+                    isRegistering = false;
+                    return;
+                }
+            } else {
+                console.log("[Registration] Cámara ya activa.");
+                if (preview) { preview.srcObject = stream; preview.play(); }
+            }
+
+            await phase1Capture();
+        }
+
+        function resetPhasesUI() {
+            document.getElementById('phase-capture-container').style.opacity = '1';
+            document.getElementById('capture-bar').style.width = '0%';
+            document.getElementById('capture-percent').innerText = '0%';
+            document.getElementById('capture-status').innerText = 'Capturando...';
+            document.getElementById('phase-process-container').style.opacity = '0.4';
+            document.getElementById('phase-train-container').style.opacity = '0.4';
+            document.getElementById('registration-finished-actions').style.display = 'none';
+        }
+
+        async function phase1Capture() {
+            console.log("[Phase 1] Capturando 50 imágenes...");
+            while (isRegistering && registrationCount < TOTAL_CAPTURES) {
+                if (video.readyState === video.HAVE_ENOUGH_DATA) {
+                    updateCaptureInstructions();
+                    const tempCanvas = document.createElement('canvas');
+                    tempCanvas.width = video.videoWidth; tempCanvas.height = video.videoHeight;
+                    tempCanvas.getContext('2d').drawImage(video, 0, 0);
+                    const base64Image = tempCanvas.toDataURL('image/jpeg', 0.6);
+                    try {
+                        const res = await fetch('/api/facial/save-frame', {
+                            method: 'POST',
+                            headers: { 'Content-Type': 'application/json' },
+                            body: JSON.stringify({ image: base64Image, name: registrationUser, count: registrationCount + 1 })
+                        });
+                        const data = await res.json();
+                        if (data.success && data.saved) {
+                            registrationCount++;
+                            const p = Math.round((registrationCount / TOTAL_CAPTURES) * 100);
+                            document.getElementById('capture-bar').style.width = p + '%';
+                            document.getElementById('capture-percent').innerText = p + '%';
+                            document.getElementById('capture-status').innerText = `Capturadas ${registrationCount} de ${TOTAL_CAPTURES}`;
+                        }
+                    } catch (err) {}
+                }
+                await new Promise(r => setTimeout(r, 150));
+            }
+            if (registrationCount >= TOTAL_CAPTURES) await phase2Process();
+        }
+
+        function updateCaptureInstructions() {
+            const instr = document.getElementById('register-instruction');
+            if (registrationCount < 15) instr.innerText = "Mira fijamente a la cámara";
+            else if (registrationCount < 35) instr.innerText = "Gira la cabeza a la IZQUIERDA lentamente";
+            else instr.innerText = "Gira la cabeza a la DERECHA lentamente";
+        }
+
+        async function phase2Process() {
+            console.log("[Phase 2] Procesando dataset...");
+            document.getElementById('register-instruction').innerText = "Procesando imágenes...";
+            document.getElementById('phase-process-container').style.opacity = '1';
+            let p = 0;
+            const interval = setInterval(() => { if (p < 90) { p += 10; document.getElementById('process-bar').style.width = p + '%'; } }, 500);
+            try {
+                await fetch('/api/facial/process', { method: 'POST' });
+                clearInterval(interval);
+                document.getElementById('process-bar').style.width = '100%';
+                await phase3Train();
+            } catch (err) { alert("Fallo proceso"); cancelRegistration(); }
+        }
+
+        async function phase3Train() {
+            console.log("[Phase 3] Entrenando IA...");
+            document.getElementById('register-instruction').innerText = "Entrenando IA (Esto puede tardar)...";
+            document.getElementById('phase-train-container').style.opacity = '1';
+            let p = 0;
+            const interval = setInterval(() => { if (p < 95) { p += 1; document.getElementById('train-bar').style.width = p + '%'; } }, 1000);
+            try {
+                await fetch('/api/facial/train', { method: 'POST' });
+                clearInterval(interval);
+                document.getElementById('train-bar').style.width = '100%';
+                finishRegistration();
+            } catch (err) { alert("Fallo entrenamiento"); cancelRegistration(); }
+        }
+
+        function finishRegistration() {
+            isRegistering = false;
+            document.getElementById('register-instruction').innerText = "¡Registro Exitoso!";
+            document.getElementById('registration-finished-actions').style.display = 'block';
+            document.getElementById('btn-cancel-reg').style.display = 'none';
+        }
+
+        function cancelRegistration() { isRegistering = false; bootstrap.Modal.getInstance(document.getElementById('registerProgressModal')).hide(); }
+        function resetRegistration() { startRegistrationFlow(); }
+
+        // API INCIDENCIAS
+        async function enviarIncidencia() {
+            const btn = document.getElementById('btnSubmit');
+            btn.disabled = true;
+            const data = {
+                robotId: document.getElementById('robotId').value,
+                tipo: document.getElementById('tipoEvento').value,
+                severidad: document.getElementById('severidad').value,
+                mensaje: document.getElementById('mensajeIncidencia').value
+            };
+            try {
+                const res = await fetch('/api/eventos', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(data) });
+                if ((await res.json()).success) { alert("Declarada"); stopWebcam(); }
+            } catch (err) { alert("Error"); }
+            finally { btn.disabled = false; }
+        }
+
+        async function runBackendScript(action) {
+            outputDiv.className = "alert alert-warning mt-3"; outputDiv.innerText = `Ejecutando ${action}...`;
+            try {
+                const res = await fetch(`/api/facial/${action}`, { method: 'POST' });
+                const data = await res.json();
+                outputDiv.className = data.success ? "alert alert-success mt-3" : "alert alert-danger mt-3";
+                outputDiv.innerText = data.success ? "Éxito" : "Error: " + data.error;
+            } catch (err) { outputDiv.className = "alert alert-danger mt-3"; outputDiv.innerText = "Error red"; }
         }
     </script>
 </body>

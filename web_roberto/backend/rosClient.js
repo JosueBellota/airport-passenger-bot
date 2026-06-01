@@ -17,82 +17,61 @@ let currentGoal = null;
 let rosInstance = null;
 let goalTopic = null;
 /**
- * Inicializa la conexión con ROS Bridge y configura los suscriptores y publicadores.
- * Se conecta al puerto 9090 por defecto.
+ * Inicializa la conexión real con ROS Bridge y configura los suscriptores y publicadores.
  */
 function init() {
-    const ros = new ROSLIB.Ros({
-        url: 'ws://127.0.0.1:9090'
-    });
-    rosInstance = ros;
-
-    ros.on('connection', () => {
-        console.log('✅ Conectado a ROS Bridge (Backend)');
+    console.log('🔗 Conectando a ROS Bridge en ws://localhost:9090...');
+    
+    rosInstance = new ROSLIB.Ros({
+        url: 'ws://localhost:9090'
     });
 
-    ros.on('error', (error) => {
-        console.error('❌ Error en ROS Bridge:', error);
+    rosInstance.on('connection', () => {
+        console.log('✅ Conectado a ROS Bridge exitosamente.');
+        // Registramos el evento de conexión en la base de datos
+        logica.logConnectionEvent(1, 'connected').catch(e => console.error('Error loggeando conexión:', e));
     });
 
-    ros.on('close', () => {
-        console.log('⚠️ Conexión cerrada con ROS Bridge');
+    rosInstance.on('error', (error) => {
+        console.error('❌ Error de conexión ROS Bridge:', error);
     });
 
-    /**
-     * Callback para el tópico /amcl_pose.
-     * Actualiza la posición en tiempo real y gestiona la persistencia en DB.
-     */
-    const poseListener = new ROSLIB.Topic({
-        ros: ros,
+    rosInstance.on('close', () => {
+        console.warn('⚠️ Conexión a ROS Bridge cerrada.');
+        logica.logConnectionEvent(1, 'disconnected').catch(e => console.error('Error loggeando desconexión:', e));
+    });
+
+    // Suscripción a la pose del robot (AMCL)
+    const poseTopic = new ROSLIB.Topic({
+        ros: rosInstance,
         name: '/amcl_pose',
-        messageType: 'geometry_msgs/PoseWithCovarianceStamped',
-        // CRITICAL FOR JAZZY: Match AMCL Best Effort QoS
-        queue_length: 1,
-        throttle_rate: 100 
+        messageType: 'geometry_msgs/msg/PoseWithCovarianceStamped'
     });
 
-    poseListener.subscribe((message) => {
-        const x = message.pose.pose.position.x;
-        const y = message.pose.pose.position.y;
+    poseTopic.subscribe((message) => {
+        latestPosition.x = message.pose.pose.position.x;
+        latestPosition.y = message.pose.pose.position.y;
+        latestPosition.timestamp = new Date().toISOString();
         
-        latestPosition = {
-            x: x,
-            y: y,
-            timestamp: new Date().toISOString()
-        };
-
-        // Calcular distancia inicial mediante teorema de Pitágoras
-        const dx = x - latestPosition.x;
-        const dy = y - latestPosition.y;
-        initialDistance = Math.sqrt(dx * dx + dy * dy);
-
+        // Throttling para no saturar la base de datos (cada 2s o si se movió > 5cm)
         const now = Date.now();
-        // Euclidean distance calculation
-        const distMoved = Math.sqrt(
-            Math.pow(x - lastInsertedPos.x, 2) + 
-            Math.pow(y - lastInsertedPos.y, 2)
+        const dist = Math.sqrt(
+            Math.pow(latestPosition.x - lastInsertedPos.x, 2) + 
+            Math.pow(latestPosition.y - lastInsertedPos.y, 2)
         );
 
-        /**
-         * LÓGICA DE PERSISTENCIA (Smart Logging):
-         * Solo guardamos en la base de datos si:
-         * 1. Han pasado al menos 500ms (evita saturar el disco).
-         * 2. El robot se ha movido más de 2cm (evita drift y redundancia).
-         */
-    if (now - lastInsertTime >= 500 && distMoved > 0.02) {
-    logica.insertPosition(1, x, y); 
-    lastInsertTime = now;
-    lastInsertedPos = { x, y };
-}
+        if (now - lastInsertTime > 2000 && dist > 0.05) {
+            logica.insertPosition(1, latestPosition.x, latestPosition.y);
+            lastInsertedPos = { x: latestPosition.x, y: latestPosition.y };
+            lastInsertTime = now;
+        }
     });
 
-    // ---------------------------------------------------------
-    // 2. GOAL TOPIC SETUP (Navigation)
-    // ---------------------------------------------------------
+    // Publicador para enviar metas al robot (Nav2)
     goalTopic = new ROSLIB.Topic({
-        ros: ros,
+        ros: rosInstance,
         name: '/goal_pose',
-        messageType: 'geometry_msgs/PoseStamped'
+        messageType: 'geometry_msgs/msg/PoseStamped'
     });
 }
 /**

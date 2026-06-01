@@ -410,6 +410,21 @@ router.get('/eventos', async (req, res) => {
 });
 
 /**
+ * @route POST /api/eventos
+ * @description Crea una nueva incidencia.
+ */
+router.post('/eventos', async (req, res) => {
+    try {
+        const { robotId, tipo, severidad, mensaje } = req.body;
+        const id = await logica.insertEvento({ robotId, tipo, severidad, mensaje });
+        res.json({ success: true, eventoId: id });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ success: false, message: 'Error al crear evento' });
+    }
+});
+
+/**
  * @route POST /api/eventos/resolver
  * @description Registra una acción de mantenimiento y cierra la incidencia.
  */
@@ -428,6 +443,30 @@ router.post('/eventos/resolver', async (req, res) => {
 
 // --- Rutas de Reconocimiento Facial ---
 const facialLogic = require('./facial_logic');
+
+router.post('/facial/auth-register', async (req, res) => {
+    const { email, password } = req.body;
+    try {
+        const result = await logica.validarCredenciales(email, password);
+        if (result.success) {
+            res.json({ success: true, nombre: result.usuario.nombre });
+        } else {
+            res.status(401).json(result);
+        }
+    } catch (err) {
+        res.status(500).json({ success: false, message: 'Error de servidor' });
+    }
+});
+
+router.post('/facial/save-frame', async (req, res) => {
+    const { image, name, count } = req.body;
+    try {
+        const result = await facialLogic.saveRegistrationFrame(name, image, count);
+        res.json(result);
+    } catch (err) {
+        res.status(500).json({ success: false, error: err.message || err });
+    }
+});
 
 router.post('/facial/process', async (req, res) => {
     try {
