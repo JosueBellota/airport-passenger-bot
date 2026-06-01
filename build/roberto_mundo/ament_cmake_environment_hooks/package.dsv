@@ -1,0 +1,4 @@
+source;share/roberto_mundo/local_setup.bash
+source;share/roberto_mundo/local_setup.dsv
+source;share/roberto_mundo/local_setup.sh
+source;share/roberto_mundo/local_setup.zsh
