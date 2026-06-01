@@ -1,0 +1,101 @@
+[0.000000] (-) TimerEvent: {}
+[0.001150] (-) JobUnselected: {'identifier': 'roberto'}
+[0.001248] (-) JobUnselected: {'identifier': 'roberto_gesture_detection'}
+[0.001506] (-) JobUnselected: {'identifier': 'roberto_lidar'}
+[0.001819] (-) JobUnselected: {'identifier': 'roberto_mundo'}
+[0.001905] (-) JobUnselected: {'identifier': 'roberto_nav_ruta'}
+[0.002029] (-) JobUnselected: {'identifier': 'roberto_person_detection'}
+[0.002224] (roberto_nav_punto) JobQueued: {'identifier': 'roberto_nav_punto', 'dependencies': OrderedDict()}
+[0.002568] (roberto_nav_punto) JobStarted: {'identifier': 'roberto_nav_punto'}
+[0.100292] (-) TimerEvent: {}
+[0.200725] (-) TimerEvent: {}
+[0.301124] (-) TimerEvent: {}
+[0.401525] (-) TimerEvent: {}
+[0.501975] (-) TimerEvent: {}
+[0.603777] (-) TimerEvent: {}
+[0.704099] (-) TimerEvent: {}
+[0.804498] (-) TimerEvent: {}
+[0.905000] (-) TimerEvent: {}
+[1.005397] (-) TimerEvent: {}
+[1.105820] (-) TimerEvent: {}
+[1.206299] (-) TimerEvent: {}
+[1.307678] (-) TimerEvent: {}
+[1.389141] (roberto_nav_punto) Command: {'cmd': ['/usr/bin/python3', '-W', 'ignore:setup.py install is deprecated', '-W', 'ignore:easy_install command is deprecated', 'setup.py', 'egg_info', '--egg-base', '../build/roberto_nav_punto', 'build', '--build-base', '/root/ROS2/Roberto/build/roberto_nav_punto/build', 'install', '--record', '/root/ROS2/Roberto/build/roberto_nav_punto/install.log', '--single-version-externally-managed', 'install_data'], 'cwd': '/root/ROS2/Roberto/roberto_nav_punto', 'env': {'GZ_SLEEP_BEFORE_STARTUP_SECS': '2', 'LESSOPEN': '| /usr/bin/lesspipe %s', 'GZ_SIM_RESOURCE_PATH': '/opt/ros/jazzy/share:/root/ROS2/Roberto/install/roberto_mundo/share/roberto_mundo/models', 'USER': 'root', 'GZ_CONFIG_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/share/gz:/opt/ros/jazzy/opt/sdformat_vendor/share/gz:/opt/ros/jazzy/opt/gz_gui_vendor/share/gz:/opt/ros/jazzy/opt/gz_transport_vendor/share/gz:/opt/ros/jazzy/opt/gz_rendering_vendor/share/gz:/opt/ros/jazzy/opt/gz_plugin_vendor/share/gz:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/share/gz:/opt/ros/jazzy/opt/gz_msgs_vendor/share/gz:/opt/ros/jazzy/opt/gz_common_vendor/share/gz', 'SHLVL': '1', 'LIBGL_ALWAYS_SOFTWARE': '1', 'LD_LIBRARY_PATH': '/opt/ros/jazzy/opt/gz_sim_vendor/lib:/opt/ros/jazzy/opt/gz_sensors_vendor/lib:/opt/ros/jazzy/opt/gz_physics_vendor/lib:/opt/ros/jazzy/opt/sdformat_vendor/lib:/opt/ros/jazzy/opt/rviz_ogre_vendor/lib:/opt/ros/jazzy/lib/x86_64-linux-gnu:/opt/ros/jazzy/opt/gz_gui_vendor/lib:/opt/ros/jazzy/opt/gz_transport_vendor/lib:/opt/ros/jazzy/opt/gz_rendering_vendor/lib:/opt/ros/jazzy/opt/gz_plugin_vendor/lib:/opt/ros/jazzy/opt/gz_fuel_tools_vendor/lib:/opt/ros/jazzy/opt/gz_msgs_vendor/lib:/opt/ros/jazzy/opt/gz_common_vendor/lib:/opt/ros/jazzy/opt/gz_math_vendor/lib:/opt/ros/jazzy/opt/gz_utils_vendor/lib:/opt/ros/jazzy/opt/gz_tools_vendor/lib:/opt/ros/jazzy/opt/gz_ogre_next_vendor/lib:/opt/ros/jazzy/opt/gz_dartsim_vendor/lib:/opt/ros/jazzy/opt/gz_cmake_vendor/lib:/opt/ros/jazzy/lib', 'WT_PROFILE_ID': '{d8e96812-b789-5068-a5ae-10b2fb53e95f}', 'MOTD_SHOWN': 'update-motd', 'HOME': '/root', 'OLDPWD': '/root/ROS2/Roberto', 'ROS_PYTHON_VERSION': '3', 'DBUS_SESSION_BUS_ADDRESS': 'unix:path=/run/user/0/bus', 'WSL_DISTRO_NAME': 'Ubuntu-24.04', 'WAYLAND_DISPLAY': 'wayland-0', 'COLCON_PREFIX_PATH': '/root/ROS2/Roberto/install:/root/ROS2/turtlebot3_ws/install', 'ROS_DISTRO': 'jazzy', 'LOGNAME': 'root', 'NAME': 'DESKTOP-30Q2FHM', 'WSL_INTEROP': '/run/WSL/62339_interop', 'PULSE_SERVER': 'unix:/mnt/wslg/PulseServer', '_': '/usr/bin/colcon', 'ROS_VERSION': '2', 'ogre_vulkan_render_system': '0', 'TERM': 'xterm-256color', 'QT_X11_NO_MITSHM': '1', 'PATH': '/opt/ros/jazzy/opt/gz_msgs_vendor/bin:/opt/ros/jazzy/opt/gz_tools_vendor/bin:/opt/ros/jazzy/opt/gz_ogre_next_vendor/bin:/opt/ros/jazzy/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/nodejs/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/MATLAB/R2025b/bin:/mnt/c/Program Files/usbipd-win/:/mnt/c/Users/josue/AppData/Local/Programs/Python/Python312/Scripts/:/mnt/c/Users/josue/AppData/Local/Programs/Python/Python312/:/mnt/c/Users/josue/AppData/Local/Programs/Python/Launcher/:/mnt/c/Users/josue/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/josue/AppData/Local/GitHubDesktop/bin:/mnt/c/Users/josue/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Users/josue/AppData/Roaming/npm:/snap/bin:/root/.local/bin:/root/.local/bin', 'WT_SESSION': 'a45d8764-c53f-4b8e-807e-4996a4addffb', 'XDG_RUNTIME_DIR': '/run/user/0', 'DISPLAY': ':0', 'LANG': 'C.UTF-8', 'GZ_IP': '127.0.0.1', 'LS_COLORS': 'rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=00:su=37;41:sg=30;43:ca=00:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arc=01;31:*.arj=01;31:*.taz=01;31:*.lha=01;31:*.lz4=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.tzo=01;31:*.t7z=01;31:*.zip=01;31:*.z=01;31:*.dz=01;31:*.gz=01;31:*.lrz=01;31:*.lz=01;31:*.lzo=01;31:*.xz=01;31:*.zst=01;31:*.tzst=01;31:*.bz2=01;31:*.bz=01;31:*.tbz=01;31:*.tbz2=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.alz=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.cab=01;31:*.wim=01;31:*.swm=01;31:*.dwm=01;31:*.esd=01;31:*.avif=01;35:*.jpg=01;35:*.jpeg=01;35:*.mjpg=01;35:*.mjpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.webm=01;35:*.webp=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=00;36:*.au=00;36:*.flac=00;36:*.m4a=00;36:*.mid=00;36:*.midi=00;36:*.mka=00;36:*.mp3=00;36:*.mpc=00;36:*.ogg=00;36:*.ra=00;36:*.wav=00;36:*.oga=00;36:*.opus=00;36:*.spx=00;36:*.xspf=00;36:*~=00;90:*#=00;90:*.bak=00;90:*.crdownload=00;90:*.dpkg-dist=00;90:*.dpkg-new=00;90:*.dpkg-old=00;90:*.dpkg-tmp=00;90:*.old=00;90:*.orig=00;90:*.part=00;90:*.rej=00;90:*.rpmnew=00;90:*.rpmorig=00;90:*.rpmsave=00;90:*.swp=00;90:*.tmp=00;90:*.ucf-dist=00;90:*.ucf-new=00;90:*.ucf-old=00;90:', 'ROS_DOMAIN_ID': '30', 'AMENT_PREFIX_PATH': '/root/ROS2/Roberto/install/roberto_person_detection:/root/ROS2/Roberto/install/roberto:/root/ROS2/Roberto/install/roberto_nav_ruta:/root/ROS2/Roberto/install/roberto_nav_punto:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/Roberto/install/roberto_lidar:/root/ROS2/Roberto/install/roberto_gesture_detection:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy', 'SHELL': '/bin/bash', 'LESSCLOSE': '/usr/bin/lesspipe %s %s', 'GZ_VERSION': '8', 'ROS_AUTOMATIC_DISCOVERY_RANGE': 'SUBNET', 'PWD': '/root/ROS2/Roberto/build/roberto_nav_punto', 'TURTLEBOT3_MODEL': 'burger_cam', 'GEMINI_API_KEY': 'AQ.Ab8RN6JiKHxBtH8y82T2WBDLJZcllZtlGMnpcFes6OkquKCBmg', 'XDG_DATA_DIRS': '/usr/local/share:/usr/share:/var/lib/snapd/desktop', 'MESA_GL_VERSION_OVERRIDE': '4.1', 'PYTHONPATH': '/root/ROS2/Roberto/build/roberto_nav_punto/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_person_detection/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_ruta/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_lidar/lib/python3.12/site-packages:/root/ROS2/Roberto/install/roberto_gesture_detection/lib/python3.12/site-packages:/opt/ros/jazzy/lib/python3.12/site-packages', 'COLCON': '1', 'WSL2_GUI_APPS_ENABLED': '1', 'HOSTTYPE': 'x86_64', 'CMAKE_PREFIX_PATH': '/root/ROS2/Roberto/install/roberto:/root/ROS2/Roberto/install/roberto_mundo:/root/ROS2/turtlebot3_ws/install/roberto:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor', 'WSLENV': 'WT_SESSION:WT_PROFILE_ID:'}, 'shell': False}
+[1.407981] (-) TimerEvent: {}
+[1.508823] (-) TimerEvent: {}
+[1.618375] (-) TimerEvent: {}
+[1.719061] (-) TimerEvent: {}
+[1.823220] (-) TimerEvent: {}
+[1.931871] (-) TimerEvent: {}
+[2.034108] (-) TimerEvent: {}
+[2.136626] (-) TimerEvent: {}
+[2.238157] (-) TimerEvent: {}
+[2.339390] (-) TimerEvent: {}
+[2.443962] (-) TimerEvent: {}
+[2.544640] (-) TimerEvent: {}
+[2.646100] (-) TimerEvent: {}
+[2.746804] (-) TimerEvent: {}
+[2.847681] (-) TimerEvent: {}
+[2.951853] (-) TimerEvent: {}
+[3.055439] (-) TimerEvent: {}
+[3.167333] (-) TimerEvent: {}
+[3.268656] (-) TimerEvent: {}
+[3.369387] (-) TimerEvent: {}
+[3.470568] (-) TimerEvent: {}
+[3.563353] (roberto_nav_punto) StdoutLine: {'line': b'running egg_info\n'}
+[3.570962] (-) TimerEvent: {}
+[3.673298] (-) TimerEvent: {}
+[3.774402] (-) TimerEvent: {}
+[3.869668] (roberto_nav_punto) StdoutLine: {'line': b'writing ../build/roberto_nav_punto/roberto_nav_punto.egg-info/PKG-INFO\n'}
+[3.872700] (roberto_nav_punto) StdoutLine: {'line': b'writing dependency_links to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/dependency_links.txt\n'}
+[3.876783] (roberto_nav_punto) StdoutLine: {'line': b'writing entry points to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/entry_points.txt\n'}
+[3.877358] (-) TimerEvent: {}
+[3.878252] (roberto_nav_punto) StdoutLine: {'line': b'writing requirements to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/requires.txt\n'}
+[3.884304] (roberto_nav_punto) StdoutLine: {'line': b'writing top-level names to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/top_level.txt\n'}
+[3.990211] (-) TimerEvent: {}
+[4.094034] (-) TimerEvent: {}
+[4.196271] (-) TimerEvent: {}
+[4.297101] (-) TimerEvent: {}
+[4.402516] (-) TimerEvent: {}
+[4.477025] (roberto_nav_punto) StdoutLine: {'line': b"reading manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'\n"}
+[4.483509] (roberto_nav_punto) StdoutLine: {'line': b"writing manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'\n"}
+[4.484820] (roberto_nav_punto) StdoutLine: {'line': b'running build\n'}
+[4.485769] (roberto_nav_punto) StdoutLine: {'line': b'running build_py\n'}
+[4.486793] (roberto_nav_punto) StdoutLine: {'line': b'copying roberto_nav_punto/face_vision_node.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto\n'}
+[4.488636] (roberto_nav_punto) StdoutLine: {'line': b'copying roberto_nav_punto/vision_server.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto\n'}
+[4.490157] (roberto_nav_punto) StdoutLine: {'line': b'copying roberto_nav_punto/simple_follower.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto\n'}
+[4.491267] (roberto_nav_punto) StdoutLine: {'line': b'copying roberto_nav_punto/__init__.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto\n'}
+[4.492957] (roberto_nav_punto) StdoutLine: {'line': b'running install\n'}
+[4.502801] (-) TimerEvent: {}
+[4.552771] (roberto_nav_punto) StdoutLine: {'line': b'running install_lib\n'}
+[4.605746] (-) TimerEvent: {}
+[4.706584] (-) TimerEvent: {}
+[4.734336] (roberto_nav_punto) StdoutLine: {'line': b'copying /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto/simple_follower.py -> /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto\n'}
+[4.742349] (roberto_nav_punto) StdoutLine: {'line': b'byte-compiling /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto/simple_follower.py to simple_follower.cpython-312.pyc\n'}
+[4.753730] (roberto_nav_punto) StdoutLine: {'line': b'running install_data\n'}
+[4.755044] (roberto_nav_punto) StdoutLine: {'line': b'copying resource/roberto_nav_punto -> /root/ROS2/Roberto/install/roberto_nav_punto/share/ament_index/resource_index/packages\n'}
+[4.757225] (roberto_nav_punto) StdoutLine: {'line': b'copying package.xml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto\n'}
+[4.764446] (roberto_nav_punto) StdoutLine: {'line': b'copying launch/localization.launch.py -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/launch\n'}
+[4.765280] (roberto_nav_punto) StdoutLine: {'line': b'copying config/map_server_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/config\n'}
+[4.765662] (roberto_nav_punto) StdoutLine: {'line': b'copying config/amcl_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/config\n'}
+[4.766190] (roberto_nav_punto) StdoutLine: {'line': b'copying rviz/localization.rviz -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/rviz\n'}
+[4.769227] (roberto_nav_punto) StdoutLine: {'line': b'running install_egg_info\n'}
+[4.823837] (-) TimerEvent: {}
+[4.924619] (-) TimerEvent: {}
+[4.969371] (roberto_nav_punto) StdoutLine: {'line': b"removing '/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto-0.0.0-py3.12.egg-info' (and everything under it)\n"}
+[4.970779] (roberto_nav_punto) StdoutLine: {'line': b'Copying ../build/roberto_nav_punto/roberto_nav_punto.egg-info to /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto-0.0.0-py3.12.egg-info\n'}
+[4.975601] (roberto_nav_punto) StdoutLine: {'line': b'running install_scripts\n'}
+[5.028031] (-) TimerEvent: {}
+[5.129195] (-) TimerEvent: {}
+[5.230132] (-) TimerEvent: {}
+[5.331456] (-) TimerEvent: {}
+[5.436089] (-) TimerEvent: {}
+[5.477140] (roberto_nav_punto) StdoutLine: {'line': b'Installing face_vision_node script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto\n'}
+[5.478420] (roberto_nav_punto) StdoutLine: {'line': b'Installing simple_follower script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto\n'}
+[5.479440] (roberto_nav_punto) StdoutLine: {'line': b'Installing vision_server script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto\n'}
+[5.483890] (roberto_nav_punto) StdoutLine: {'line': b"writing list of installed files to '/root/ROS2/Roberto/build/roberto_nav_punto/install.log'\n"}
+[5.536374] (-) TimerEvent: {}
+[5.603655] (roberto_nav_punto) CommandEnded: {'returncode': 0}
+[5.639920] (-) TimerEvent: {}
+[5.691037] (roberto_nav_punto) JobEnded: {'identifier': 'roberto_nav_punto', 'rc': 0}
+[5.692767] (-) EventReactorShutdown: {}
