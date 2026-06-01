@@ -47,7 +47,7 @@
     <include>
       <name>persona_prueba_bobeye</name>
       <uri>model://bobeye</uri>
-      <pose>-2.0 0.5 0.0 0 0 0</pose>
+      <pose>-1.5 0.0 0.0 0 0 3.1416</pose>
     </include>
 
     <model name="terminal_structure">

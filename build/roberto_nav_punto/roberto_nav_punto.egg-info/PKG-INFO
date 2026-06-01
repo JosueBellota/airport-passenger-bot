@@ -1,16 +1,13 @@
 Metadata-Version: 2.4
 Name: roberto_nav_punto
 Version: 0.0.0
-Summary: TODO: Package description
-Maintainer: mery
-Maintainer-email: meryemboumlik612@gmail.com
-License: TODO: License declaration
+Summary: Paquete de navegacion y seguimiento para Roberto
+Author: Josue
+Author-email: josue@example.com
+License: Apache License 2.0
 Requires-Dist: setuptools
-Provides-Extra: test
-Requires-Dist: pytest; extra == "test"
+Dynamic: author
+Dynamic: author-email
 Dynamic: license
-Dynamic: maintainer
-Dynamic: maintainer-email
-Dynamic: provides-extra
 Dynamic: requires-dist
 Dynamic: summary

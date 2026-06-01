@@ -1,0 +1,35 @@
+/usr/local/lib/python3.12/dist-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+  warnings.warn(msg)
+running egg_info
+writing ../build/roberto_nav_punto/roberto_nav_punto.egg-info/PKG-INFO
+writing dependency_links to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/dependency_links.txt
+writing entry points to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/entry_points.txt
+writing requirements to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/requires.txt
+writing top-level names to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/top_level.txt
+reading manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'
+writing manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'
+running build
+running build_py
+copying roberto_nav_punto/face_vision_node.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+copying roberto_nav_punto/vision_server.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+copying roberto_nav_punto/simple_follower.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+copying roberto_nav_punto/__init__.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+copying roberto_nav_punto/person_tracker.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+running install
+running install_lib
+running install_data
+copying resource/roberto_nav_punto -> /root/ROS2/Roberto/install/roberto_nav_punto/share/ament_index/resource_index/packages
+copying package.xml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto
+copying launch/localization.launch.py -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/launch
+copying config/map_server_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/config
+copying config/amcl_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/config
+copying rviz/localization.rviz -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/rviz
+running install_egg_info
+removing '/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto-0.0.0-py3.12.egg-info' (and everything under it)
+Copying ../build/roberto_nav_punto/roberto_nav_punto.egg-info to /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto-0.0.0-py3.12.egg-info
+running install_scripts
+Installing face_vision_node script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+Installing person_tracker script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+Installing simple_follower script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+Installing vision_server script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+writing list of installed files to '/root/ROS2/Roberto/build/roberto_nav_punto/install.log'

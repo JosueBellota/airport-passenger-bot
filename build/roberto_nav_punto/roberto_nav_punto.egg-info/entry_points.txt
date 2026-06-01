@@ -1,4 +1,5 @@
 [console_scripts]
 face_vision_node = roberto_nav_punto.face_vision_node:main
-simple_follower.py = roberto_nav_punto.simple_follower:main
+person_tracker = roberto_nav_punto.person_tracker:main
+simple_follower = roberto_nav_punto.simple_follower:main
 vision_server = roberto_nav_punto.vision_server:main

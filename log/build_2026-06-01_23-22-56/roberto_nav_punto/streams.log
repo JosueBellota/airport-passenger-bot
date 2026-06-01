@@ -1,0 +1,51 @@
+[3.625s] Invoking command in '/root/ROS2/Roberto/roberto_nav_punto': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_punto/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_punto build --build-base /root/ROS2/Roberto/build/roberto_nav_punto/build install --record /root/ROS2/Roberto/build/roberto_nav_punto/install.log --single-version-externally-managed install_data
+[4.669s] /usr/local/lib/python3.12/dist-packages/setuptools/_distutils/dist.py:287: UserWarning: Unknown distribution option: 'tests_require'
+[4.670s]   warnings.warn(msg)
+[5.693s] running egg_info
+[5.737s] creating ../build/roberto_nav_punto/roberto_nav_punto.egg-info
+[5.738s] writing ../build/roberto_nav_punto/roberto_nav_punto.egg-info/PKG-INFO
+[5.738s] writing dependency_links to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/dependency_links.txt
+[5.741s] writing entry points to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/entry_points.txt
+[5.741s] writing requirements to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/requires.txt
+[5.742s] writing top-level names to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/top_level.txt
+[5.742s] writing manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'
+[5.849s] reading manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'
+[5.850s] writing manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'
+[5.850s] running build
+[5.851s] running build_py
+[5.851s] creating /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+[5.853s] copying roberto_nav_punto/face_vision_node.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+[5.853s] copying roberto_nav_punto/vision_server.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+[5.854s] copying roberto_nav_punto/simple_follower.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+[5.855s] copying roberto_nav_punto/__init__.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+[5.855s] running install
+[5.865s] running install_lib
+[5.911s] creating /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto
+[5.911s] copying /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto/face_vision_node.py -> /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto
+[5.911s] copying /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto/vision_server.py -> /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto
+[5.911s] copying /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto/simple_follower.py -> /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto
+[5.912s] copying /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto/__init__.py -> /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto
+[5.912s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto/face_vision_node.py to face_vision_node.cpython-312.pyc
+[5.922s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto/vision_server.py to vision_server.cpython-312.pyc
+[5.922s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto/simple_follower.py to simple_follower.cpython-312.pyc
+[5.922s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto/__init__.py to __init__.cpython-312.pyc
+[5.922s] running install_data
+[5.922s] creating /root/ROS2/Roberto/install/roberto_nav_punto/share/ament_index/resource_index/packages
+[5.922s] copying resource/roberto_nav_punto -> /root/ROS2/Roberto/install/roberto_nav_punto/share/ament_index/resource_index/packages
+[5.923s] copying package.xml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto
+[5.923s] creating /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/launch
+[5.923s] copying launch/localization.launch.py -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/launch
+[5.923s] creating /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/config
+[5.924s] copying config/map_server_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/config
+[5.924s] copying config/amcl_params.yaml -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/config
+[5.925s] creating /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/rviz
+[5.926s] copying rviz/localization.rviz -> /root/ROS2/Roberto/install/roberto_nav_punto/share/roberto_nav_punto/rviz
+[5.926s] running install_egg_info
+[5.975s] Copying ../build/roberto_nav_punto/roberto_nav_punto.egg-info to /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto-0.0.0-py3.12.egg-info
+[5.977s] running install_scripts
+[6.089s] Installing face_vision_node script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+[6.090s] Installing person_tracker script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+[6.091s] Installing simple_follower script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+[6.091s] Installing vision_server script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+[6.091s] writing list of installed files to '/root/ROS2/Roberto/build/roberto_nav_punto/install.log'
+[6.138s] Invoked command in '/root/ROS2/Roberto/roberto_nav_punto' returned '0': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_punto/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_punto build --build-base /root/ROS2/Roberto/build/roberto_nav_punto/build install --record /root/ROS2/Roberto/build/roberto_nav_punto/install.log --single-version-externally-managed install_data
