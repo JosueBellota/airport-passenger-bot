@@ -1,0 +1,45 @@
+################################################################################
+# Archivo: amcl_params.yaml
+# Autor: Mery
+# Descripcion: Configuracion del nodo nav2_amcl para estimar la posicion global
+#              del robot en el mapa utilizando LiDAR y Odometria.
+################################################################################
+
+amcl:
+  ros__parameters:
+    # --- Configuracion de Simulacion ---
+    # Indica que el nodo debe sincronizarse con el reloj de Gazebo
+    use_sim_time: True
+
+    # --- Definicion de Frames (TF) ---
+    # Estructura de la cadena de transformaciones necesaria para Tarea 8
+    base_frame_id: "base_footprint"  # Frame base del robot
+    odom_frame_id: "odom"            # Frame de odometria (referencia local)
+    global_frame_id: "map"           # Frame del mapa (referencia global)
+    scan_topic: "scan"               # Topico de entrada del sensor LiDAR
+
+    # --- Configuracion del Filtro de Particulas ---
+    # Define la cantidad de "puntos de probabilidad" para la localizacion
+    min_particles: 500
+    max_particles: 2000
+    
+    # Umbrales para actualizar la posicion (10cm o 0.1 radianes de giro)
+    update_min_d: 0.1
+    update_min_a: 0.1
+
+    # --- Modelo de Ruido (Parametros Alpha) ---
+    # Ajuste de la incertidumbre en el movimiento para estabilidad en simulacion
+    alpha1: 0.1
+    alpha2: 0.1
+    alpha3: 0.1
+    alpha4: 0.1
+    alpha5: 0.1
+
+    # --- Configuracion de Pose Inicial ---
+    # Automatiza la localizacion al arrancar para evitar inicializacion manual
+    set_initial_pose: True
+    initial_pose:
+      x: 0.0
+      y: 0.0
+      z: 0.0
+      yaw: 0.0

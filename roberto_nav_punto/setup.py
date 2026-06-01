@@ -27,10 +27,12 @@ setup(
             'pytest',
         ],
     },
+
     entry_points={
         'console_scripts': [
             'simple_follower.py = roberto_nav_punto.simple_follower:main',
             'vision_server = roberto_nav_punto.vision_server:main',
+            'face_vision_node = roberto_nav_punto.face_vision_node:main',
         ],
     },
 )
