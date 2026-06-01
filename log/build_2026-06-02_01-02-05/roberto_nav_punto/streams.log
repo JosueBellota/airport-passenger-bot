@@ -1,0 +1,27 @@
+[1.259s] Invoking command in '/root/ROS2/Roberto/roberto_nav_punto': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_punto/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_punto build --build-base /root/ROS2/Roberto/build/roberto_nav_punto/build install --record /root/ROS2/Roberto/build/roberto_nav_punto/install.log --single-version-externally-managed install_data
+[1.659s] running egg_info
+[1.691s] writing ../build/roberto_nav_punto/roberto_nav_punto.egg-info/PKG-INFO
+[1.691s] writing dependency_links to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/dependency_links.txt
+[1.692s] writing entry points to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/entry_points.txt
+[1.692s] writing requirements to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/requires.txt
+[1.692s] writing top-level names to ../build/roberto_nav_punto/roberto_nav_punto.egg-info/top_level.txt
+[1.759s] reading manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'
+[1.761s] writing manifest file '../build/roberto_nav_punto/roberto_nav_punto.egg-info/SOURCES.txt'
+[1.761s] running build
+[1.761s] running build_py
+[1.762s] copying roberto_nav_punto/vision_server.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+[1.762s] copying roberto_nav_punto/web_video_server.py -> /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto
+[1.762s] running install
+[1.768s] running install_lib
+[1.807s] copying /root/ROS2/Roberto/build/roberto_nav_punto/build/lib/roberto_nav_punto/vision_server.py -> /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto
+[1.826s] byte-compiling /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto/vision_server.py to vision_server.cpython-312.pyc
+[1.845s] running install_data
+[1.845s] running install_egg_info
+[1.879s] removing '/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto-0.0.0-py3.12.egg-info' (and everything under it)
+[1.880s] Copying ../build/roberto_nav_punto/roberto_nav_punto.egg-info to /root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages/roberto_nav_punto-0.0.0-py3.12.egg-info
+[1.916s] running install_scripts
+[1.984s] Installing face_vision_node script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+[1.984s] Installing simple_follower script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+[1.984s] Installing vision_server script to /root/ROS2/Roberto/install/roberto_nav_punto/lib/roberto_nav_punto
+[1.984s] writing list of installed files to '/root/ROS2/Roberto/build/roberto_nav_punto/install.log'
+[2.018s] Invoked command in '/root/ROS2/Roberto/roberto_nav_punto' returned '0': PYTHONPATH=/root/ROS2/Roberto/build/roberto_nav_punto/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/root/ROS2/Roberto/install/roberto_nav_punto/lib/python3.12/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/roberto_nav_punto build --build-base /root/ROS2/Roberto/build/roberto_nav_punto/build install --record /root/ROS2/Roberto/build/roberto_nav_punto/install.log --single-version-externally-managed install_data

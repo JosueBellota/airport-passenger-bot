@@ -1,115 +1,73 @@
-"""
-Autor: Chris
-Descripción: Servidor de Streaming de Vídeo. 
-Este script actúa como un puente (Bridge) que recibe imágenes de ROS 2, 
-las convierte a formato JPEG y las sirve a través de un servidor Flask 
-para que puedan verse en cualquier navegador web.
-"""
 import rclpy
 from rclpy.node import Node
 from sensor_msgs.msg import Image
-from cv_bridge import CvBridge
 import cv2
-from flask import Flask, Response
-from flask_cors import CORS
-import threading
-import time
+from cv_bridge import CvBridge
+import os
+import subprocess
 
-app = Flask(__name__)
-CORS(app)
-
-bridge = CvBridge()
-camera_node = None
-
-class CameraSubscriber(Node):
-    """
-    Nodo de ROS 2 que se suscribe al tópico de la cámara.
-    
-    Mantiene en memoria el último frame recibido para que el servidor 
-    web pueda consultarlo en cualquier momento.
-    """
+class StreamRawExtractorNode(Node):
     def __init__(self):
-        """
-        Inicializa el nodo y el suscriptor al flujo de imagen cruda.
-        """
-        super().__init__('camera_subscriber')
+        super().__init__('vision_server')
+        self.bridge = CvBridge()
+        
+        # Directorio de destino definitivo
+        self.output_dir = '/root/ROS2/Roberto/roberto_nav_punto/capturas'
+        os.makedirs(self.output_dir, exist_ok=True)
+        self.output_path = os.path.join(self.output_dir, 'live_raw_frame.jpg')
+        
+        # Suscripción directa al tópico crudo de la imagen
         self.subscription = self.create_subscription(
             Image,
             '/camera/image_raw',
-            self.listener_callback,
-            10)
-        self.current_frame = None
+            self.image_callback,
+            10
+        )
+        self.get_logger().info('=== EXTRACTOR CRUDO /CAMERA/IMAGE_RAW ACTIVO ===')
 
-    def listener_callback(self, data):
-        """
-        Transforma la imagen de ROS a un formato compatible con OpenCV (BGR8).
-        
-        Args:
-            data (sensor_msgs.msg.Image): Datos de la imagen de ROS.
-        """
-        self.current_frame = bridge.imgmsg_to_cv2(data, "bgr8")
+    def is_rqt_image_view_running(self):
+        """Comprueba si rqt_image_view está activo."""
+        try:
+            output = subprocess.check_output(['pgrep', '-f', 'rqt_image_view'])
+            return len(output) > 0
+        except subprocess.CalledProcessError:
+            return False
 
-def generate_frames():
-    """
-    Generador de frames para el streaming HTTP.
-    
-    Codifica el frame actual de OpenCV a JPEG de forma continua para 
-    crear un flujo de video (MJPEG).
-    
-    Yields:
-        bytes: Frame codificado en formato multipart/x-mixed-replace.
-    """
-    global camera_node
-    while True:
-        if camera_node is not None and camera_node.current_frame is not None:
-            ret, buffer = cv2.imencode('.jpg', camera_node.current_frame)
-            if ret:
-                frame = buffer.tobytes()
-                yield (b'--frame\r\n'
-                       b'Content-Type: image/jpeg\r\n\r\n' + frame + b'\r\n')
-        
-        # Pausa de 30ms (~30 FPS) para no congelar la CPU. 
-        # ¡Y ya NO usamos spin_once aquí!
-        time.sleep(0.03)
+    def image_callback(self, msg):
+        # Condición solicitada: rqt_image_view debe estar ejecutándose
+        if not self.is_rqt_image_view_running():
+            return
 
-@app.route('/video_feed')
-def video_feed():
-    """
-    Ruta de Flask que sirve el flujo de video.
-    
-    Returns:
-        Response: Respuesta HTTP con el tipo de contenido multipart.
-    """
-    return Response(generate_frames(),
-                    mimetype='multipart/x-mixed-replace; boundary=frame')
+        try:
+            # MANEJO DE ERRORES DIRECTO: 
+            # Convertimos usando 'passthrough' para extraer la matriz exacta que tiene el tópico
+            # sin forzar conversiones de color (bgr8/rgb8) que hagan saltar las aserciones de OpenCV
+            cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding='passthrough')
+            
+            if cv_image is None:
+                return
 
-# --- NUEVA FUNCIÓN: Mantiene a ROS 2 vivo en el fondo ---
-def ros2_spin_thread():
-    """
-    Función encargada de mantener vivo el proceso de ROS 2.
-    
-    Se ejecuta en un hilo separado para que rclpy.spin() no bloquee 
-    la ejecución del servidor Flask.
-    """
-    global camera_node
-    rclpy.init()
-    camera_node = CameraSubscriber()
-    rclpy.spin(camera_node) # Esto se queda girando infinitamente de forma segura
-    camera_node.destroy_node()
-    rclpy.shutdown()
+            # Si la imagen viene en escala de grises o formato nativo de simulación,
+            # lo volcamos directamente al disco duro sobreescribiendo el archivo.
+            success = cv2.imwrite(self.output_path, cv_image)
+            if success:
+                self.get_logger().info('📸 [VOLCADO DIRECTO]: Frame guardado desde el tópico de la cámara.')
+
+        except Exception as e:
+            # Si ocurre cualquier anomalía física con el buffer de bytes, se ignora de forma segura
+            return
 
 def main(args=None):
-    """
-    Punto de entrada principal. 
-    Inicia el hilo de ROS 2 y arranca el servidor web de Flask.
-    """
-    # 1. Arrancamos ROS 2 en un "hilo" invisible
-    ros_thread = threading.Thread(target=ros2_spin_thread, daemon=True)
-    ros_thread.start()
-    
-    # 2. Arrancamos Flask en el frente
-    print("Iniciando Servidor de Visión en el puerto 5000...")
-    app.run(host='0.0.0.0', port=5000, threaded=True)
+    rclpy.init(args=args)
+    node = StreamRawExtractorNode()
+    try:
+        rclpy.spin(node)
+    except KeyboardInterrupt:
+        pass
+    finally:
+        node.destroy_node()
+        if rclpy.ok():
+            rclpy.shutdown()
 
 if __name__ == '__main__':
     main()

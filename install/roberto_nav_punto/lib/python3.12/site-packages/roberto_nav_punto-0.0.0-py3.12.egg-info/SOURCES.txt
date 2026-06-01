@@ -16,6 +16,7 @@ roberto_nav_punto/__init__.py
 roberto_nav_punto/face_vision_node.py
 roberto_nav_punto/simple_follower.py
 roberto_nav_punto/vision_server.py
+roberto_nav_punto/web_video_server.py
 rviz/localization.rviz
 test/test_copyright.py
 test/test_flake8.py
