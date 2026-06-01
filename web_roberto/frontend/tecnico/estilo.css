@@ -161,6 +161,8 @@ body {
     color: #4b5563;
 }
 
+.camera-placeholder img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; }
+
 .video-placeholder i {
     font-size: 3rem;
     margin-bottom: 10px;
